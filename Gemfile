@@ -16,6 +16,7 @@ gem 'font-awesome-sass'
 gem 'materialize-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'material_icons'
 
 group :development, :test do
   gem 'binding_of_caller'
