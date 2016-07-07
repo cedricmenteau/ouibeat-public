@@ -8,6 +8,8 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'devise'
 gem 'redis'
+gem 'cloudinary'
+gem 'carrierwave'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -19,8 +21,7 @@ gem 'materialize-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'material_icons'
-gem 'cloudinary'
-gem 'carrierwave'
+gem 'annotate'
 
 group :development, :test do
   gem 'binding_of_caller'
