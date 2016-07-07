@@ -1,5 +1,25 @@
 <h1>Dashboard</h1>
 
 <%= link_to destroy_user_session_path, method: :delete do %>
-  <span class="waves-effect waves-light btn"><i class="material-icons">add</i>Se déconnecter</span>
+  <span class="waves-effect waves-light btn">Se déconnecter</span>
 <% end %>
+
+
+<div class="row">
+  <div class="col s8">
+    <ul class="tabs">
+      <li class="tab col s2"><a class="active" href="#logos">Logos</a></li>
+      <li class="tab col s2"><a href="#projects">Projets</a></li>
+    </ul>
+  </div>
+  <div id="logos" class="col s12">
+    RENDER FORM LOGO
+  </div>
+  <div id="projects" class="col s12">
+    RENDER FORM PROJECT
+  </div>
+</div>
+
+
+
+
