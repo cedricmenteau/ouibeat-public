@@ -13,6 +13,7 @@ gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
 gem 'font-awesome-sass'
+gem 'materialize-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
@@ -23,8 +24,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-
-
 end
 
 group :production do
