@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col s10 offset-s1">
+      <%= simple_form_for(@logo) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :picture %>
+        <%= f.input :picture_cache, as: :hidden %>
+        <%= f.submit "Créer", class: "waves-effect waves-light btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
