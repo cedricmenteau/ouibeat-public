@@ -1,5 +1,20 @@
 <h1>Pages#home</h1>
 
+<!-- PROJECTS -->
+<section>
+  <div class="container">
+    <h2>Nos projets</h2>
+    <div class="row">
+      <% @projects.each do |project| %>
+        <div class="col s12 l6">
+           <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+
 <!-- LOGOS -->
 <section>
   <div class="container">

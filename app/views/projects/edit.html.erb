@@ -11,10 +11,8 @@
             <%= cl_image_tag picture.path, width: 100, height: 100, crop: :fill %>
           <% end %>
         </div>
-         <%= f.input :pictures, as: :attachinary %>
-        <%#= f.input :pictures_cache, as: :hidden, multiple: true %>
+        <%= f.input :pictures, as: :attachinary %>
         <%= f.input :logo, as: :attachinary %>
-        <%#= f.input :logo_cache, as: :hidden %>
         <div>
           <% if f.object.logo? %>
             <%= cl_image_tag f.object.logo.path, width: 100, height: 100, crop: :fill %>

@@ -41,7 +41,7 @@ class LogosController < ApplicationController
   end
 
   def logo_params
-    params.require(:logo).permit(:name, :picture, :picture_cache, :position, :link)
+    params.require(:logo).permit(:name, :picture, :position, :link)
   end
 
 end

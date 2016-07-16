@@ -5,6 +5,7 @@ class PagesController < ApplicationController
       redirect_to admin_path
     end
     @logos = Logo.all
+    @projects = Project.all
   end
 
 end
