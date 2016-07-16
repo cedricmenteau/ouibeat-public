@@ -1,0 +1,5 @@
+ <% logos.each do |logo| %>
+  <% if logo %>
+    <%= link_to image_tag(logo.picture.url(:thumb)), logo.link, target: "_blank" %>
+  <% end %>
+<% end %>

@@ -4,6 +4,7 @@ class AdminController < ApplicationController
 
   def dashboard
     @logos = Logo.all
+    @projects = Project.all
   end
 
 end

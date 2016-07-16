@@ -1,16 +1,19 @@
 # == Schema Information
 #
-# Table name: logos
+# Table name: projects
 #
 #  id         :integer          not null, primary key
 #  name       :string
-#  position   :integer
+#  title      :string
+#  sub_title  :string
+#  text       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  link       :string
 #
 
-class Logo < ActiveRecord::Base
-  # mount_uploader :picture, PictureUploader
-  has_attachment :picture
+class Project < ActiveRecord::Base
+
+  has_attachments :pictures, maximum: 10
+  has_attachment :logo
+
 end

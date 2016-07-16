@@ -6,7 +6,7 @@
     <h2>Nos soutiens</h2>
     <div class="row">
       <% @logos.in_groups_of(5) do |logos| %>
-        <div class="col s12 m6 l3">
+        <div class="col s12 l6">
            <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
         </div>
       <% end %>
