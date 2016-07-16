@@ -1,9 +1,8 @@
-<h1>Dashboard</h1>
+<h3>Dashboard</h3>
 
 <%= link_to destroy_user_session_path, method: :delete do %>
   <span class="waves-effect waves-light btn">Se déconnecter</span>
 <% end %>
-
 
 <div class="row">
   <div class="col s8">
@@ -13,7 +12,7 @@
     </ul>
   </div>
   <div id="logos" class="col s12">
-    <%= render "logos/shared/index" %>
+    <%= render "logos/shared/tab_index" %>
   </div>
   <div id="projects" class="col s12">
     RENDER FORM PROJECT

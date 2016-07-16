@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     if current_user
       redirect_to admin_path
     end
+    @logos = Logo.all
   end
 
 end

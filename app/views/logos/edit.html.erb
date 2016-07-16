@@ -3,6 +3,10 @@
     <div class="col s10 offset-s1">
       <%= simple_form_for(@logo) do |f| %>
         <%= f.input :name %>
+        <%= f.input :link %>
+        <div>
+          <%= image_tag f.object.picture.url(:thumb) %>
+        </div>
         <%= f.input :picture %>
         <%= f.input :picture_cache, as: :hidden %>
         <%= f.submit "Sauvegarder", class: "waves-effect waves-light btn" %>

@@ -1,5 +1,7 @@
 class LogosController < ApplicationController
 
+  before_action :authenticate_user!
+
   before_action :set_logo, only: [:edit, :update, :destroy]
 
   def new
@@ -39,7 +41,7 @@ class LogosController < ApplicationController
   end
 
   def logo_params
-    params.require(:logo).permit(:name, :picture, :picture_cache, :position)
+    params.require(:logo).permit(:name, :picture, :picture_cache, :position, :link)
   end
 
 end

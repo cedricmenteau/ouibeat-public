@@ -3,7 +3,7 @@
     <% @logos.each do |logo| %>
       <li class="collection-item">
         <span class="title"><%= logo.name %></span>
-        <%= cl_image_tag logo.picture.url %>
+        <%= image_tag logo.picture.url(:thumb) %>
         <span class="position"><%= logo.position %></span>
          <!-- EDIT LOGO -->
         <%= link_to edit_logo_path(logo[:id]) do %>

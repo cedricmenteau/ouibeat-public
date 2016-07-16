@@ -4,10 +4,8 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :logos
+  get 'admin', to: 'admin#dashboard'
 
-  namespace :admin do
-    get '', to: 'dashboard#index', as: '/'
-  end
+  resources :logos
 
 end
