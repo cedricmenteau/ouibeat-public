@@ -1,5 +1,22 @@
 <% if project.pictures? %>
-  <% project.pictures.each do |picture| %>
-    <%= cl_image_tag(picture.path, width: 100, height: 100, crop: :fill)%>
+  <% project.pictures.in_groups_of(9) do |pictures| %>
+    <div class="section-projects-container">
+      <ul class="col-1">
+        <li class="flex-item"><%= cl_image_tag(pictures[0].path) if pictures[0] %></li>
+        <li class="flex-item"><%= cl_image_tag(pictures[1].path) if pictures[1] %></li>
+        <li class="flex-item"><%= cl_image_tag(pictures[2].path) if pictures[2] %></li>
+      </ul>
+      <ul class="col-2">
+        <li class="flex-item"><%= cl_image_tag(pictures[3].path) if pictures[3] %></li>
+        <li class="flex-item"><%= cl_image_tag(pictures[4].path) if pictures[4] %></li>
+        <li class="flex-item"><%= cl_image_tag(pictures[5].path) if pictures[5] %></li>
+      </ul>
+      <ul class="col-3">
+        <li class="flex-item"><%= cl_image_tag(pictures[6].path) if pictures[6] %></li>
+        <li class="flex-item"><%= cl_image_tag(pictures[7].path) if pictures[7] %></li>
+        <li class="flex-item"><%= cl_image_tag(pictures[8].path) if pictures[8] %></li>
+      </ul>
+    </div>
   <% end %>
 <% end %>
+
