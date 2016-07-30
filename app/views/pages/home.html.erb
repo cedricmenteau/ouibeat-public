@@ -4,14 +4,11 @@
 <section>
   <div class="container">
     <h2>Nos projets</h2>
-  <div class="carousel carousel-slider" data-indicators="true">
-    <!--   <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-    </div> -->
+  <div class="carousel carousel-slider">
     <% @projects.each do |project| %>
-      <div class="carousel-item" href="">
+      <a class="carousel-item" href="#">
         <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
-      </div>
+      </a>
     <% end %>
   </div>
 </section>
@@ -38,7 +35,7 @@ $(document).ready(function(){
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $('.carousel').slider();
+      $('.carousel.carousel-slider').carousel({full_width: true, interval: 10});
     });
   </script>
 <% end %>
