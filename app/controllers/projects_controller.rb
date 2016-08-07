@@ -1,8 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_action :authenticate_user!
-
-  before_action :set_project, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: :show
+  before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def new
     @project = Project.new
@@ -15,6 +14,9 @@ class ProjectsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
   end
 
   def edit

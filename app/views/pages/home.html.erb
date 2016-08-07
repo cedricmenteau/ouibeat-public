@@ -6,9 +6,9 @@
     <h2>Nos projets</h2>
   <div class="carousel carousel-slider">
     <% @projects.each do |project| %>
-      <a class="carousel-item" href="#">
+      <%= link_to project_path(project[:id]), class: "carousel-item" do %>
         <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
-      </a>
+      <% end %>
     <% end %>
   </div>
 </section>
@@ -28,12 +28,11 @@
   </div>
 </section>
 
-
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $('.slider').slider();
       $('.carousel.carousel-slider').carousel({full_width: true, interval: 10});
+      window.setInterval(function(){$('.carousel').carousel('next')},3000);
     });
   </script>
 <% end %>
