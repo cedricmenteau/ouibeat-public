@@ -28,13 +28,11 @@
   </div>
 </section>
 
-$(document).ready(function(){
-  $('.slider').slider();
-});
 
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
+      $('.slider').slider();
       $('.carousel.carousel-slider').carousel({full_width: true, interval: 10});
     });
   </script>

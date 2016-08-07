@@ -1,7 +1,8 @@
 // @charset "UTF-8";
 
 // Graphical variables
-@import "config/variables";
+@import "config/*";
+@import "layout/*";
 
 // External libraries
 @import "bourbon";
@@ -13,7 +14,6 @@
 @import "pages/index";
 @import "projects/index";
 @import "vendor/index";
-
 // Mixins
 @import "materialize/components/prefixer";
 @import "materialize/components/mixins";
