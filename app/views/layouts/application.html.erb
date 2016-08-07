@@ -3,7 +3,7 @@
   <head>
     <%= render "layouts/shared/head" %>
   </head>
-  <body>
+  <body class="<%= yield (:body_class) %>">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
