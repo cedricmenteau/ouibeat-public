@@ -22,15 +22,29 @@
   align-items: center;
   justify-content: space-between;
 
-  &:after {
-    content: "";
+  &:before {
+    content: image_url('shared/path-1.png');
     position: absolute;
-    background: image_url('shared/background-navbar.png');
+    display: flex;
+    justify-content: flex-start;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 230px;
     height: 60px;
     z-index: 0;
+  }
+
+  &:after {
+    content: image_url('shared/path-2.png');
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 0;
+    right: 0;
+    width: 560px;
+    height: 60px;
+    z-index: 0;
+
   }
 
   .nav-wrapper {

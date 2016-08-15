@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-740.000000, -964.000000)">
+            <g id="Header" transform="translate(-46.000000, -3.000000)">
+                <g id="Banniere" transform="translate(0.000000, 93.000000)">
+                    <g id="Bandeau-réseaux-sociaux-" transform="translate(46.000000, 860.000000)">
+                        <g id="Icônes" transform="translate(398.000000, 12.000000)">
+                            <g id="Youtube" transform="translate(342.000000, 2.000000)">
+                                <path d="M0,18.0093426 C0,20.7656066 2.24721412,23 4.99065745,23 L18.0093426,23 C20.7656066,23 23,20.7527859 23,18.0093426 L23,4.99065745 C23,2.23439345 20.7527859,0 18.0093426,0 L4.99065745,0 C2.23439345,0 0,2.24721412 0,4.99065745 L0,18.0093426 Z" id="Fill-1" fill="#E0001B"></path>
+                                <path d="M17.8478085,11.204835 L8.4922766,5.051935 C8.39397872,4.98736833 8.26908511,4.98281833 8.16653191,5.039585 C8.06397872,5.09656833 7.99993617,5.205985 7.99993617,5.324935 L7.99993617,17.630735 C7.99993617,17.749685 8.06397872,17.8591017 8.16653191,17.916085 C8.21419149,17.9425183 8.26674468,17.955735 8.31908511,17.955735 C8.37951064,17.955735 8.4397234,17.938185 8.4922766,17.903735 L17.8478085,11.7510517 C17.9388723,11.691035 17.993766,11.588335 17.993766,11.477835 C17.993766,11.3675517 17.9388723,11.264635 17.8478085,11.204835" id="Fill-1" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
