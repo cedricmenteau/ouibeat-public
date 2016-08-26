@@ -21,13 +21,14 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 
   &:before {
     content: image_url('shared/path-1.png');
     position: absolute;
     display: flex;
     justify-content: flex-start;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 230px;
     height: 60px;
@@ -39,7 +40,7 @@
     position: absolute;
     display: flex;
     justify-content: flex-end;
-    top: 0;
+    top: -2px;
     right: 0;
     width: 560px;
     height: 60px;

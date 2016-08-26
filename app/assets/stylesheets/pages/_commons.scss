@@ -1,0 +1,92 @@
+@media only screen and (min-width: 993px) {
+  .container {
+      width: 80% !important;
+  }
+}
+
+h1 {
+  font-family: 'CenturyGothic-Bold';
+  font-size: 23px !important;
+  text-transform: uppercase;
+}
+
+h2 {
+  position: relative;
+  margin: 30px 0 0 !important;
+  font-family: 'CenturyGothic-Bold';
+  font-size: 23px !important;
+  text-transform: uppercase;
+  color: #4A4A4A;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    top: -20px;
+    background-color: #00CFCB;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    bottom: -20px;
+    background-color: #00CFCB;
+  }
+}
+
+h3 {
+  position: relative;
+  margin: 30px 0 0 !important;
+  font-family: 'CenturyGothic-Bold';
+  font-size: 15px !important;
+  text-transform: uppercase;
+  color: #4A4A4A;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    top: -20px;
+    background-color: #00CFCB;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    bottom: -20px;
+    background-color: #00CFCB;
+  }
+}
+
+p {
+  font-family: 'CenturyGothic';
+  font-size: 15px;
+  line-height: 21px;
+  color: #4A4A4A;
+}
+
+.btn-ouibeat {
+  padding: 7px;
+  margin-bottom: 2em;
+  color: white;
+  font-size: 14px;
+  border: 2px solid white;
+}
+
+.btn-ouibeat.dark {
+  font-size: 12px;
+  color: white;
+  background-color: #4A4A4A;
+  border: none;
+  text-transform: uppercase;
+}

@@ -3,40 +3,79 @@
 <header>
   <div class="home-header center-align">
     <%= image_tag 'logos/main-logo.svg' %>
-    <h2>Concepteur d'éxpériences sociales et connectées dédiées aux plus belles activations de marques</h2>
-    <% link_to 'Voir la vidéo', "" %>
-    <%= image_tag 'home/icone-mouse.svg' %>
+    <h1>Concepteur d'éxpériences sociales et connectées dédiées aux plus belles activations de marques</h1>
+    <%= link_to "#", class: 'btn-ouibeat waves-effect waves-light' do %>
+      Voir la vidéo
+    <% end %>
+
+    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
     <div class="social-container">
       <i>100% compatible avec :</i>
       <ul>
-        <li><%= image_tag 'shared/icones/facebook.svg' %></li>
-        <li><%= image_tag 'shared/icones/twitter.svg' %></li>
-        <li><%= image_tag 'shared/icones/instagram.svg' %></li>
-        <li><%= image_tag 'shared/icones/youtube.svg' %></li>
-        <li><%= image_tag 'shared/icones/vimeo.svg' %></li>
-        <li><%= image_tag 'shared/icones/periscope.svg' %></li>
-        <li><%= image_tag 'shared/icones/linkedin.svg' %></li>
-        <li><%= image_tag 'shared/icones/googleplus.svg' %></li>
-        <li><%= image_tag 'shared/icones/pinterest.svg' %></li>
-        <li><%= image_tag 'shared/icones/vine.svg' %></li>
-        <li><%= image_tag 'shared/icones/rss.svg' %></li>
-        <li><%= image_tag 'shared/icones/tumblr.svg' %></li>
+        <li><%= image_tag 'shared/icons/facebook.svg' %></li>
+        <li><%= image_tag 'shared/icons/twitter.svg' %></li>
+        <li><%= image_tag 'shared/icons/instagram.svg' %></li>
+        <li><%= image_tag 'shared/icons/youtube.svg' %></li>
+        <li><%= image_tag 'shared/icons/vimeo.svg' %></li>
+        <li><%= image_tag 'shared/icons/periscope.svg' %></li>
+        <li><%= image_tag 'shared/icons/linkedin.svg' %></li>
+        <li><%= image_tag 'shared/icons/googleplus.svg' %></li>
+        <li><%= image_tag 'shared/icons/pinterest.svg' %></li>
+        <li><%= image_tag 'shared/icons/vine.svg' %></li>
+        <li><%= image_tag 'shared/icons/rss.svg' %></li>
+        <li><%= image_tag 'shared/icons/tumblr.svg' %></li>
       </ul>
     </div>
   </div>
 </header>
 
 <!-- PROJECTS -->
-<section>
+<section class="section-text grey lighten-4">
   <div class="container">
-    <h2>Nos projets</h2>
-  <div class="carousel carousel-slider">
-    <% @projects.each do |project| %>
-      <%= link_to project_path(project[:id]), class: "carousel-item" do %>
-        <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
-      <% end %>
-    <% end %>
+    <div class="row">
+      <div class="col s12 m6">
+        <h2>Propulseur d'expériences e-sociales</h2>
+      </div>
+      <div class="col s12 m6">
+        <p>Première plateforme de création de social walls événementiels et web dédiée aux marques et aux agences depuis 2013 en France, OuiBeat s’est très rapidement imposé comme un acteur essentiel dans la digitalisation des évènements avec pour principale expertise, l’utilisation des réseaux sociaux.</p>
+        <p>Notre start up spécialisée dans la création d’expériences e-sociales intégrées aux activations de marques propose aujourd’hui 3 offres : le social wall, la borne modulable connectée, la conception et le développement digitale.</p>
+      </div>
+    </div>
   </div>
+</section>
+
+<section class="section-offers">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Nos offres</h2>
+      </div>
+    </div>
+    <div class="row offers">
+      <div class="col s12 m4 center-align offer">
+        <%= image_tag 'shared/icons/icon-socialwall.svg', alt: 'Icon Social >all OuiBeat' %>
+        <h3>Social<br>Wall</h3>
+        <p>Notre plateforme est utilisée par les plus grandes marques et agences qui ont décidé de placer au coeur de leur stratégie le social brand content et la récupération d’UGC.</p>
+        <%= link_to 'En savoir plus', '#', class: 'btn-ouibeat dark waves-effect waves-light' %>
+      </div>
+      <div class="col s12 m4 center-align offer">
+        <%= image_tag 'shared/icons/icon-borne.svg', alt: 'Icon Borne OuiBeat' %>
+        <h3>Borne modulable<br>connectée</h3>
+        <p>Parce que le social brand content est la 1ère source d’influence dans la commercialisation d’un produit, nous avons décidé de développer la 1ère borne photo modulable connectée et reliable à notre plateforme de social walls.</p>
+        <%= link_to 'En savoir plus', '#', class: 'btn-ouibeat dark waves-effect waves-light' %>
+      </div>
+      <div class="col s12 m4 center-align offer">
+        <%= image_tag 'shared/icons/icon-conception.svg', alt: 'Icon social wall OuiBeat' %>
+        <h3>Conception et<br>développement digitale</h3>
+        <p>Un pôle de conception / rédaction et dedéveloppement digital est à votre service afin de vous accompagner dans la personnalisation de vos expériences e-sociales « car nous ne pouvons pas répondre à tous les projets et toutes les problématiques d’une seule et même voix ». </p>
+        <%= link_to 'En savoir plus', '#', class: 'btn-ouibeat dark waves-effect waves-light' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div id="embed-ouibeat"></div>
 </section>
 
 
@@ -54,13 +93,31 @@
   </div>
 </section>
 
+<section>
+  <div class="carousel carousel-slider">
+    <% @projects.each do |project| %>
+      <%= link_to project_path(project[:id]), class: "carousel-item" do %>
+        <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
+      <% end %>
+    <% end %>
+  </div>
+</section>
+
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
       $('.carousel.carousel-slider').carousel({full_width: true, interval: 10});
       window.setInterval(function(){$('.carousel').carousel('next')},3000);
     });
-  </script>
+
+
+    (function(){
+      window.ouibeatEmbedSite='http://app.ouibeat.com';
+      window.ouibeatEmbedPath='/events/web/eaa977282a03169a89909543183afab997a45784';
+      var ob=document.createElement('script');ob.type='text/javascript';ob.async=true;ob.src=window.ouibeatEmbedSite+'/themes/web/assets/js/embed.js';
+      var sc=document.getElementsByTagName('script')[0];sc.parentNode.insertBefore(ob, sc);
+    }());
+ </script>
 <% end %>
 
 
