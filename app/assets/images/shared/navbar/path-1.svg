@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="231px" height="54px" viewBox="0 0 231 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 863</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="97.8101946%" y1="-19.7044678%" x2="26.4545849%" y2="67.728445%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(0.000000, -33.000000)" fill="url(#linearGradient-1)">
+            <g id="Header" transform="translate(-46.000000, -3.000000)">
+                <g id="Nav-barre" transform="translate(46.000000, 36.000000)">
+                    <g id="Fond-Nav-barre">
+                        <polygon id="Path-863" points="0 53.440063 230.202357 0.881834956 0.0384221311 0.881834956"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
