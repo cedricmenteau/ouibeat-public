@@ -129,4 +129,46 @@
       }
     }
   }
+
+  .section-logos {
+    padding: 60px 0;
+
+    .container {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+
+      &:before, &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin: 0 15px;
+      }
+    }
+  }
+
+  .section-portofolio {
+    padding: 60px 0;
+
+    h2 {
+      text-align: center;
+
+      &:before, &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
 }

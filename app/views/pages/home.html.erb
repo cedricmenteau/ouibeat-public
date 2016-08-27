@@ -80,25 +80,34 @@
 
 
 <!-- LOGOS -->
-<section>
+<section class="section-logos">
   <div class="container">
-    <h2>Nos soutiens</h2>
-    <div class="row">
-      <% @logos.in_groups_of(5) do |logos| %>
-        <div class="col s12 l6">
-           <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
-        </div>
+    <h2>Ils nous font confiance</h2>
+      <% @logos.in_groups_of(6) do |logos| %>
+        <ul class="index-logos">
+          <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
+        </ul>
       <% end %>
-    </div>
+    <%= link_to 'Voir plus', logos_path(id: @logos.last.id), remote: true, class: 'btn-ouibeat dark waves-effect waves-light' %>
   </div>
 </section>
 
-<section>
+<!-- PORTOFOLIO -->
+<section class="section-portofolio grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
+  </div>
   <div class="carousel carousel-slider">
     <% @projects.each do |project| %>
-      <%= link_to project_path(project[:id]), class: "carousel-item" do %>
+    <div class="carousel-item">
+      <%#= link_to project_path(project[:id]), class: "carousel-item" do %>
         <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
-      <% end %>
+      <%# end %>
+      </div>
     <% end %>
   </div>
 </section>
@@ -106,8 +115,8 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $('.carousel.carousel-slider').carousel({full_width: true, interval: 10});
-      window.setInterval(function(){$('.carousel').carousel('next')},3000);
+      $('.carousel.carousel-slider').carousel({full_width: true});
+      window.setInterval(function(){$('.carousel').carousel('next')},5000);
     });
 
 

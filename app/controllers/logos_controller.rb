@@ -1,8 +1,16 @@
 class LogosController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
 
   before_action :set_logo, only: [:edit, :update, :destroy]
+
+  def index
+    if params[:id]
+      @logos = Logo.where('id > ?', params[:id]).limit(6)
+    else
+      @logos = Logo.limit(6)
+    end
+  end
 
   def new
     @logo = Logo.new
@@ -32,7 +40,6 @@ class LogosController < ApplicationController
     @logo.destroy
     redirect_to admin_path
   end
-
 
   private
 

@@ -1,6 +1,6 @@
 <% if project.pictures? %>
   <% project.pictures.in_groups_of(9) do |pictures| %>
-    <div class="section-projects-container">
+    <div class="container-projects">
       <ul class="col-1">
         <li class="flex-item"><%= cl_image_tag(pictures[0].path) if pictures[0] %></li>
         <li class="flex-item"><%= cl_image_tag(pictures[1].path) if pictures[1] %></li>
@@ -12,7 +12,16 @@
         <li class="flex-item"><%= cl_image_tag(pictures[5].path) if pictures[5] %></li>
       </ul>
       <ul class="col-3">
-        <li class="flex-item"><%= cl_image_tag(pictures[6].path) if pictures[6] %></li>
+        <li class="flex-item">
+          <%= cl_image_tag(pictures[6].path) if pictures[6] %>
+          <div class="project-text">
+            <h1 class="name"><%= project.name %></h1>
+            <h3 class="title"><%= project.title %></h3>
+            <%= link_to project_path(project[:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
+              Voir le projet
+            <% end %>
+          </div>
+        </li>
         <li class="flex-item"><%= cl_image_tag(pictures[7].path) if pictures[7] %></li>
         <li class="flex-item"><%= cl_image_tag(pictures[8].path) if pictures[8] %></li>
       </ul>
