@@ -74,10 +74,7 @@
   </div>
 </section>
 
-<section>
-  <div id="embed-ouibeat"></div>
-</section>
-
+<%= render 'shared/selection' %>
 
 <!-- LOGOS -->
 <section>
@@ -93,15 +90,36 @@
   </div>
 </section>
 
-<section>
-  <div class="carousel carousel-slider">
-    <% @projects.each do |project| %>
-      <%= link_to project_path(project[:id]), class: "carousel-item" do %>
-        <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
-      <% end %>
-    <% end %>
+<section class="section-news">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Notre actualité</h2>
+      </div>
+    </div>
   </div>
+  <div id="embed-ouibeat"></div>
 </section>
+
+
+<!-- <section>
+  <div class="carousel carousel-slider">
+    <# @projects.each do |project| #>
+      <#= link_to project_path(project[:id]), class: "carousel-item" do #>
+        <#= render partial: "projects/shared/section_projects", locals: {project: project} #>
+      <# end #>
+    <# end #>
+  </div>
+</section> -->
+
+<section class="section-discover">
+  <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
+  <%= link_to 'Voir la vidéo', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+</section>
+
+
+<%= render 'shared/footer' %>
+
 
 <% content_for :after_js do %>
   <script>
