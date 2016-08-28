@@ -60,7 +60,7 @@
     }
 
     &:after {
-      background-image: url('shared/selection/offer-1.jpg');
+      background-image: asset-url('shared/selection/offer-1.jpg');
     }
 
     &:hover {
@@ -89,7 +89,7 @@
     &:after {
       content: "";
       position: absolute;
-      background-image: url('shared/selection/offer-2.jpg');
+      background-image: asset-url('shared/selection/offer-2.jpg');
       top: 0;
       left: -75%;
       width: 225%;
@@ -120,7 +120,7 @@
     }
 
     &:after {
-      background-image: url('shared/selection/offer-1.jpg');
+      background-image: asset-url('shared/selection/offer-1.jpg');
     }
 
     &:hover {
