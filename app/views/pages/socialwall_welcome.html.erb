@@ -1,0 +1,76 @@
+<% body_class "socialwall-welcome-action" %>
+
+<%= render 'shared/navbar_socialwall' %>
+
+<header>
+  <h1>Il n'a jamais été aussi simple de concevoir son social wall</h1>
+  <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+</header>
+
+<section class="section-text mask-grey-right">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <h2>Centralisez le contenu<br>de tous vos réseaux sociaux</h2>
+        <p>OuiBeat vous permet de centraliser au même endroit l’ensemble de vos réseaux sociaux. Un seul et même espace où retrouver les dernières actualités de votre marque et les meilleurs réactions de votre communauté.</p>
+      </div>
+      <div class="col s12 m6 right-align">
+        <%= image_tag 'socialwall/socialwall-network.png' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-carousel mask-grey-left">
+  <div class="container center-align">
+    <h2>Créez les plus beaux<br>social walls</h2>
+    <p>Sélectionnez les réseaux sociaux, les hashtags, vos comptes de marques ou d’influenceurs que vous souhaitez activer, intégrez votre propre contenu de marque et personnalisez l’affichage de votre social wall à votre besoin et votre image. Choisissez parmi nos thèmes pré-configurés ou développez votre propre affichage sur-mesure grâce à notre équipe de développeurs.</p>
+  </div>
+  <div class="carousel-container">
+    <%= image_tag 'socialwall/carousel/macbook.png', class: 'macbook-mockup' %>
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
+      <a class="carousel-item" href="#two!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
+      <a class="carousel-item" href="#three!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
+      <a class="carousel-item" href="#four!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
+      <a class="carousel-item" href="#five!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-text grey lighten-4 mask-white-left">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 left-align">
+        <%= image_tag 'socialwall/socialwall-moderation.png' %>
+      </div>
+      <div class="col s12 m6">
+        <h2>Contrôlez<br>le contenu diffusé</h2>
+        <p>Gardez le contrôle de votre événement. Grâce à la plateforme de modération, vous sélectionnez très facilement et rapidement le contenu que vous souhaitez diffuser sur le social wall.</p>
+        <p>Des influenceurs présents sur votre événement? Certifiez leurs comptes et mettez ainsi en avant automatiquement leurs meilleurs contributions. La solution OuiBeat étant responsive, la modération peut être effectuée de manière très simple, sur ordinateur comme sur smartphone, sur le lieu de votre événement ou à distance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-text grey lighten-4 mask-white-right">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <h2>Mesurez le retour<br>sur investissement</h2>
+        <p>Grâce à notre outil d’analyse en temps réel, visualisez l’engagement de votre communauté sur les réseaux sociaux, les temps forts de votre activation et identifiez vos principaux influenceurs générant le plus d’interactions. </p>
+        <p>Récupérez également l’intégralité du contenu généré pendant votre événement par simple téléchargement.</p>
+      </div>
+      <div class="col s12 m6 right-align">
+        <%= image_tag 'socialwall/socialwall-stats.png' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>
+
+
+<% content_for :after_js do %>
+
+<% end %>
