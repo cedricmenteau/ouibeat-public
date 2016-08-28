@@ -1,0 +1,33 @@
+#mc_embed_signup {
+  position: relative;
+  width: 100%;
+  top: -25px;
+
+  #mc_embed_signup_scroll {
+    display: flex;
+
+    input[type=email] {
+      padding-left: 10px;
+      min-width: 220px;
+      height: 37px;
+      border: none;
+      box-shadow: none;
+      background: white;
+      color: black;
+    }
+
+    input[type="submit"] {
+      -webkit-appearance: none;
+      padding: 0 10px;
+      height: 37px;
+      border: none;
+      box-shadow: none;
+      font-family: 'CenturyGothic-Bold';
+      font-size: 14px;
+      text-transform: uppercase;
+      background-color: #00CFCB;
+      color: white;
+      outline: none;
+    }
+  }
+}

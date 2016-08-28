@@ -80,8 +80,8 @@ footer {
       }
 
       .social {
-        padding-top: 13px;
-        max-width: 135px;
+        padding: 13px 1rem;
+        width: 33.33333%;
 
         ul.social-grid {
           display: flex;
@@ -98,6 +98,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         padding-top: 13px;
+        width: 66.66666%;
       }
     }
 
