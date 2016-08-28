@@ -4,6 +4,11 @@
   }
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto !important;
+}
+
 h1 {
   font-family: 'CenturyGothic-Bold';
   font-size: 23px !important;
@@ -107,7 +112,6 @@ p {
     position: relative;
     padding-top: 60px;
     height: 440px;
-    background: asset-url('socialwall/welcome-header.jpg') no-repeat top center fixed;
 
     &:after {
       content: "";
