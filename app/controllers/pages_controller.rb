@@ -8,7 +8,13 @@ class PagesController < ApplicationController
     @projects = Project.all
   end
 
-  def socialwall_welcome
+  def socialwall
+  end
+
+  def socialwall_plateforme
+  end
+
+  def socialwall_solution
   end
 
 end

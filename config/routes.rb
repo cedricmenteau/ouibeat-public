@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get 'admin', to: 'admin#dashboard'
-  get 'socialwall-welcome', to: 'pages#socialwall_welcome'
+  get 'socialwall', to: 'pages#socialwall'
+  get 'socialwall-plateforme', to: 'pages#socialwall_plateforme'
+  get 'socialwall-solution', to: 'pages#socialwall_solution'
 
   resources :logos
   resources :projects

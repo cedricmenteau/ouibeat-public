@@ -1,0 +1,68 @@
+.socialwall-solution-action {
+
+  header {
+    background: asset-url('socialwall/solution-header.jpg') no-repeat top center fixed;
+  }
+
+  .section-text {
+    height: 520px;
+
+    h2 {
+      margin-bottom: 60px !important;
+      max-width: 100% !important;
+      transform: none !important;
+      left: 0;
+    }
+  }
+
+  .mask-white-left {
+    &:after {
+      width: 55%;
+      -webkit-clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  .mask-white-right {
+     &:after {
+      width: 55%;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%);
+    }
+  }
+
+  .section-parol.mask-white-right {
+    &:after {
+      background: asset-url('socialwall/socialwall-graph.png') no-repeat top right;
+      background-color: white;
+    }
+  }
+
+  .section-concepts.mask-white-left {
+    &:after {
+      background: asset-url('socialwall/socialwall-concepts.png') no-repeat top left;
+      background-size: cover;
+    }
+  }
+
+  .section-viral.mask-white-right {
+    &:after {
+      background: asset-url('socialwall/socialwall-viral.png') no-repeat top left;
+      background-size: cover;
+    }
+  }
+
+  .section-dynamism.mask-white-left {
+    &:after {
+      background: asset-url('socialwall/socialwall-dynamism.png') no-repeat top left;
+      background-color: white;
+    }
+  }
+
+  .section-animation.mask-white-right {
+    &:after {
+      background: asset-url('socialwall/socialwall-animation.png') no-repeat top left;
+      background-size: cover;
+    }
+  }
+}
