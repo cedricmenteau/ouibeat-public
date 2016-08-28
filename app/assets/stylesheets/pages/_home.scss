@@ -180,67 +180,10 @@
   }
 
   .section-discover {
-    position: relative;
-    margin-bottom: -60px;
-    height: 500px;
-    overflow: hidden;
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(0,0,0,0.3);
-      z-index: 1;
-    }
-
-    &:hover {
-      .discover-container {
-        &:after {
-          transform: scale(1.1);
-        }
-      }
-    }
-
     .discover-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      height: 100%;
-
       &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
         background: asset-url('home/discover-offer.jpg') no-repeat top center;
         background-size: cover;
-        @include transition(all 0.3s ease-in-out);
-      }
-
-
-      h2 {
-        margin: 30px 0 65px !important;
-        text-align: center;
-        color: white;
-        z-index: 10;
-
-        &:before, &:after {
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: white;
-        }
-      }
-
-      a {
-        z-index: 10;
       }
     }
   }
