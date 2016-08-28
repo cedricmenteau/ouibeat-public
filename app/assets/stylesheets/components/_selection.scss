@@ -8,11 +8,12 @@
     position: relative;
     overflow: hidden;
     height: 100%;
-    @include transition(all 0.2s ease-in-out);
+    @include transition(all 0.3s ease-in-out);
 
     .selection-content {
       position: absolute;
       visibility: hidden;
+      opacity: 0;
       top: 35%;
       z-index: 30;
 
@@ -44,6 +45,7 @@
 
       .selection-content {
         visibility: visible;
+        opacity: 1;
       }
     }
   }

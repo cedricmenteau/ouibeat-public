@@ -77,17 +77,34 @@
 <%= render 'shared/selection' %>
 
 <!-- LOGOS -->
-<section>
+<section class="section-clients">
   <div class="container">
-    <h2>Nos soutiens</h2>
+    <h2>Ils nous font confiance</h2>
     <div class="row">
-      <% @logos.in_groups_of(5) do |logos| %>
-        <div class="col s12 l6">
+      <% @logos.in_groups_of(6) do |logos| %>
+        <div class="col s12 logo-container">
            <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
         </div>
       <% end %>
     </div>
   </div>
+</section>
+
+<section class="section-portfolio grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="carousel carousel-slider">
+    <# @projects.each do |project| %>
+      <#= link_to project_path(project[:id]), class: "carousel-item" do %>
+        <#= render partial: "projects/shared/section_projects", locals: {project: project} %>
+      <# end %>
+    <# end %>
+  </div> -->
 </section>
 
 <section class="section-news">
@@ -101,20 +118,11 @@
   <div id="embed-ouibeat"></div>
 </section>
 
-
-<!-- <section>
-  <div class="carousel carousel-slider">
-    <# @projects.each do |project| #>
-      <#= link_to project_path(project[:id]), class: "carousel-item" do #>
-        <#= render partial: "projects/shared/section_projects", locals: {project: project} #>
-      <# end #>
-    <# end #>
-  </div>
-</section> -->
-
 <section class="section-discover">
-  <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
-  <%= link_to 'Voir la vidéo', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+  <div class="discover-container">
+    <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
+    <%= link_to 'Voir la vidéo', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+  </div>
 </section>
 
 

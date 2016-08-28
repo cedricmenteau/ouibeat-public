@@ -1,24 +1,69 @@
 <footer>
-  <div class="container">
+  <div class="container footer-content">
     <div class="row">
-      <%= image_tag 'logos/main-logo.svg' %>
+      <%= image_tag 'logos/main-logo.svg', class: 'footer-logo' %>
     </div>
     <div class="row">
-      <div class="col m3">
+      <div class="col m3 pages">
+        <ul>
+          <li><%= link_to 'Home', '/' %></li>
+          <li><%= link_to 'Social Wall', '/' %></li>
+          <li><%= link_to 'Bornes connectées', '/' %></li>
+          <li><%= link_to 'Conception digitale', '/' %></li>
+          <li><%= link_to 'Contact', '/' %></li>
+        </ul>
       </div>
-       <div class="col m3">
+      <div class="col m3 corporate">
+        <ul>
+          <li><%= link_to 'À propos', '/' %></li>
+          <li><%= link_to 'Carrière', '/' %></li>
+          <li><%= link_to 'Presse', '/' %></li>
+          <li><%= link_to 'Certification', '/' %></li>
+        </ul>
       </div>
-       <div class="col m3">
+      <div class="col m6 network">
+        <div class='social'>
+          <span>Suivez-nous</span>
+          <ul class='social-grid'>
+            <li>
+              <%= link_to '/' do%>
+                <%= image_tag 'shared/footer/footer-icon-facebook.svg' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '/' do%>
+                <%= image_tag 'shared/footer/footer-icon-twitter.svg' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '/' do%>
+                <%= image_tag 'shared/footer/footer-icon-instagram.svg' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '/' do%>
+                <%= image_tag 'shared/footer/footer-icon-vimeo.svg' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '/' do%>
+                <%= image_tag 'shared/footer/footer-icon-linkedin.svg' %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        <div class="newsletter">
+          <span>Inscrivez-vous à la newsletter</span>
+        </div>
       </div>
-       <div class="col m3">
-      </div>
+    </div>
+
+    <div class="row">
+      <ul class="copyright">
+        <li>Copyright © 2016 OuiBeat, Tous droits réservés</li>
+        <li><%= link_to "Conditions d'utilisation", '/' %></li>
+        <li><%= link_to "Politique de confidentialité", '/' %></li>
+      </ul>
     </div>
   </div>
-   <div class="row">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-   </div>
 </footer>

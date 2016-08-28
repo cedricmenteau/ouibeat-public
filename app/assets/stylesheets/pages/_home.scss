@@ -130,6 +130,40 @@
     }
   }
 
+  .section-clients {
+    padding: 60px 0;
+
+    h2 {
+      text-align: center;
+
+      &:before, &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 80px;
+      width: 100%;
+    }
+  }
+
+  .section-portfolio {
+    padding: 60px 0;
+
+    h2 {
+      text-align: center;
+
+      &:before, &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
   .section-news {
     padding: 60px 0;
 
@@ -144,15 +178,10 @@
   }
 
   .section-discover {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     margin-bottom: -60px;
     height: 500px;
-    background:asset-url('home/discover-offer.jpg') no-repeat top center;
-    background-size: cover;
+    overflow: hidden;
 
     &:after {
       content: "";
@@ -165,21 +194,52 @@
       z-index: 1;
     }
 
-    h2 {
-      margin: 30px 0 65px !important;
-      text-align: center;
-      color: white;
-      z-index: 10;
-
-      &:before, &:after {
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
+    &:hover {
+      .discover-container {
+        &:after {
+          transform: scale(1.1);
+        }
       }
     }
 
-    a {
-      z-index: 10;
+    .discover-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:asset-url('home/discover-offer.jpg') no-repeat top center;
+        background-size: cover;
+        @include transition(all 0.3s ease-in-out);
+      }
+
+
+      h2 {
+        margin: 30px 0 65px !important;
+        text-align: center;
+        color: white;
+        z-index: 10;
+
+        &:before, &:after {
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: white;
+        }
+      }
+
+      a {
+        z-index: 10;
+      }
     }
   }
 }
