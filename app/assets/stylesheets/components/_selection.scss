@@ -51,8 +51,6 @@
   }
 
   .polygone-1 {
-    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
     z-index: 20;
 
     .selection-content {
@@ -61,6 +59,8 @@
 
     &:after {
       background-image: asset-url('shared/selection/offer-1.jpg');
+      -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
     }
 
     &:hover {
@@ -71,6 +71,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
         background-color: rgba(0,0,0,0.6);
         z-index: 25;
       }
@@ -111,8 +113,6 @@
   }
 
   .polygone-3 {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
     z-index: 20;
 
     .selection-content {
@@ -120,6 +120,8 @@
     }
 
     &:after {
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
       background-image: asset-url('shared/selection/offer-1.jpg');
     }
 
@@ -132,6 +134,8 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0,0,0,0.6);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
         z-index: 25;
       }
     }

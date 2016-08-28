@@ -8,7 +8,7 @@
       <%= image_tag 'logos/main-logo.svg' %>
     <% end %>
     <ul class="right hide-on-med-and-down">
-      <li><a href="#">Social wall</a></li>
+      <li><%= link_to 'Social wall', socialwall_welcome_path %></li>
       <li><a href="#">Borne connectée</a></li>
       <li><a href="#">Conception digitale</a></li>
       <li><a href="#">Contact</a></li>
@@ -20,7 +20,7 @@
 </nav>
 
 <div id="sub-nav" class="sub-nav">
-  <%= link_to 'Accueil', '/' %>
+  <%= link_to 'Social wall', socialwall_welcome_path %>
   <%= link_to 'Plateforme', '/' %>
   <%= link_to 'Solution', '/' %>
   <%= link_to 'Portfolio', '/' %>
