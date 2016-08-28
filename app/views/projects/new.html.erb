@@ -3,6 +3,8 @@
     <div class="col s10 offset-s1">
       <%= simple_form_for(@project) do |f| %>
         <%= f.input :name %>
+        <%= f.input :category, collection: ["Social Wall", "Borne", "Conception"], prompt: 'Sélectionnez une catégorie' %>
+        <%= f.input :date %>
         <%= f.input :title %>
         <%= f.input :sub_title %>
         <%= f.input :text %>
@@ -13,5 +15,3 @@
     </div>
   </div>
 </div>
-
-

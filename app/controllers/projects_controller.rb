@@ -42,8 +42,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :title, :sub_title, :text, :logo, pictures: [])
-    # params.require(:project).permit(:name, :title, :sub_title, :text, :pictures, :pictures_cache, {pictures: []}, {pictures_cache: []}, :logo, :logo_cache)
+    params.require(:project).permit(:name, :category, :date, :title, :sub_title, :text, :logo, pictures: [])
   end
 
 end
