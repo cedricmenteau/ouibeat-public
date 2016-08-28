@@ -1,5 +1,5 @@
 <% logos.each do |logo| %>
   <% if logo %>
-    <li><%= link_to cl_image_tag(logo.picture.path, width: 100), logo.link, target: "_blank" %></li>
+    <%= link_to cl_image_tag(logo.picture.path, width: 100), logo.link, target: "_blank" %>
   <% end %>
 <% end %>

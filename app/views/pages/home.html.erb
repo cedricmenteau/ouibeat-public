@@ -74,26 +74,24 @@
   </div>
 </section>
 
-<section>
-  <div id="embed-ouibeat"></div>
-</section>
-
+<%= render 'shared/selection' %>
 
 <!-- LOGOS -->
-<section class="section-logos">
+<section class="section-clients">
   <div class="container">
     <h2>Ils nous font confiance</h2>
+    <div class="row">
       <% @logos.in_groups_of(6) do |logos| %>
-        <ul class="index-logos">
-          <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
-        </ul>
+        <div class="col s12 logo-container">
+           <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
+        </div>
       <% end %>
     <%= link_to 'Voir plus', logos_path(id: @logos.last.id), remote: true, class: 'btn-ouibeat dark waves-effect waves-light' %>
   </div>
 </section>
 
-<!-- PORTOFOLIO -->
-<section class="section-portofolio grey lighten-4">
+<!-- PORTFOLIO -->
+<section class="section-portfolio grey lighten-4">
   <div class="container">
     <div class="row">
       <div class="s12">
@@ -104,13 +102,33 @@
   <div class="carousel carousel-slider">
     <% @projects.each do |project| %>
     <div class="carousel-item">
-      <%#= link_to project_path(project[:id]), class: "carousel-item" do %>
         <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
-      <%# end %>
       </div>
     <% end %>
   </div>
 </section>
+
+<section class="section-news">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Notre actualité</h2>
+      </div>
+    </div>
+  </div>
+  <div id="embed-ouibeat"></div>
+</section>
+
+<section class="section-discover">
+  <div class="discover-container">
+    <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
+    <%= link_to 'Voir la vidéo', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+  </div>
+</section>
+
+
+<%= render 'shared/footer' %>
+
 
 <% content_for :after_js do %>
   <script>

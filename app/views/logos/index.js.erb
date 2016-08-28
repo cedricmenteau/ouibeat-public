@@ -1,5 +1,5 @@
 <% if @logos.present? %>
 
-  $('.index-logos').html('<%= j render partial: "logos/shared/section_logos", locals: {logos: @logos} %>');
+  $('.logo-container').html('<%= j render partial: "logos/shared/section_logos", locals: {logos: @logos} %>');
 
 <% end %>
