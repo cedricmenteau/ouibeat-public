@@ -3,9 +3,68 @@
 <%= render 'shared/navbar_socialwall' %>
 
 <header>
-  <h1>Il n'a jamais été aussi simple de concevoir son social wall</h1>
-  <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+  <div class="home-header center-align">
+    <%= image_tag 'logos/main-logo.svg' %>
+    <h1>Le social wall des plus belles activations event + web + mobile</h1>
+    <%= link_to "#", class: 'btn-ouibeat waves-effect waves-light' do %>
+      Voir la vidéo
+    <% end %>
+
+    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+  </div>
+  <div class="social-container">
+    <i>100% compatible avec :</i>
+    <ul>
+      <li><%= image_tag 'shared/icons/facebook.svg' %></li>
+      <li><%= image_tag 'shared/icons/twitter.svg' %></li>
+      <li><%= image_tag 'shared/icons/instagram.svg' %></li>
+      <li><%= image_tag 'shared/icons/youtube.svg' %></li>
+      <li><%= image_tag 'shared/icons/vimeo.svg' %></li>
+      <li><%= image_tag 'shared/icons/periscope.svg' %></li>
+      <li><%= image_tag 'shared/icons/linkedin.svg' %></li>
+      <li><%= image_tag 'shared/icons/googleplus.svg' %></li>
+      <li><%= image_tag 'shared/icons/pinterest.svg' %></li>
+      <li><%= image_tag 'shared/icons/vine.svg' %></li>
+      <li><%= image_tag 'shared/icons/rss.svg' %></li>
+      <li><%= image_tag 'shared/icons/tumblr.svg' %></li>
+    </ul>
+  </div>
 </header>
+
+<section class="section-introduction section-text mask-grey-right">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <h2>Affichage en temps réel<br>et analyse de contenu social</h2>
+        <p>OuiBeat est une solution de création de social wall 100% personnalisable, adaptée à l’évènement, au web et au mobile. Grâce à la plateforme OuiBeat, vous agrégez instantanément les meilleurs contenus sociaux, vous animez et faites intéragir votre communauté, tout en développant votre visibilité digitale.</p>
+        <p>Génération de leads qualifiés, de trafic sur site web ou encore vecteur de viralité, OuiBeat est le nouvel outil marketing indispensable utilisé par les plus grandes agences et annonceurs dans leur stratégie digitale, mettant en avant le social brand content.</p>
+      </div>
+      <div class="col s12 m6">
+        <%= image_tag 'socialwall/socialwall-introduction.png' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-discover">
+  <div class="discover-container">
+    <h2>Il n'a jamais été aussi simple<br>de personnaliser son social wall !</h2>
+    <%= link_to 'Découvrez le fonctionnement', socialwall_plateforme_path, class: 'btn-ouibeat waves-effect waves-light' %>
+  </div>
+</section>
+
+<section class="section-clients grey lighten-4">
+  <div class="container">
+    <h2>Ils nous font confiance</h2>
+    <div class="row">
+      <% @logos.in_groups_of(6) do |logos| %>
+        <div class="col s12 logo-container">
+           <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
 
 <%= render 'shared/footer' %>
 

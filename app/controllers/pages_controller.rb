@@ -9,6 +9,8 @@ class PagesController < ApplicationController
   end
 
   def socialwall
+    @logos = Logo.all
+    @projects = Project.all
   end
 
   def socialwall_plateforme
