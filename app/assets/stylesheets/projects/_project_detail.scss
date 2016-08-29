@@ -19,8 +19,7 @@
   }
 
   .section-text {
-    margin: 60px 0;
-
+    margin-top: 60px;
 
     h2 {
       margin-bottom: 40px !important;
@@ -40,20 +39,24 @@
       width: 7%;
       margin-top: 10px;
     }
+  }
 
-    .paragraph {
+  .section-paragraph {
 
-      .pictures-detail {
-        display: flex;
-        max-width: 100%;
-        justify-content: center;
+    .pictures-detail {
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
 
-        img {
-          width: 100%;
-          height: 100%;
-        }
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
+  }
+
+  .section-video {
+    margin-bottom: 60px;
   }
 }
 
