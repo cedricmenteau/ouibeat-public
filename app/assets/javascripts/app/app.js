@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.parallax').parallax();
-  $('.carousel').carousel({shift: 0, indicators: true});
+  //$('.carousel').carousel({shift: 0, indicators: true});
 
 
   var mn = $('#navbar');
