@@ -83,12 +83,8 @@
   <div class="container">
     <h2>Ils nous font confiance</h2>
     <div class="row">
-      <% @logos.in_groups_of(6) do |logos| %>
-        <div class="col s12 logo-container">
-           <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
-        </div>
-      <% end %>
-    <%= link_to 'Voir plus', logos_path(id: @logos.last.id), remote: true, class: 'btn-ouibeat dark waves-effect waves-light' %>
+      <%= render partial: "shared/section_clients", locals: {logos: @logos} %>
+    </div>
   </div>
 </section>
 
@@ -101,10 +97,10 @@
       </div>
     </div>
   </div>
-  <div class="portfolio carousel carousel-slider">
-    <% @projects.each do |project| %>
+  <div class="portfolio-carousel">
+    <% @projects.in_groups_of(9) do |projects| %>
       <div class="carousel-item">
-        <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
+        <%= render partial: "projects/shared/section_projects", locals: {projects: projects} %>
       </div>
     <% end %>
   </div>
@@ -135,7 +131,15 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      window.setInterval(function(){$('.portfolio.carousel').carousel('next')},5000);
+      $('.portfolio-carousel').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        autoplay: true,
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
     });
 
     (function(){

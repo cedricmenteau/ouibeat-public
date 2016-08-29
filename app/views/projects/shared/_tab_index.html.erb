@@ -6,8 +6,8 @@
         <span class="title"><%= project.title %></span>
         <span class="title"><%= project.sub_title %></span>
         <span class="title"><%= project.text %></span>
-        <% project.pictures.each do |picture| %>
-          <%= cl_image_tag picture.path, width: 100, height: 100, crop: :fill %>
+        <% if project.picture? %>
+          <%= cl_image_tag project.picture.path, width: 100, height: 100, crop: :fill %>
         <% end %>
         <span class="position"><%#= project.position %></span>
         <% if project.logo? %>

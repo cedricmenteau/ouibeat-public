@@ -43,7 +43,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :category, :date, :title, :sub_title, :text, :logo, pictures: [])
+    params.require(:project).permit(:name, :category, :date, :title, :sub_title, :text, :logo, :picture)
   end
 
 end

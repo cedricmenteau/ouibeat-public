@@ -5,7 +5,7 @@ class PagesController < ApplicationController
       redirect_to admin_path
     end
     @logos = Logo.limit(6)
-    @projects = Project.all
+    @projects = Project.all.shuffle
   end
 
   def socialwall

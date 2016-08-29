@@ -5,11 +5,7 @@ class LogosController < ApplicationController
   before_action :set_logo, only: [:edit, :update, :destroy]
 
   def index
-    if params[:id]
-      @logos = Logo.where('id > ?', params[:id]).limit(6)
-    else
-      @logos = Logo.limit(6)
-    end
+    @logos = Logo.where('id > ?', params[:id]).limit(6)
   end
 
   def new
