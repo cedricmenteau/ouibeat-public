@@ -216,6 +216,19 @@ p {
   }
 }
 
+.section-news {
+  padding: 60px 0;
+
+  h2 {
+    text-align: center;
+
+    &:before, &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 .section-next {
   padding: 60px 0 0;
 
