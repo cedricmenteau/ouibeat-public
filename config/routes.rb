@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get 'socialwall-solution', to: 'pages#socialwall_solution'
 
   resources :logos
-  resources :projects
+
+  resources :projects do
+    resources :details
+  end
 
 end

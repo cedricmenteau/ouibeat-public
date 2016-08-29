@@ -1,5 +1,37 @@
-<div class="container">
-<span>SHOW SECTION</span>
-</div>
+<% body_class "project-detail" %>
+
+<%= render 'shared/navbar' %>
+
+<header>
+  <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+</header>
+
+<section class="section-text">
+  <div class="container">
+    <div class="row">
+      <div class="col s10 offset-s2">
+        <h2><%= @project.title %></h2>
+        <p class="label">Date :<span> <%= @project.date %></span></p>
+        <p class="label">Announceur :<span> <%= @project.name %></span></p>
+        <%= image_tag icon_category_path(@project.category), class: 'icon-category' %>
+        <div class="paragraph">
+          <% @details.each do |detail| %>
+            <p><%= detail.text %></p>
+            <div class="pictures-detail">
+              <% detail.pictures.each do |picture| %>
+                <%= cl_image_tag picture.path %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
+<%= render 'shared/footer' %>
+
+
+<% content_for :after_js do %>
+<% end %>

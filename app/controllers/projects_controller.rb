@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @details = Detail.where(project_id: @project.id)
   end
 
   def edit

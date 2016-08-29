@@ -15,6 +15,8 @@
 
 class Project < ActiveRecord::Base
 
+  has_many :details
+
   has_attachments :pictures, maximum: 10
   has_attachment :logo
 

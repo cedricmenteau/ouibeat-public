@@ -101,9 +101,9 @@
       </div>
     </div>
   </div>
-  <div class="carousel carousel-slider">
+  <div class="portfolio carousel carousel-slider">
     <% @projects.each do |project| %>
-    <div class="carousel-item">
+      <div class="carousel-item">
         <%= render partial: "projects/shared/section_projects", locals: {project: project} %>
       </div>
     <% end %>
@@ -135,8 +135,7 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $('.carousel.carousel-slider').carousel({full_width: true});
-      window.setInterval(function(){$('.carousel').carousel('next')},5000);
+      window.setInterval(function(){$('.portfolio.carousel').carousel('next')},5000);
     });
 
     (function(){

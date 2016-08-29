@@ -21,6 +21,8 @@
         <%= link_to project_path(project[:id]), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
+        <!-- INDEX details project -->
+        <%= link_to 'Liste détails', project_details_path(project[:id]), class: 'btn-ouibeat dark waves-effect waves-light' %>
       </li>
     <% end %>
   </ul>
@@ -29,3 +31,4 @@
     <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
   <% end %>
 </div>
+
