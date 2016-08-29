@@ -47,7 +47,7 @@
 </section>
 
 <section class="section-discover">
-  <div class="discover-container">
+  <div class="discover-container-solution">
     <h2>Il n'a jamais été aussi simple<br>de personnaliser son social wall !</h2>
     <%= link_to 'Découvrez le fonctionnement', socialwall_plateforme_path, class: 'btn-ouibeat waves-effect waves-light' %>
   </div>
@@ -64,6 +64,59 @@
       <% end %>
     </div>
   </div>
+</section>
+
+<section class="section-discover">
+  <div class="discover-container-video">
+    <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
+    <%= link_to 'Voir la vidéo', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+  </div>
+</section>
+
+<section class="section-devices">
+  <div class="container">
+    <h2>Une plateforme qui<br>s'adapte à tous les besoins</h2>
+    <div class="row">
+      <div class="col m2 center-align">
+        <%= image_tag 'socialwall/icons/icon-socialwall.svg' %>
+        <h3>Mur d'écran</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'socialwall/icons/icon-tv.svg' %>
+        <h3>Télévision</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'socialwall/icons/icon-tablet.svg' %>
+        <h3>Tablet</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'socialwall/icons/icon-laptop.svg' %>
+        <h3>Ordinateur</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'socialwall/icons/icon-mobile.svg' %>
+        <h3>Mobile</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'socialwall/icons/icon-watch.svg' %>
+        <h3>Montre</h3>
+      </div>
+    </div>
+    <div class="row center-align" style="padding-top: 45px">
+      <%= link_to 'Découvrir les solutions', socialwall_solution_path, class: 'btn-ouibeat dark waves-effect waves-light' %>
+    </div>
+  </div>
+</section>
+
+<section class="section-next grey lighten-4">
+  <h2>Nos autres expertises</h2>
+  <div class="next-container">
+    <div class="next-left mask-white-left-50">
+    </div>
+    <div class="next-right mask-white-right-50">
+    </div>
+  </div>
+
 </section>
 
 <%= render 'shared/footer' %>

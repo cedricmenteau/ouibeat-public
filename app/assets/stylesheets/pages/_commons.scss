@@ -119,7 +119,6 @@ p {
 
 .section-discover {
   position: relative;
-  margin-bottom: -60px;
   height: 500px;
   overflow: hidden;
 
@@ -135,14 +134,16 @@ p {
   }
 
   &:hover {
-    .discover-container {
+    .discover-container-video,
+    .discover-container-solution {
       &:after {
         transform: scale(1.1);
       }
     }
   }
 
-  .discover-container {
+  .discover-container-video,
+  .discover-container-solution {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,6 +181,55 @@ p {
     a {
       z-index: 10;
     }
+  }
+}
+
+.section-devices {
+  padding: 60px 0;
+
+  h2 {
+    margin-bottom: 60px !important;
+    text-align: center;
+
+    &:before, &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  h3 {
+    text-align: center;
+
+    &:before {
+      top: -15px;
+    }
+
+    &:after {
+      bottom: -15px;
+    }
+
+    &:before, &:after {
+      width: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.section-next {
+  padding: 60px 0 0;
+
+  h2 {
+    text-align: center;
+
+    &:before, &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .next-container {
+
   }
 }
 
