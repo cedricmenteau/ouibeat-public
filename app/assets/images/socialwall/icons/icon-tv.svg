@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="110px" height="110px" viewBox="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Icône</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Social-Wall_web-" transform="translate(-412.000000, -4558.000000)">
+            <g id="Icônes-plateforme" transform="translate(244.000000, 4416.000000)">
+                <g id="Icônes" transform="translate(0.000000, 140.000000)">
+                    <g id="Icône-2-" transform="translate(168.000000, 2.000000)">
+                        <g id="Icône">
+                            <circle id="Oval-42-Copy" fill="#F4F4F6" cx="55" cy="55" r="55"></circle>
+                            <g id="TV" transform="translate(24.000000, 35.000000)" fill="#1D1D1B">
+                                <g id="Group">
+                                    <path d="M59.3612822,3.52978462 L4.09967822,3.52978462 L4.09967822,35.6706308 L59.3612822,35.6706308 L59.3612822,3.52978462 L59.3612822,3.52978462 Z M58.4256386,34.7247923 L5.03532178,34.7247923 L5.03532178,4.47625385 L58.4256386,4.47625385 L58.4256386,34.7247923 L58.4256386,34.7247923 Z" id="Shape"></path>
+                                    <rect id="Rectangle-path" transform="translate(19.417850, 24.880913) rotate(225.000000) translate(-19.417850, -24.880913) " x="14.5447535" y="24.4078405" width="9.74619366" height="0.946144772"></rect>
+                                    <rect id="Rectangle-path" transform="translate(24.345526, 21.711096) rotate(45.465941) translate(-24.345526, -21.711096) " x="12.4089933" y="21.2380418" width="23.8730653" height="0.946109154"></rect>
+                                    <rect id="Rectangle-path" transform="translate(41.446082, 22.195221) rotate(45.000000) translate(-41.446082, -22.195221) " x="32.5330705" y="21.7221491" width="17.8260221" height="0.946144772"></rect>
+                                    <rect id="Rectangle-path" transform="translate(40.957398, 14.215000) rotate(44.886559) translate(-40.957398, -14.215000) " x="32.7368968" y="13.741927" width="16.4410033" height="0.946146627"></rect>
+                                    <rect id="Rectangle-path" transform="translate(30.768180, 18.778171) rotate(45.887262) translate(-30.768180, -18.778171) " x="24.4933496" y="18.3050757" width="12.5496604" height="0.946191318"></rect>
+                                    <rect id="Rectangle-path" x="24.8238713" y="40.0109538" width="13.3469554" height="0.946153846"></rect>
+                                    <path d="M0.0405445545,0.308761538 L0.0405445545,38.3507692 L62.9547772,38.3507692 L62.9547772,0.309076923 L0.0405445545,0.309076923 L0.0405445545,0.308761538 Z M62.0188218,37.4046154 L0.976188119,37.4046154 L0.976188119,1.25523077 L62.0191337,1.25523077 L62.0191337,37.4046154 L62.0188218,37.4046154 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
