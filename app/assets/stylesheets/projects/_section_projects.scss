@@ -74,6 +74,12 @@
         display: flex;
         position: relative;
 
+        &:hover {
+          .project-text {
+            opacity: 1;
+          }
+        }
+
         &:after {
           content: "";
           display: block;
@@ -126,6 +132,7 @@
     .project-text {
       width: 100%;
       z-index: 10;
+      opacity: 0;
 
       p {
         color: #fff;
