@@ -1,5 +1,6 @@
 <% if @logos.present? %>
-  $('.logo-container').html('<%= j render partial: "logos/shared/section_logos", locals: {logos: @logos} %>');
-  var logoId = $('.logo-container a').last().attr('class');
-  $('.btn-more').attr('href').split('=')[1] = logoId;
+  $('.logo-container').append('<%= j render partial: "logos/shared/section_logos", locals: {logos: @logos} %>');
+  <% if params[:id] == nil %>
+    $('.btn-more').addClass('disabled');
+  <% end %>
 <% end %>
