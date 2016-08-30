@@ -73,6 +73,10 @@
     }
   }
 
+  .section-introduction {
+    @include diagBgRight40($grey);
+  }
+
   .section-introduction.mask-grey-right {
     &:after {
       width: 45%;

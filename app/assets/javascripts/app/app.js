@@ -14,14 +14,25 @@ $(document).ready(function(){
     }
   });
 
-   var  on = $('#sub-nav');
-        ons = "sub-nav-scrolled";
+ var  on = $('#sub-nav');
+      ons = "sub-nav-scrolled";
 
   $(window).scroll(function() {
     if( $(this).scrollTop() > 30 ) {
       on.addClass(ons);
     } else {
       on.removeClass(ons);
+    }
+  });
+
+  var pn = $('#navbar-project');
+      pns = "navbar-project-scrolled";
+
+  $(window).scroll(function() {
+    if( $(this).scrollTop() > 0 ) {
+      pn.addClass(pns);
+    } else {
+      pns.removeClass(pn);
     }
   });
 });
