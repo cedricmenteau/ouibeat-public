@@ -187,7 +187,6 @@
 
 <%= render 'shared/footer' %>
 
-
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
@@ -199,8 +198,13 @@
         // speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
       });
     });
+
+    $('.slick-prev').html('something');
+    $('.slick-next').html('something');
 
     (function(){
       window.ouibeatEmbedSite='http://app.ouibeat.com';
