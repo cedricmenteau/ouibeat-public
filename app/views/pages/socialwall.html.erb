@@ -57,11 +57,9 @@
   <div class="container">
     <h2>Ils nous font confiance</h2>
     <div class="row">
-      <% @logos.in_groups_of(6) do |logos| %>
         <div class="col s12 logo-container">
-           <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
+           <%= render partial: "shared/section_clients", locals: {logos: @logos} %>
         </div>
-      <% end %>
     </div>
   </div>
 </section>

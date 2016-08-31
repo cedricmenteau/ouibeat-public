@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   end
 
   def socialwall
-    @logos = Logo.all
+    @logos = Logo.limit(6)
     @projects = Project.all
   end
 

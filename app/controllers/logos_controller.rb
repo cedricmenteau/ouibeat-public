@@ -6,7 +6,7 @@ class LogosController < ApplicationController
 
   def index
     @logos = Logo.where('id > ?', params[:id]).limit(6)
-    if @logos[5].present? && Logo.where('id > ?', @logos[5].id).limit(1)
+    if @logos[5].present? && Logo.where('id > ?', @logos[5].id).limit(1).present?
       params[:id] = @logos[5].id
     else
       params[:id] = nil
