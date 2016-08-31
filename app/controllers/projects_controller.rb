@@ -1,7 +1,15 @@
 class ProjectsController < ApplicationController
 
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :index_filter]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+
+  def index_filter
+    if !params[:filter].present? || params[:filter] == 'all'
+      @projects = Project.all
+    else
+      @projects = Project.where('category = ?', params[:filter])
+    end
+  end
 
   def new
     @project = Project.new
@@ -43,7 +51,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :category, :date, :title, :sub_title, :text, :logo, :picture)
+    params.require(:project).permit(:name, :category, :date, :title, :sub_title, :text, :logo, :picture, :filter)
   end
 
 end

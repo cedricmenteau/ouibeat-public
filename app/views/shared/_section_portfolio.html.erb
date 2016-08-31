@@ -1,0 +1,8 @@
+<nav id="sub-nav-filter" class="sub-nav-filter">
+  <%= link_to 'All', projects_index_filter_path(filter: 'all'), remote: true %>
+  <%= link_to 'Social wall', projects_index_filter_path(filter: 'Social Wall'), remote: true %>
+  <%= link_to 'Borne connectée', projects_index_filter_path(filter: 'Borne'), remote: true %>
+  <%= link_to 'Conception digitale', projects_index_filter_path(filter: 'Conception'), remote: true %>
+</nav>
+
+<%= render partial: "projects/shared/section_projects", locals: {projects: @projects} %>
