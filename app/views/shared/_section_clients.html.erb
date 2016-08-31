@@ -1,4 +1,4 @@
-<% if @logos.present? %>
+<% if logos.present? %>
   <% logos.in_groups_of(6) do |logos| %>
     <div class="col s12 logo-container">
       <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>

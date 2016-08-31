@@ -2,5 +2,9 @@
   $('.logo-container').append('<%= j render partial: "logos/shared/section_logos", locals: {logos: @logos} %>');
   <% if params[:id] == nil %>
     $('.btn-more').addClass('disabled');
+    $('.btn-more').attr('href', "#")
+  <% else %>
+   var href = $('.btn-more').attr('href').split('=')[0] + "=" + <%= params[:id] %>
+    $('.btn-more').attr('href', href)
   <% end %>
 <% end %>
