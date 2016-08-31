@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col s10 offset-s2">
         <h1><%= @project.title %></h1>
-        <p class="label">Date :<span> <%= @project.date.strftime("%d %B %Y") %></span></p>
+        <p class="label">Date :<span> <%= I18n.l @project.date, format: :short %> <%= @project.date.year %></span></p>
         <p class="label">Announceur :<span> <%= @project.name %></span></p>
         <%= image_tag icon_category_path(@project.category), class: 'icon-category' %>
       </div>

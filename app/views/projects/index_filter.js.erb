@@ -1,11 +1,11 @@
 $('.portfolio-carousel').remove();
 $('.section-portfolio').append('<%= j render partial: "projects/shared/section_projects", locals: {projects: @projects} %>')
 $('.portfolio-carousel').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        autoplay: true,
-        speed: 1500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
+  dots: false,
+  arrows: true,
+  infinite: true,
+  autoplay: true,
+  speed: 1500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+});

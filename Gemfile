@@ -26,6 +26,7 @@ gem 'autoprefixer-rails'
 gem 'material_icons'
 gem 'annotate'
 gem "jquery-slick-rails"
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'binding_of_caller'
