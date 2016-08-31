@@ -115,12 +115,21 @@ p {
     }
   }
 
+  .row {
+    text-align: center;
+  }
+
   .logo-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin-top: 40px;
     width: 100%;
+  }
+
+  .btn-more {
+    margin-top: 40px;
   }
 }
 
