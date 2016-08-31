@@ -19,4 +19,7 @@ class PagesController < ApplicationController
   def socialwall_solution
   end
 
+  def borne_connectee
+  end
+
 end

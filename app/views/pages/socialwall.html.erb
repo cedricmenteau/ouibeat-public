@@ -66,6 +66,32 @@
   </div>
 </section>
 
+<section class="section-carousel">
+  <h2>Event ou Web<br>à chaque social wall ses usages</h2>
+  <div class="carousel-socialwall-main">
+    <div class="carousel-socialwall-items carousel-socialwall-item-1">
+      <span>Social Wall Web</span>
+      <%= image_tag 'socialwall/carousel/socialwall-carousel-item-1.png' %>
+      <ul>
+        <li>Suivi de comptes sociaux</li>
+        <li>Partage instantané sur les réseaux sociaux</li>
+        <li>Téléchargement des photos de la borne</li>
+        <li>Création de jeu concours</li>
+        <li>Connexion à la borne photo OuiBeat</li>
+      </ul>
+    </div>
+    <div class="carousel-socialwall-items carousel-socialwall-item-2">
+      <span>Social Wall Event</span>
+      <%= image_tag 'socialwall/carousel/socialwall-carousel-item-2.png' %>
+      <ul>
+        <li>Adaptation à tous types d'écran</li>
+        <li>Personalisation et intégration de contenu promotionnel</li>
+        <li>Diffusion contenu vidéo, photo, édito</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="section-discover">
   <div class="discover-container-video">
     <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
@@ -108,6 +134,24 @@
   </div>
 </section>
 
+<!-- PORTFOLIO -->
+<section class="section-portfolio grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-carousel">
+    <% @projects.in_groups_of(9) do |projects| %>
+      <div class="carousel-item">
+        <%= render partial: "projects/shared/section_projects", locals: {projects: projects} %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
 <section class="section-news">
   <div class="container">
     <div class="row">
@@ -143,9 +187,25 @@
 
 <%= render 'shared/footer' %>
 
-
 <% content_for :after_js do %>
   <script>
+    $(document).ready(function(){
+      $('.carousel-socialwall-main').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        // autoplay: true,
+        // speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+      });
+    });
+
+    $('.slick-prev').html('something');
+    $('.slick-next').html('something');
+
     (function(){
       window.ouibeatEmbedSite='http://app.ouibeat.com';
       window.ouibeatEmbedPath='/events/web/eaa977282a03169a89909543183afab997a45784';

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'socialwall', to: 'pages#socialwall'
   get 'socialwall-plateforme', to: 'pages#socialwall_plateforme'
   get 'socialwall-solution', to: 'pages#socialwall_solution'
+  get 'borne-connectee', to: 'pages#borne_connectee'
 
   resources :logos
 
