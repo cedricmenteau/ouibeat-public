@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def socialwall
     @logos = Logo.limit(6)
-    @projects = Project.all
+    @projects = Project.where('category = ?', 'Social Wall')
   end
 
   def socialwall_plateforme

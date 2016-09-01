@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
 
   def show
     @details = Detail.where(project_id: @project.id)
+    @projects = Project.where.not(id: @project.id)
   end
 
   def edit

@@ -3,7 +3,7 @@
     <div class="carousel-item">
       <div class="container-projects">
         <ul class="col-1">
-          <li class="flex-item"><%= cl_image_tag(projects[0].picture.path) if projects[0].present? && projects[0].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[0].picture.path, width: 600, height: 600, crop: :fill, width: 600, height: 600, crop: :fill) if projects[0].present? && projects[0].picture.present? %>
             <div class="project-text">
               <% if projects[0].present? %>
                 <h3 class="title-small"><%= projects[0].title %></h3>
@@ -13,7 +13,7 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[1].picture.path) if projects[1].present? && projects[1].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[1].picture.path, width: 600, height: 600, crop: :fill) if projects[1].present? && projects[1].picture.present? %>
             <div class="project-text">
               <% if projects[1].present? %>
                 <h3 class="title-small"><%= projects[1].title %></h3>
@@ -23,7 +23,7 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[2].picture.path) if projects[2].present? && projects[2].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[2].picture.path, width: 600, height: 600, crop: :fill) if projects[2].present? && projects[2].picture.present? %>
             <div class="project-text">
               <% if projects[2].present? %>
                 <h1 class="name"><%= projects[2].name %></h1>
@@ -36,7 +36,7 @@
           </li>
         </ul>
         <ul class="col-2">
-          <li class="flex-item"><%= cl_image_tag(projects[3].picture.path) if projects[3].present? && projects[3].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[3].picture.path, width: 600, height: 600, crop: :fill) if projects[3].present? && projects[3].picture.present? %>
             <div class="project-text">
               <% if projects[3].present? %>
                 <h3 class="title-small"><%= projects[3].title %></h3>
@@ -46,7 +46,7 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[4].picture.path) if projects[4].present? && projects[4].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[4].picture.path, width: 600, height: 600, crop: :fill) if projects[4].present? && projects[4].picture.present? %>
             <div class="project-text">
               <% if projects[4].present? %>
                 <h3 class="title-small"><%= projects[4].title %></h3>
@@ -56,7 +56,7 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[5].picture.path) if projects[5].present? && projects[5].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[5].picture.path, width: 600, height: 600, crop: :fill) if projects[5].present? && projects[5].picture.present? %>
             <div class="project-text">
               <% if projects[5].present? %>
                 <h3 class="title-small"><%= projects[5].title %></h3>
@@ -69,7 +69,7 @@
         </ul>
         <ul class="col-3">
           <li class="flex-item">
-            <%= cl_image_tag(projects[6].picture.path) if projects[6].present? && projects[6].picture.present? %>
+            <%= cl_image_tag(projects[6].picture.path, width: 600, height: 600, crop: :fill) if projects[6].present? && projects[6].picture.present? %>
             <div class="project-text">
               <% if projects[6].present? %>
                 <h1 class="name"><%= projects[6].name %></h1>
@@ -80,7 +80,7 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[7].picture.path) if projects[7].present? && projects[7].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[7].picture.path, width: 600, height: 600, crop: :fill) if projects[7].present? && projects[7].picture.present? %>
             <div class="project-text">
               <% if projects[7].present? %>s
                 <h3 class="title-small"><%= projects[7].title %></h3>
@@ -90,7 +90,7 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[8].picture.path) if projects[8].present? && projects[8].picture.present? %>
+          <li class="flex-item"><%= cl_image_tag(projects[8].picture.path, width: 600, height: 600, crop: :fill) if projects[8].present? && projects[8].picture.present? %>
             <div class="project-text">
               <% if projects[8].present? %>
                 <h3 class="title-small"><%= projects[8].title %></h3>

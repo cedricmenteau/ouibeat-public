@@ -139,13 +139,7 @@
       </div>
     </div>
   </div>
-  <div class="portfolio-carousel">
-    <% @projects.in_groups_of(9) do |projects| %>
-      <div class="carousel-item">
-        <%= render partial: "projects/shared/section_projects", locals: {projects: projects} %>
-      </div>
-    <% end %>
-  </div>
+  <%= render partial: "projects/shared/section_projects", locals: {projects: @projects} %>
 </section>
 
 <section class="section-news">
