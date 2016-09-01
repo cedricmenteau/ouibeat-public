@@ -6,10 +6,9 @@
         <%= f.input :category, collection: ["Social Wall", "Borne", "Conception"], prompt: 'Sélectionnez une catégorie' %>
         <%= f.input :date %>
         <%= f.input :title %>
-        <%= f.input :sub_title %>
-        <%= f.input :text %>
         <%= f.input :picture, as: :attachinary %>
         <%= f.input :logo, as: :attachinary %>
+        <%= f.input :active, collection: [['Oui', true ], ['Non', false ]] %>
         <%= f.submit "Sauvegarder", class: "waves-effect waves-light btn" %>
       <% end %>
     </div>

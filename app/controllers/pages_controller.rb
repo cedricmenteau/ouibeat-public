@@ -5,12 +5,12 @@ class PagesController < ApplicationController
       redirect_to admin_path
     end
     @logos = Logo.limit(6)
-    @projects = Project.all.shuffle
+    @projects = Project.active.shuffle
   end
 
   def socialwall
     @logos = Logo.limit(6)
-    @projects = Project.where('category = ?', 'Social Wall')
+    @projects = Project.active.where('category = ?', 'Social Wall')
   end
 
   def socialwall_plateforme

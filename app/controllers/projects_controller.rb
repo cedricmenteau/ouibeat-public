@@ -5,9 +5,9 @@ class ProjectsController < ApplicationController
 
   def index_filter
     if !params[:filter].present? || params[:filter] == 'all'
-      @projects = Project.all
+      @projects = Project.active
     else
-      @projects = Project.where('category = ?', params[:filter])
+      @projects = Project.active.where('category = ?', params[:filter])
     end
   end
 
@@ -52,7 +52,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :category, :date, :title, :sub_title, :text, :logo, :picture, :filter)
+    params.require(:project).permit(:name, :category, :date, :title, :active, :logo, :picture, :filter)
   end
 
 end

@@ -2,14 +2,13 @@
   <div class="row">
     <div class="col s10 offset-s1">
       <%= simple_form_for(@project) do |f| %>
-        <%= f.input :name %>
         <%= f.input :category, collection: ["Social Wall", "Borne", "Conception"], prompt: 'Sélectionnez une catégorie' %>
-        <%= f.input :date %>
+        <%= f.input :name %>
         <%= f.input :title %>
-        <%= f.input :sub_title %>
-        <%= f.input :text %>
+        <%= f.input :date %>
         <%= f.input :picture, as: :attachinary %>
         <%= f.input :logo, as: :attachinary %>
+        <%= f.input :active, collection: [['Oui', true ], ['Non', false ]] %>
         <%= f.submit "Créer", class: "waves-effect waves-light btn" %>
       <% end %>
     </div>

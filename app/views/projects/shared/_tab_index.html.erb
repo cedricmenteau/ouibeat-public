@@ -2,17 +2,19 @@
   <ul class="collection">
     <% @projects.each do |project| %>
       <li class="collection-item">
-        <span class="title"><%= project.name %></span>
-        <span class="title"><%= project.title %></span>
-        <span class="title"><%= project.sub_title %></span>
-        <span class="title"><%= project.text %></span>
+        <p class="category">Catégorie : <%= project.category %></p>
+        <p class="name">Annonceur : <%= project.name %></p>
+        <p class="title">Titre : <%= project.title %></p>
         <% if project.picture? %>
+          <p>Image principale :</p>
           <%= cl_image_tag project.picture.path, width: 100, height: 100, crop: :fill %>
         <% end %>
-        <span class="position"><%#= project.position %></span>
+        <p class="position"><%#= project.position %></p>
         <% if project.logo? %>
+          <p>Logo :</p>
           <%= cl_image_tag project.logo.path, width: 100, height: 100, crop: :fill %>
         <% end %>
+        <p class="active">Projet actif : <%= project.active %></p>
          <!-- EDIT project -->
         <%= link_to edit_project_path(project[:id]) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
