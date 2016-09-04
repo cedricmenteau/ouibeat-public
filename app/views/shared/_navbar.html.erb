@@ -1,6 +1,21 @@
-<div class="navbar-disclaimer valign-wrapper">
-  <span class="center-align">Propulseur d'expérience digitale</span>
-</div>
+<% if current_page?(root_path) %>
+  <div class="navbar-disclaimer valign-wrapper">
+    <span class="center-align">Propulseur d'expérience digitale</span>
+  </div>
+<% elsif current_page?(socialwall_path) || current_page?(socialwall_plateforme_path) || current_page?(socialwall_solution_path) %>
+  <div class="navbar-disclaimer valign-wrapper">
+    <span class="center-align">Social wall</span>
+  </div>
+<% elsif current_page?(borne_connectee_path) %>
+  <div class="navbar-disclaimer valign-wrapper">
+    <span class="center-align">Borne connectée modulable</span>
+  </div>
+<% elsif current_page?(conception_digitale_path) %>
+  <div class="navbar-disclaimer valign-wrapper">
+    <span class="center-align">Conception digitale</span>
+  </div>
+<% else %>
+<% end %>
 
 <nav id="navbar" class="navbar">
   <div class="nav-wrapper">
@@ -19,3 +34,11 @@
   </div>
 </nav>
 
+<% if current_page?(socialwall_path) || current_page?(socialwall_plateforme_path) || current_page?(socialwall_solution_path) %>
+  <div id="sub-nav" class="sub-nav">
+    <%= link_to 'Social wall', socialwall_path %>
+    <%= link_to 'Plateforme', socialwall_plateforme_path %>
+    <%= link_to 'Solution', socialwall_solution_path %>
+    <!-- <#= link_to 'Portfolio', '/' %> -->
+  </div>
+<% end %>
