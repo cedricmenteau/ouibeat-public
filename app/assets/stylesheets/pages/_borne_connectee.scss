@@ -1,3 +1,141 @@
 .borne-connectee-action  {
+  header {
+    display: flex;
+    position: relative;
+    height: calc(100vh - 30px);
+    background: asset-url('borne/borne-header.jpg') no-repeat top center fixed;
+    background-size: cover;
 
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    .home-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      width: 100%;
+
+      h1 {
+        max-width: 660px;
+        margin: 2em 0 !important;
+        font-family: 'CenturyGothic-BoldItalic';
+        font-size: 20px;
+        color: #fff;
+
+        &:before, &:after {
+          display: none;
+        }
+      }
+
+      .icon-mouse {
+        margin-top: 3.5em;
+      }
+
+      .social-container {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        bottom: -90px;
+        background-color: black;
+
+        i {
+          margin-right: 20px;
+          color: white;
+        }
+
+        ul {
+          display: flex;
+          margin: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-text {
+    height: 520px;
+
+    h2 {
+      margin-bottom: 60px !important;
+      max-width: 100% !important;
+      transform: none !important;
+      left: 0;
+    }
+  }
+
+  .section-borne-intro.mask-white-right {
+    &:after {
+      background: asset-url('borne/borne-ouibeat.jpg') no-repeat top left;
+      background-size: cover;
+    }
+  }
+
+  .section-borne-murale.mask-white-left {
+    &:after {
+      background: asset-url('borne/borne-murale.png') no-repeat top left;
+      background-size: cover;
+      background-color: white;
+    }
+  }
+
+  .section-borne-connectee.mask-white-left {
+    &:after {
+      background: asset-url('borne/borne-ouibeat.jpg') no-repeat top left;
+      background-size: cover;
+    }
+  }
+
+  .section-pros {
+    padding: 60px 0;
+
+    .pros-items {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      h3 {
+        &:before, &:after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .section-next {
+    .next-container {
+      .next-left {
+        &:after {
+          background: asset-url('shared/selection/offer-socialwall.jpg') no-repeat top left;
+          background-size: cover;
+        }
+      }
+
+      .next-right {
+        &:after {
+          background: asset-url('socialwall/conception-digitale.png') no-repeat top left;
+          background-size: cover;
+        }
+      }
+    }
+  }
 }

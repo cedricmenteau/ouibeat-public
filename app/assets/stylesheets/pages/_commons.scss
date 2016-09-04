@@ -321,8 +321,6 @@ p {
         background-color: green;
         -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
-        background: asset-url('socialwall/borne-connectee.png') no-repeat top left;
-        background-size: cover;
         z-index: 0;
         @include transition(all 0.2s ease-in-out);
       }
@@ -349,8 +347,6 @@ p {
         background-color: blue;
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
-        background: asset-url('socialwall/conception-digitale.png') no-repeat top left;
-        background-size: cover;
         z-index: 0;
         @include transition(all 0.2s ease-in-out);
       }
@@ -385,7 +381,8 @@ p {
 
 .socialwall-action,
 .socialwall-plateforme-action,
-.socialwall-solution-action {
+.socialwall-solution-action,
+.borne-connectee-action {
 
   header {
     display: flex !important;

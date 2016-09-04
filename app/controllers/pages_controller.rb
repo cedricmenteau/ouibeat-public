@@ -20,6 +20,8 @@ class PagesController < ApplicationController
   end
 
   def borne_connectee
+    @logos = Logo.limit(6)
+    @projects = Project.active.shuffle
   end
 
 end

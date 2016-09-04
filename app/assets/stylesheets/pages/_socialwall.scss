@@ -216,6 +216,24 @@
   .portfolio-carousel {
     padding-top: 40px;
   }
+
+  .section-next {
+    .next-container {
+      .next-left {
+        &:after {
+          background: asset-url('socialwall/borne-connectee.png') no-repeat top left;
+          background-size: cover;
+        }
+      }
+
+      .next-right {
+        &:after {
+          background: asset-url('socialwall/conception-digitale.png') no-repeat top left;
+          background-size: cover;
+        }
+      }
+    }
+  }
 }
 
 
