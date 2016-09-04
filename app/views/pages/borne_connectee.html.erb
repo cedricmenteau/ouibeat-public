@@ -54,6 +54,46 @@
   </div>
 </section>
 
+<section class="section-configuration grey lighten-4 ">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Découvrez les<br>4 configurations</h2>
+      </div>
+    </div>
+  </div>
+  <div class="borne-carousel">
+    <div class="">
+      <%= image_tag 'borne/borne-config-1.png' %>
+      <div class="item-details">
+        <span>Configuration 1</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'borne/borne-config-2.png' %>
+      <div class="item-details">
+        <span>Configuration 2</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'borne/borne-config-3.png' %>
+      <div class="item-details">
+        <span>Configuration 3</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'borne/borne-config-4.png' %>
+      <div class="item-details">
+        <span>Configuration 4</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section-pros">
   <div class="container">
     <div class="pros-items">
@@ -152,16 +192,57 @@
     <div class="next-left">
       <div class="next-content">
         <h3>Social Wall</h3>
-        <%= link_to 'Découvrez notre solution', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+        <%= link_to 'Découvrez notre solution', socialwall_path , class: 'btn-ouibeat waves-effect waves-light' %>
       </div>
     </div>
     <div class="next-right">
       <div class="next-content">
         <h3>La conception digitale</h3>
-        <%= link_to 'Concevez votre projet', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+        <%= link_to 'Concevez votre projet', conception_digitale_path, class: 'btn-ouibeat waves-effect waves-light' %>
       </div>
     </div>
   </div>
 </section>
 
 <%= render 'shared/footer' %>
+
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function(){
+      $('.borne-carousel').slick({
+        centerMode: true,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        draggable: true,
+        initialSlide: 0,
+        swipe: true,
+        touchMove: true,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+<% end %>
