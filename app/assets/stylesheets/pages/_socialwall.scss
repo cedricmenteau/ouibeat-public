@@ -4,7 +4,7 @@
     position: relative;
     margin-top: 40px !important;
     margin-top: 100px;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: asset-url('socialwall/socialwall-header.png') no-repeat top center fixed;
     background-size: cover;
 
