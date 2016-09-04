@@ -24,4 +24,10 @@ class PagesController < ApplicationController
     @projects = Project.active.shuffle
   end
 
+  def conception_digitale
+  end
+
+  def contact
+  end
+
 end
