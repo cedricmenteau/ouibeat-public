@@ -26,14 +26,56 @@
     <h2>Créez les plus beaux<br>social walls</h2>
     <p>Sélectionnez les réseaux sociaux, les hashtags, vos comptes de marques ou d’influenceurs que vous souhaitez activer, intégrez votre propre contenu de marque et personnalisez l’affichage de votre social wall à votre besoin et votre image. Choisissez parmi nos thèmes pré-configurés ou développez votre propre affichage sur-mesure grâce à notre équipe de développeurs.</p>
   </div>
-  <div class="carousel-container">
-    <%= image_tag 'socialwall/carousel/macbook.png', class: 'macbook-mockup' %>
-    <div class="carousel">
-      <a class="carousel-item" href="#one!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
-      <a class="carousel-item" href="#two!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
-      <a class="carousel-item" href="#three!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
-      <a class="carousel-item" href="#four!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
-      <a class="carousel-item" href="#five!"><%= image_tag 'socialwall/carousel/screen-ikea.png' %></a>
+
+  <div class="exemples-centered">
+    <div class="">
+      <%= image_tag 'socialwall/carousel/screen-obcustom.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob03.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob02.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob01.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob04.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-obweb.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-obperiscope.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
     </div>
   </div>
 </section>
@@ -72,5 +114,42 @@
 
 
 <% content_for :after_js do %>
-
+  <script>
+    $(document).ready(function(){
+      $('.exemples-centered').slick({
+        centerMode: true,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        draggable: true,
+        initialSlide: 0,
+        swipe: true,
+        touchMove: true,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
 <% end %>
