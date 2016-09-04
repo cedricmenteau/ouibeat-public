@@ -97,13 +97,7 @@
       </div>
     </div>
   </div>
-  <div class="portfolio-carousel">
-    <% @projects.in_groups_of(9) do |projects| %>
-      <div class="carousel-item">
-        <%= render partial: "projects/shared/section_projects", locals: {projects: projects} %>
-      </div>
-    <% end %>
-  </div>
+  <%= render partial: "shared/section_portfolio" %>
 </section>
 
 <section class="section-news">
@@ -139,6 +133,8 @@
         speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
       });
     });
 

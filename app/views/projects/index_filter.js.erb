@@ -1,0 +1,13 @@
+$('.portfolio-carousel').remove();
+$('.section-portfolio').append('<%= j render partial: "projects/shared/section_projects", locals: {projects: @projects} %>')
+$('.portfolio-carousel').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  autoplay: true,
+  speed: 1500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+  prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+});

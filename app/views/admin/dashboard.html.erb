@@ -15,6 +15,13 @@
     <%= render "logos/shared/tab_index" %>
   </div>
   <div id="projects" class="col s12">
+    <ul class="indicators">
+      <li><span>Nombre de projets créés : <%= @projects.count %></li>
+      <li><span>Nombre de projets actifs : <%= @projects.active.count %></li>
+      <li><span>Nombre de projets actifs "Social Wall" : <%= @projects.active.social_wall.count %></li>
+      <li><span>Nombre de projets actifs "Borne connectées" : <%= @projects.active.borne.count %></li>
+      <li><span>Nombre de projets actifs "Conception digitale" : <%= @projects.active.conception.count %></li>
+    </ul>
     <%= render "projects/shared/tab_index" %>
   </div>
   <div id="details" class="col s12">

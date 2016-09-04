@@ -11,6 +11,5 @@
 #
 
 class Logo < ActiveRecord::Base
-  # mount_uploader :picture, PictureUploader
   has_attachment :picture
 end
