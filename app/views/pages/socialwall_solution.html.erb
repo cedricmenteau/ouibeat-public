@@ -2,18 +2,21 @@
 
 <%= render 'shared/navbar' %>
 
-<header>
+<header class="second-layout">
   <h1>Une plateforme qui s'adapte à toutes les solutions</h1>
   <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
 </header>
 
-<section class="section-parol section-text grey lighten-4 mask-white-right">
+<section class="section-parol section-text">
   <div class="container">
     <div class="row">
       <div class="col s12 m6">
        <h2>Donnez la parole<br>à votre communauté</h2>
         <p>Qui est mieux placé que votre communauté pour témoigner et appuyer vos campagnes marketing? </p>
         <p>Grâce à OuiBeat, vous offrez l’expérience utilisateur la plus complète possible autour de vos activations et entretenez un lien affectif avec votre cible bien au delà du simple événement.</p>
+      </div>
+      <div class="col s12 m6 right-align">
+       <%= image_tag 'conceptiondigitale/section-startup.png'%>
       </div>
     </div>
   </div>

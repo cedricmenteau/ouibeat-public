@@ -25,6 +25,7 @@ class PagesController < ApplicationController
   end
 
   def conception_digitale
+    @projects = Project.active.shuffle
   end
 
   def contact
