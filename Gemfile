@@ -27,6 +27,7 @@ gem 'material_icons'
 gem 'annotate'
 gem "jquery-slick-rails"
 gem 'rails-i18n'
+gem 'acts_as_list'
 
 group :development, :test do
   gem 'binding_of_caller'

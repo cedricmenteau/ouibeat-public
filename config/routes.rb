@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get 'socialwall-solution', to: 'pages#socialwall_solution'
   get 'borne-connectee', to: 'pages#borne_connectee'
   get 'projects-index-filter', to: 'projects#index_filter'
+  get 'logos-move-lower', to: 'logos#move_lower'
+  get 'logos-move-higher', to: 'logos#move_higher'
+  get 'logos-move-position', to: 'logos#move_position'
 
   resources :logos
 

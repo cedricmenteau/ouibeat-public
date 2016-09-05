@@ -17,6 +17,12 @@
         <%= link_to logo_path(logo[:id]), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
+        <%= link_to logos_move_lower_path(id: logo[:id]) do %>
+          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
+        <% end %>
+        <%= link_to logos_move_higher_path(id: logo[:id]) do %>
+          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
+        <% end %>
       </li>
     <% end %>
   </ul>

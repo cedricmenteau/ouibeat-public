@@ -126,6 +126,11 @@ p {
     align-items: center;
     margin-top: 40px;
     width: 100%;
+
+    .logo-list {
+      display: flex;
+      align-items: center;
+    }
   }
 
   .btn-more {
