@@ -1,4 +1,4 @@
-<div class="logo-list">
+<div class="logos">
   <% logos.each do |logo| %>
     <% if logo %>
       <%= link_to cl_image_tag(logo.picture.path, width: 100), logo.link, target: "_blank", class: logo.id %>

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'socialwall-plateforme', to: 'pages#socialwall_plateforme'
   get 'socialwall-solution', to: 'pages#socialwall_solution'
   get 'borne-connectee', to: 'pages#borne_connectee'
+  get 'conception-digitale', to: 'pages#conception_digitale'
+  get 'contact', to: 'pages#contact'
   get 'projects-index-filter', to: 'projects#index_filter'
   get 'logos-move-lower', to: 'logos#move_lower'
   get 'logos-move-higher', to: 'logos#move_higher'

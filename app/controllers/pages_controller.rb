@@ -20,6 +20,15 @@ class PagesController < ApplicationController
   end
 
   def borne_connectee
+    @logos = Logo.limit(6)
+    @projects = Project.active.shuffle
+  end
+
+  def conception_digitale
+    @projects = Project.active.shuffle
+  end
+
+  def contact
   end
 
 end

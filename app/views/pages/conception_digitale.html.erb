@@ -1,0 +1,132 @@
+<% body_class "conception-digitale-action" %>
+
+<%= render 'shared/navbar' %>
+
+<header class="main-layout">
+  <div class="home-header center-align">
+    <%= image_tag 'logos/main-logo.svg' %>
+    <h1>Conception et développement<br>de mécanique d'engagement mobile et sociale</h1>
+    <%= link_to "#", class: 'btn-ouibeat waves-effect waves-light' do %>
+      Voir la vidéo
+    <% end %>
+
+    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+    <div class="social-container">
+      <i>100% compatible avec :</i>
+      <ul>
+        <li><%= image_tag 'shared/icons/facebook.svg' %></li>
+        <li><%= image_tag 'shared/icons/twitter.svg' %></li>
+        <li><%= image_tag 'shared/icons/instagram.svg' %></li>
+        <li><%= image_tag 'shared/icons/youtube.svg' %></li>
+        <li><%= image_tag 'shared/icons/vimeo.svg' %></li>
+        <li><%= image_tag 'shared/icons/periscope.svg' %></li>
+        <li><%= image_tag 'shared/icons/linkedin.svg' %></li>
+        <li><%= image_tag 'shared/icons/googleplus.svg' %></li>
+        <li><%= image_tag 'shared/icons/pinterest.svg' %></li>
+        <li><%= image_tag 'shared/icons/vine.svg' %></li>
+        <li><%= image_tag 'shared/icons/rss.svg' %></li>
+        <li><%= image_tag 'shared/icons/tumblr.svg' %></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="section-startup section-text grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <h2>La start-up<br>des réseaux sociaux</h2>
+        <p>De la 1ère expérience de marque vécue à l’acte d’achat, il est incontestable d’affirmer que le digital s’est intégré dans tous les leviers du processus de consommation. Les entreprises ont l’obligation de repenser leurs stratégies de communication en développant de nouvelles actions pour capter l’attention, optimiser leur visibilité sur le web, générer du traffic et embaser du lead qualifié afin d’entrer dans leurs nouveaux programmes CRM et PRM.</p>
+        <p>C’est pour répondre à ces objectifs que OuiBeat s’est spécialisé dans l’utilisation des réseaux sociaux intégrées aux activation de marque et intervient du conseil à la production d’actions social media via 2 offres complémentaires :</p>
+        <ul>
+          <li><span>OuiBeat Web</span> regroupe l’ensemble du savoir-faire acquis dans la mise en place de solutions web & mobiles.</li>
+          <li><span>OuiBeat Social</span> est basée sur le développement d’applications dédiées aux réseaux sociaux </li>
+        </ul>
+      </div>
+       <div class="col s12 m6 right-align">
+        <%= image_tag 'conceptiondigitale/section-startup.png'%>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-divider center-align">
+  <h2>Nos offres<br>web et sociale</h2>
+</section>
+
+<section class="section-web section-text grey lighten-4 mask-grey-right">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <%= image_tag 'conceptiondigitale/section-web.png'%>
+      </div>
+      <div class="col s12 m6">
+        <%= image_tag 'conceptiondigitale/logo-ouibeat-web.png', class: 'section-logo'  %>
+        <p>Vous souhaitez créer une application ou un site web mobile de marque associé à un dispositif social, l’offre OuiBeat Web est parfaitement adaptée pour vous accompagner via la mise en place de solutions telles que :</p>
+        <ul>
+          <li>Application native iOS, Android</li>
+          <li>Site web mobile et responsive design</li>
+          <li>Application mobile in-store</li>
+          <li>Web Application événementielles</li>
+          <li>Dashboard d’analyse digitale et diffusion de contenu</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-social section-text grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <%= image_tag 'conceptiondigitale/logo-ouibeat-social.png', class: 'section-logo' %>
+        <p>Car l’API de OuiBeat est certifiée auprès des principaux réseaux sociaux, l’offre OuiBeat Social sera votre meilleur allié dans le développement réactif de votre application dédiée aux réseaux sociaux sur les thématiques suivantes :</p>
+        <ul>
+          <li><span>Application sociales sur-mesure</span> avec intégration des fonctionnalités virales de chaque réseaux sociaux et un design unique pour un parcours utilisateurs optimisés</li>
+          <li><span>Application prête à l’emploi</span> pour gagner en réactivité : jeux concours, instants gagnants, quizz </li>
+          <li><span>Dashboard</span> de data-visualisation pour analyser et piloter vos actions de communication</li>
+          <li><span>Social Feed</span> pour visualiser les discussions de votre communauté</li>
+        </ul>
+      </div>
+      <div class="col s12 m6">
+        <%= image_tag 'conceptiondigitale/section-social.png' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
+  </div>
+  <%= render partial: "shared/section_portfolio" %>
+</section>
+
+<section class="section-next grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <h2>Nos autres expertises</h2>
+    </div>
+  </div>
+  <div class="next-container">
+    <div class="next-left">
+      <div class="next-content">
+        <h3>Social Wall</h3>
+        <%= link_to 'Découvrez notre solution', socialwall_path , class: 'btn-ouibeat waves-effect waves-light' %>
+      </div>
+    </div>
+    <div class="next-right">
+      <div class="next-content">
+        <h3>La borne photo connectée<br>et modulable</h3>
+        <%= link_to 'Découvrez la borne', borne_connectee_path, class: 'btn-ouibeat waves-effect waves-light' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>

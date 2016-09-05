@@ -6,11 +6,11 @@
     <div class="row">
       <div class="col m3 pages">
         <ul>
-          <li><%= link_to 'Home', '/' %></li>
-          <li><%= link_to 'Social Wall', '/' %></li>
-          <li><%= link_to 'Bornes connectées', '/' %></li>
-          <li><%= link_to 'Conception digitale', '/' %></li>
-          <li><%= link_to 'Contact', '/' %></li>
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Social Wall', socialwall_path %></li>
+          <li><%= link_to 'Bornes connectées', borne_connectee_path %></li>
+          <li><%= link_to 'Conception digitale', conception_digitale_path %></li>
+          <li><%= link_to 'Contact', contact_path %></li>
         </ul>
       </div>
       <div class="col m3 corporate">
@@ -26,27 +26,27 @@
           <span>Suivez-nous</span>
           <ul class='social-grid'>
             <li>
-              <%= link_to '/' do%>
+              <%= link_to 'https://www.facebook.com/OuiBeat/' do%>
                 <%= image_tag 'shared/footer/footer-icon-facebook.svg' %>
               <% end %>
             </li>
             <li>
-              <%= link_to '/' do%>
+              <%= link_to 'https://twitter.com/ouibeat' do%>
                 <%= image_tag 'shared/footer/footer-icon-twitter.svg' %>
               <% end %>
             </li>
             <li>
-              <%= link_to '/' do%>
+              <%= link_to 'https://www.instagram.com/ouibeat/' do%>
                 <%= image_tag 'shared/footer/footer-icon-instagram.svg' %>
               <% end %>
             </li>
             <li>
-              <%= link_to '/' do%>
+              <%= link_to 'https://vimeo.com/ouibeat' do%>
                 <%= image_tag 'shared/footer/footer-icon-vimeo.svg' %>
               <% end %>
             </li>
             <li>
-              <%= link_to '/' do%>
+              <%= link_to 'https://www.linkedin.com/company/agence-ambassador' do%>
                 <%= image_tag 'shared/footer/footer-icon-linkedin.svg' %>
               <% end %>
             </li>

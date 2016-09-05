@@ -2,11 +2,247 @@
 
 <%= render 'shared/navbar' %>
 
-<section class="section-test">
+<header class="main-layout">
+  <div class="home-header center-align">
+    <%= image_tag 'logos/main-logo.svg' %>
+    <h1>La borne modulable connectée<br>des plus belles activations</h1>
+    <%= link_to "#", class: 'btn-ouibeat waves-effect waves-light' do %>
+      Voir la vidéo
+    <% end %>
 
+    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+    <div class="social-container">
+      <i>100% compatible avec :</i>
+      <ul>
+        <li><%= image_tag 'shared/icons/facebook.svg' %></li>
+        <li><%= image_tag 'shared/icons/twitter.svg' %></li>
+        <li><%= image_tag 'shared/icons/instagram.svg' %></li>
+        <li><%= image_tag 'shared/icons/youtube.svg' %></li>
+        <li><%= image_tag 'shared/icons/vimeo.svg' %></li>
+        <li><%= image_tag 'shared/icons/periscope.svg' %></li>
+        <li><%= image_tag 'shared/icons/linkedin.svg' %></li>
+        <li><%= image_tag 'shared/icons/googleplus.svg' %></li>
+        <li><%= image_tag 'shared/icons/pinterest.svg' %></li>
+        <li><%= image_tag 'shared/icons/vine.svg' %></li>
+        <li><%= image_tag 'shared/icons/rss.svg' %></li>
+        <li><%= image_tag 'shared/icons/tumblr.svg' %></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<section class="section-borne-intro section-text grey lighten-4 mask-white-right">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6">
+        <h2>Animez votre<br>point de vente</h2>
+        <p>Véritable outil marketing, la borne photo OuiBeat est la solution indispensable pour l’animation de vos évènements. Vos invités impriment en live les photos prises depuis la borne, postées sur les réseaux sociaux avec votre hashtag ou encore prise par un photographe professionnel sur votre évenement.</p>
+        <p>Impression à votre identité, envoie par mail ou encore partage sur les réseaux sociaux, la borne offre de nombreuses possibilités pour promouvoir et viraliser votre évènement.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<section class="section-test-2">
-
+<section class="section-borne-murale section-text grey lighten-3 mask-white-left">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m5 offset-m7">
+        <h2>Une borne<br>modulable et design</h2>
+        <p>Version classique, enfant ou encore mini, la borne photo Ouibeat s’adapte très facilement à tous les types d’évènements. Avec son écran tactile protégé par un verre trampé très résistant et son boitier tout aluminium, elle s’offre un design sobre et épuré. La structure est totalement personnalisable, permettant ainsi une immersion totale dans votre évènement. </p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<section class="section-configuration grey lighten-4 ">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Découvrez les<br>4 configurations</h2>
+      </div>
+    </div>
+  </div>
+  <div class="borne-carousel">
+    <div class="">
+      <%= image_tag 'borne/borne-config-1.png' %>
+      <div class="item-details">
+        <span>Configuration 1</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'borne/borne-config-2.png' %>
+      <div class="item-details">
+        <span>Configuration 2</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'borne/borne-config-3.png' %>
+      <div class="item-details">
+        <span>Configuration 3</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'borne/borne-config-4.png' %>
+      <div class="item-details">
+        <span>Configuration 4</span>
+        <i>La version classique de la borne, qui s’adapte à tous types d’événements </i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pros">
+  <div class="container">
+    <div class="pros-items">
+      <div class="col m2 center-align">
+        <%= image_tag 'borne/icons/icon-borne-touch.svg' %>
+        <h3>Écran tactile</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'borne/icons/icon-borne-modulable.svg' %>
+        <h3>Modulable</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'borne/icons/icon-borne-custom.svg' %>
+        <h3>Personalisable</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'borne/icons/icon-borne-pic.svg' %>
+        <h3>Appareil photo<br>reflex</h3>
+      </div>
+      <div class="col m2 center-align">
+        <%= image_tag 'borne/icons/icon-borne-print.svg' %>
+        <h3>Impression<br>instantanée</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-borne-connectee section-text grey lighten-4 mask-white-left">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m5 offset-m7">
+        <h2>Une borne<br>100% connectée</h2>
+        <p>Totalement compatible et complémentaire du social wall OuiBeat, la borne photo Ouibeat offre une expérience 100% connectée à votre public :</p>
+        <ul>
+          <li>• envoie d’e-mails personnalisés</li>
+          <li>• partage et impression depuis les réseaux sociaux</li>
+          <li>• diffusion automatique sur les socials wall OuiBeat (event & web)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pros">
+  <div class="container">
+    <div class="pros-items">
+      <div class="center-align">
+        <%= image_tag 'borne/icons/icon-borne-mail.svg' %>
+        <h3>Écran tactile</h3>
+      </div>
+      <div class="center-align">
+        <%= image_tag 'borne/icons/icon-borne-share.svg' %>
+        <h3>Modulable</h3>
+      </div>
+      <div class="center-align">
+        <%= image_tag 'borne/icons/icon-borne-socialwall.svg' %>
+        <h3>Personalisable</h3>
+      </div>
+      <div class="center-align">
+        <%= image_tag 'borne/icons/icon-borne-collect.svg' %>
+        <h3>Appareil photo<br>reflex</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section-portfolio grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
+  </div>
+  <%= render partial: "shared/section_portfolio" %>
+</section>
+
+<!-- LOGOS -->
+<section class="section-clients">
+  <div class="container">
+    <h2>Ils nous font confiance</h2>
+    <div class="row">
+      <%= render partial: "shared/section_clients", locals: {logos: @logos} %>
+    </div>
+  </div>
+</section>
+
+<section class="section-next grey lighten-4">
+  <div class="container">
+    <div class="row">
+      <h2>Nos autres expertises</h2>
+    </div>
+  </div>
+  <div class="next-container">
+    <div class="next-left">
+      <div class="next-content">
+        <h3>Social Wall</h3>
+        <%= link_to 'Découvrez notre solution', socialwall_path , class: 'btn-ouibeat waves-effect waves-light' %>
+      </div>
+    </div>
+    <div class="next-right">
+      <div class="next-content">
+        <h3>La conception digitale</h3>
+        <%= link_to 'Concevez votre projet', conception_digitale_path, class: 'btn-ouibeat waves-effect waves-light' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>
+
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function(){
+      $('.borne-carousel').slick({
+        centerMode: true,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        draggable: true,
+        initialSlide: 0,
+        swipe: true,
+        touchMove: true,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+  </script>
+<% end %>

@@ -4,7 +4,7 @@
     position: relative;
     margin-top: 40px !important;
     margin-top: 100px;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background: asset-url('socialwall/socialwall-header.png') no-repeat top center fixed;
     background-size: cover;
 
@@ -75,6 +75,11 @@
 
   .section-introduction {
     @include diagBgRight40($grey);
+
+    img {
+      margin-top: 120px;
+      width: 100%;
+    }
   }
 
   .section-introduction.mask-grey-right {
@@ -85,12 +90,6 @@
     }
   }
 
-  .section-introduction {
-    img {
-      margin-top: 120px;
-      width: 100%;
-    }
-  }
 
   .section-text {
     h2 {
@@ -216,4 +215,30 @@
   .portfolio-carousel {
     padding-top: 40px;
   }
+
+  .section-portfolio {
+    .sub-nav-filter {
+      background-color: #f5f5f5;
+    }
+  }
+
+  .section-next {
+    .next-container {
+      .next-left {
+        &:after {
+          background: asset-url('socialwall/borne-connectee.png') no-repeat top left;
+          background-size: cover;
+        }
+      }
+
+      .next-right {
+        &:after {
+          background: asset-url('socialwall/conception-digitale.png') no-repeat top left;
+          background-size: cover;
+        }
+      }
+    }
+  }
 }
+
+

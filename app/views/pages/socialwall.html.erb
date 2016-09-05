@@ -1,6 +1,6 @@
 <% body_class "socialwall-action" %>
 
-<%= render 'shared/navbar_socialwall' %>
+<%= render 'shared/navbar' %>
 
 <header>
   <div class="home-header center-align">
@@ -31,7 +31,7 @@
   </div>
 </header>
 
-<section class="section-introduction section-text mask-grey-right">
+<section class="section-introduction section-text">
   <div class="container">
     <div class="row">
       <div class="col s12 m6">
@@ -88,6 +88,67 @@
   </div>
 </section>
 
+<section class="section-exemples">
+  <div class="container">
+    <div class="row">
+      <div class="s12">
+        <h2>Choissisez votre thème<br>ou faites le 100% sur mesure</h2>
+      </div>
+    </div>
+  </div>
+  <div class="exemples-centered">
+    <div class="">
+      <%= image_tag 'socialwall/carousel/screen-obcustom.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob03.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+    <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob02.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob01.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-ob04.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-obweb.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+     <div class="">
+      <%= image_tag 'socialwall/carousel/screen-obperiscope.jpg' %>
+      <div class="item-details">
+        <span>Social Wall Event - 0B-01</span>
+        <i>Bandeau Haut</i>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section-discover">
   <div class="discover-container-video">
     <h2>Découvrir l'offre OuiBeat<br>en vidéo</h2>
@@ -139,7 +200,7 @@
       </div>
     </div>
   </div>
-  <%= render partial: "projects/shared/section_projects", locals: {projects: @projects} %>
+  <%= render partial: "shared/section_portfolio" %>
 </section>
 
 <section class="section-news">
@@ -163,13 +224,13 @@
     <div class="next-left">
       <div class="next-content">
         <h3>La borne connectée<br>et modulable</h3>
-        <%= link_to 'Découvrez la borne', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+        <%= link_to 'Découvrez la borne', borne_connectee_path, class: 'btn-ouibeat waves-effect waves-light' %>
       </div>
     </div>
     <div class="next-right">
       <div class="next-content">
         <h3>La conception digitale</h3>
-        <%= link_to 'Concevez votre projet', '#', class: 'btn-ouibeat waves-effect waves-light' %>
+        <%= link_to 'Concevez votre projet', conception_digitale_path, class: 'btn-ouibeat waves-effect waves-light' %>
       </div>
     </div>
   </div>
@@ -190,6 +251,41 @@
         slidesToScroll: 1,
         nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+      });
+
+      $('.exemples-centered').slick({
+        centerMode: true,
+        dots: false,
+        arrows: true,
+        infinite: false,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        draggable: true,
+        initialSlide: 0,
+        swipe: true,
+        touchMove: true,
+        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
+        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+        ]
       });
     });
 
