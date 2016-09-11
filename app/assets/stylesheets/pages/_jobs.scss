@@ -1,0 +1,52 @@
+.jobs-action {
+  .section-jobs {
+    padding: 120px 0;
+    min-height: 520px;
+    background: -webkit-linear-gradient(-115deg, white 46%,  $light-grey 46%);
+    background: linear-gradient(-115deg, white 46%,  $light-grey 46%);
+
+    h3 {
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        bottom: -8px;
+      }
+    }
+
+    ul {
+      margin-top: 60px;
+      padding-left: 20px;
+
+      li {
+        list-style: disc;
+        margin: 10px 0;
+
+        a {
+          color: black;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .mask-image {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      background-color: white;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%);
+      background: asset-url('jobs/jobs-background.jpg') no-repeat top left;
+      background-size: cover;
+      z-index: 0;
+    }
+  }
+}
