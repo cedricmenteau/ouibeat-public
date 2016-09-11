@@ -31,4 +31,10 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def certification
+  end
+
+  def jobs
+  end
+
 end

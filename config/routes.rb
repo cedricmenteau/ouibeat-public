@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'conception-digitale', to: 'pages#conception_digitale'
   get 'contact', to: 'pages#contact'
   get 'projects-index-filter', to: 'projects#index_filter'
+  get 'certification', to: 'pages#certification'
+  get 'jobs', to: 'pages#jobs'
 
   resources :logos
 
