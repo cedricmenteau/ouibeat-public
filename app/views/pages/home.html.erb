@@ -10,7 +10,10 @@
       Voir la vidéo
     <% end %>
 
-    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+    <%= link_to "#who-are-we" do %>
+      <%= render 'shared/mouse' %>
+    <% end %>
+
     <div class="social-container">
       <i>100% compatible avec :</i>
       <ul>

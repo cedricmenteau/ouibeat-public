@@ -35,4 +35,10 @@ $(document).ready(function(){
       pns.removeClass(pn);
     }
   });
+
+  $("#demo01").animatedModal({
+    animatedIn:'zoomIn',
+    animatedOut:'zoomInDown',
+    color:'#000000'
+  });
 });

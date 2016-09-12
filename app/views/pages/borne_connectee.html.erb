@@ -10,7 +10,10 @@
       Voir la vidéo
     <% end %>
 
-    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+    <%= link_to "#borne-first-block" do %>
+      <%= render 'shared/mouse' %>
+    <% end %>
+
     <div class="social-container">
       <i>100% compatible avec :</i>
       <ul>
@@ -31,7 +34,7 @@
   </div>
 </header>
 
-<section class="section-borne-intro section-text grey lighten-4 mask-white-right">
+<section id="borne-first-block" class="section-borne-intro section-text grey lighten-4 mask-white-right">
   <div class="container">
     <div class="row">
       <div class="col s12 m6">
