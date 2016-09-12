@@ -25,12 +25,13 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      padding-top: 10%;
       z-index: 10;
       width: 100%;
 
       h1 {
         max-width: 550px;
-        margin: 2em 0 !important;
+        margin: 2em 0 1em !important;
         font-family: 'CenturyGothic-BoldItalic';
         font-size: 20px;
         color: #fff;
@@ -38,6 +39,10 @@
         &:before, &:after {
           display: none;
         }
+      }
+
+      a {
+        margin-bottom: 4em;
       }
 
       .icon-mouse {
@@ -54,6 +59,7 @@
       height: 50px;
       bottom: 0;
       background-color: black;
+      z-index: 10;
 
       i {
         margin-right: 20px;

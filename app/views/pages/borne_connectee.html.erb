@@ -6,11 +6,12 @@
   <div class="home-header center-align">
     <%= image_tag 'logos/main-logo.svg' %>
     <h1>La borne modulable connectée<br>des plus belles activations</h1>
-    <%= link_to "#", class: 'btn-ouibeat waves-effect waves-light' do %>
+
+    <%= link_to '#animatedModal', id: 'modal-video', class: 'btn-ouibeat waves-effect waves-light' do %>
       Voir la vidéo
     <% end %>
 
-    <%= link_to "#borne-first-block" do %>
+    <%= link_to "#", id: 'go-to-button' do %>
       <%= render 'shared/mouse' %>
     <% end %>
 
@@ -33,6 +34,8 @@
     </div>
   </div>
 </header>
+
+<%= render 'shared/modal_video' %>
 
 <section id="borne-first-block" class="section-borne-intro section-text grey lighten-4 mask-white-right">
   <div class="container">
@@ -212,6 +215,12 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
+      $("#go-to-button").click(function() {
+        $('html,body').animate({
+          scrollTop: $("#borne-first-block").offset().top
+        },'slow');
+      });
+
       $('.borne-carousel').slick({
         centerMode: true,
         dots: false,

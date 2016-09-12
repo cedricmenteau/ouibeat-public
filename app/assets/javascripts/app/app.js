@@ -36,9 +36,16 @@ $(document).ready(function(){
     }
   });
 
-  $("#demo01").animatedModal({
+  $("#modal-video").animatedModal({
     animatedIn:'zoomIn',
-    animatedOut:'zoomInDown',
+    animatedOut:'zoomOut',
     color:'#000000'
+  });
+
+  var url = $(".video-container").find("iframe").attr('src');
+
+  $('.close-animatedModal').click(function() {
+    $(".video-container").fadeOut().find("iframe").attr("src", "");
+    $(".video-container").find("iframe").attr('src', url);
   });
 });
