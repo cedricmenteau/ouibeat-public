@@ -1,8 +1,8 @@
 <nav id="sub-nav-filter" class="sub-nav-filter">
-  <%= link_to 'All', projects_index_filter_path(filter: 'all'), remote: true, class: "filter selected" %>
-  <%= link_to 'Social wall', projects_index_filter_path(filter: 'Social Wall'), remote: true, class: "filter" %>
-  <%= link_to 'Borne connectée', projects_index_filter_path(filter: 'Borne'), remote: true, class: "filter" %>
-  <%= link_to 'Conception digitale', projects_index_filter_path(filter: 'Conception'), remote: true, class: "filter" %>
+  <%= link_to 'All', projects_index_filter_path(query: 'all'), remote: true, class: "filter-all selected", id:"all" %>
+  <%= link_to 'Social wall', projects_index_filter_path(query: 'social'), remote: true, class: "filter", id: "social" %>
+  <%= link_to 'Borne connectée', projects_index_filter_path(query: 'borne'), remote: true, class: "filter", id: "borne" %>
+  <%= link_to 'Conception digitale', projects_index_filter_path(query: 'conception' ), remote: true, class: "filter", id: "conception" %>
 </nav>
 
 <%= render partial: "projects/shared/section_projects", locals: {projects: @projects} %>
@@ -10,10 +10,22 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $('.filter').click(function() {
+
+      $('.filter-all').click(function() {
         $('.filter').removeClass('selected');
         $(this).addClass('selected');
       });
+
+      $('.filter').click(function() {
+        $('.filter-all').removeClass('selected');
+        var href = "=";
+        $(this).toggleClass('selected');
+        $('.filter.selected').each(function( index ) {
+          href += ($(this).attr('id') + " ");
+        });
+        $(this).attr('href', $(this).attr('href').split('=')[0] + href);
+      });
+
     });
   </script>
 <% end %>
