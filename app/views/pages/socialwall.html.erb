@@ -6,11 +6,14 @@
   <div class="home-header center-align">
     <%= image_tag 'logos/main-logo.svg' %>
     <h1>Le social wall des plus belles activations event + web + mobile</h1>
-    <%= link_to "#", class: 'btn-ouibeat waves-effect waves-light' do %>
+
+    <%= link_to '#animatedModal', id: 'demo01', class: 'btn-ouibeat waves-effect waves-light modal-trigger' do %>
       Voir la vidéo
     <% end %>
 
-    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+    <%= link_to "#", id: 'go-to-button' do %>
+      <%= render 'shared/mouse' %>
+    <% end %>
   </div>
   <div class="social-container">
     <i>100% compatible avec :</i>
@@ -31,7 +34,9 @@
   </div>
 </header>
 
-<section class="section-introduction section-text">
+<%= render 'shared/modal_video' %>
+
+<section id="socialwall-first-block" class="section-introduction section-text">
   <div class="container">
     <div class="row">
       <div class="col s12 m6">
@@ -241,6 +246,12 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
+      $("#go-to-button").click(function() {
+        $('html,body').animate({
+          scrollTop: $("#socialwall-first-block").offset().top
+        },'slow');
+      });
+
       $('.carousel-socialwall-main').slick({
         dots: false,
         arrows: true,

@@ -1,0 +1,15 @@
+#Fill-3 {
+  position: relative;
+  animation: cursor ease 3s infinite;
+}
+
+@keyframes cursor {
+  50% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

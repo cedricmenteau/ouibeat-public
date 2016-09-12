@@ -10,7 +10,10 @@
       Voir la vidéo
     <% end %>
 
-    <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+    <%= link_to "#conception-first-block" do %>
+      <%= render 'shared/mouse' %>
+    <% end %>
+
     <div class="social-container">
       <i>100% compatible avec :</i>
       <ul>
@@ -31,7 +34,7 @@
   </div>
 </header>
 
-<section class="section-startup section-text grey lighten-4">
+<section id="conception-first-block" class="section-startup section-text grey lighten-4">
   <div class="container">
     <div class="row">
       <div class="col s12 m6">
