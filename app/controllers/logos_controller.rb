@@ -2,14 +2,14 @@ class LogosController < ApplicationController
 
   before_action :authenticate_user!, except: [:index]
 
-  before_action :set_logo, only: [:edit, :update, :destroy]
+  before_action :set_logo, only: [:edit, :update, :destroy, :move_lower, :move_higher]
 
   def index
-    @logos = Logo.where('id > ?', params[:id]).limit(6)
-    if @logos[5].present? && Logo.where('id > ?', @logos[5].id).limit(1).present?
-      params[:id] = @logos[5].id
+    @logos = Logo.where('position > ?', params[:position]).limit(6)
+    if @logos[5].present? && params[:position].to_i < Logo.last.position
+      params[:position] = @logos[5].position
     else
-      params[:id] = nil
+      params[:position] = nil
     end
   end
 
@@ -40,6 +40,16 @@ class LogosController < ApplicationController
   def destroy
     @logo.destroy
     redirect_to admin_path
+  end
+
+  def move_lower
+    @logo.move_lower
+    redirect_to admin_path
+  end
+
+  def move_higher
+    @logo.move_higher
+    poredirect_to admin_path
   end
 
   private

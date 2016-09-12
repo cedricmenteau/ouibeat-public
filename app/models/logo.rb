@@ -12,4 +12,7 @@
 
 class Logo < ActiveRecord::Base
   has_attachment :picture
+  acts_as_list
+
+  default_scope { order('position ASC') }
 end

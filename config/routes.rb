@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get 'projects-index-filter', to: 'projects#index_filter'
   get 'certification', to: 'pages#certification'
   get 'jobs', to: 'pages#jobs'
+  get 'logos-move-lower', to: 'logos#move_lower'
+  get 'logos-move-higher', to: 'logos#move_higher'
+  get 'logos-move-position', to: 'logos#move_position'
 
   resources :logos
 

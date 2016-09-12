@@ -4,10 +4,14 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index_filter
-    if !params[:filter].present? || params[:filter] == 'all'
+    if !params[:query].present? || params[:query] == 'all'
       @projects = Project.active
     else
-      @projects = Project.active.where('category = ?', params[:filter])
+      @projects = []
+      @projects.push(Project.active.where('category = ?', "Social Wall")) if params[:query].include? "social"
+      @projects.push(Project.active.where('category = ?', "Borne")) if params[:query].include? "borne"
+      @projects.push(Project.active.where('category = ?', "Conception")) if params[:query].include? "conception"
+      @projects.flatten!
     end
   end
 

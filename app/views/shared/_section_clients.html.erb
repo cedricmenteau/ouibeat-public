@@ -4,5 +4,5 @@
       <%= render partial: "logos/shared/section_logos", locals: {logos: logos} %>
     </div>
   <% end %>
-  <%= link_to 'Voir plus', logos_path(id: @logos.last.id), remote: true, class: 'btn-more btn-ouibeat dark waves-effect waves-light' %>
+  <%= link_to 'Voir plus', logos_path(position: @logos.last.position), remote: true, class: 'btn-more btn-ouibeat dark waves-effect waves-light' %>
 <% end %>
