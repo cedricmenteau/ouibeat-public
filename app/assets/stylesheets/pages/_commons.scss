@@ -108,6 +108,29 @@ p {
 }
 
 
+header {
+  img {
+    @media (max-width: 992px) {
+      width: 80%;
+    }
+  }
+
+  h1 {
+    @media (max-width: 992px) {
+      width: 90%;
+      font-size: 18px !important;
+      margin-bottom: 45px !important;
+    }
+  }
+
+  #go-to-button {
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+
 .section-clients {
   padding: 60px 0;
 

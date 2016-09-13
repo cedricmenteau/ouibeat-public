@@ -31,6 +31,27 @@
       <li><a href="https://twitter.com/ouibeat"><%= image_tag 'logos/twitter.svg', width: '17px' %></a></li>
       <li><a href="http://app.ouibeat.com/login">Connexion</a></li>
     </ul>
+
+    <div id="small-device-toggle" class="small-device-toggle hide-on-large-only">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="small-device-menu" class="small-device-menu hide-on-large-only">
+    <ul class="center-align">
+      <li><%= link_to 'Social wall', socialwall_path %></li>
+      <li><%= link_to 'Borne connectée', borne_connectee_path %></li>
+      <li><%= link_to 'Conception digitale', conception_digitale_path %></li>
+      <li><%= link_to 'Contact', contact_path %></li>
+      <li><a href="http://app.ouibeat.com/login">Connexion</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="https://www.facebook.com/OuiBeat/"><%= image_tag 'logos/facebook-dark.svg', width: '9px' %></a>
+      <a href="https://twitter.com/ouibeat"><%= image_tag 'logos/twitter-dark.svg', width: '17px' %></a>
+    </div>
   </div>
 </nav>
 
@@ -41,4 +62,16 @@
     <%= link_to 'Solution', socialwall_solution_path %>
     <!-- <#= link_to 'Portfolio', '/' %> -->
   </div>
+<% end %>
+
+
+<% content_for(:after_js) do %>
+  <script>
+    $(document).ready(function(){
+      $('#small-device-toggle').click(function(){
+        $(this).toggleClass('open');
+        $('#small-device-menu').toggleClass('small-device-show-menu');
+      });
+    });
+  </script>
 <% end %>

@@ -4,7 +4,9 @@
 
 <header class="second-layout">
   <h1>Une plateforme qui s'adapte à toutes les solutions</h1>
-  <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+  <%= link_to "#", id: 'go-to-button' do %>
+    <%= render 'shared/mouse' %>
+  <% end %>
 </header>
 
 <section class="section-parol section-text">

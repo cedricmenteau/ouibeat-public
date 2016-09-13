@@ -2,6 +2,11 @@
 
   header {
     background: asset-url('socialwall/solution-header.jpg') no-repeat top center fixed;
+
+    #go-to-button {
+      position: relative;
+      z-index: 2;
+    }
   }
 
   .section-text {
