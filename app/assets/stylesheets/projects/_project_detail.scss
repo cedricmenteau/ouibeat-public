@@ -140,6 +140,8 @@
           img {
             position: absolute;
             width: 60%;
+            min-height: 400px;
+            object-fit: cover;
             -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
 
@@ -159,6 +161,8 @@
             position: absolute;
             right: 0;
             width: 60%;
+            min-height: 400px;
+            object-fit: cover;
             -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
 
