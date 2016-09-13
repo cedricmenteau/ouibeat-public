@@ -131,10 +131,15 @@ p {
   }
 }
 
+/******************************************************************************/
+/* LOGOS */
+/******************************************************************************/
+
 .section-clients {
   padding: 60px 0;
 
   h2 {
+    margin: 0 auto !important;
     text-align: center;
 
     &:before, &:after {
@@ -157,9 +162,22 @@ p {
 
     .logos {
       display: flex;
-      width: 100%;
       justify-content: space-around;
       align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+
+      a {
+        @media (max-width: 767px) {
+          width: 33.33333%;
+          margin-bottom: 15px;
+        }
+
+        @media (max-width: 420px) {
+          width: 50%;
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 
@@ -167,6 +185,10 @@ p {
     margin-top: 40px;
   }
 }
+
+/******************************************************************************/
+/* SLIDING PANNELS */
+/******************************************************************************/
 
 .section-discover {
   position: relative;
@@ -271,6 +293,7 @@ p {
   padding: 60px 0 0;
 
   h2 {
+    margin: 0 auto !important;
     text-align: center;
 
     &:before, &:after {
@@ -284,6 +307,7 @@ p {
   padding: 60px 0;
 
   h2 {
+    margin: 0 auto !important;
     text-align: center;
 
     &:before, &:after {

@@ -1,5 +1,37 @@
 .section-portfolio {
 
+  .sub-nav-filter {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  height: 40px;
+  top: 90px;
+  //background-color: #f4f4f6;
+  box-shadow: none;
+  width: 100%;
+  z-index: 100;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
+
+  a {
+    margin: 0 30px;
+    font-family: 'CenturyGothic-Bold', 'Open sans';
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    color: black;
+  }
+
+  .selected {
+    text-decoration: underline;
+  }
+}
+
   .portfolio-carousel {
 
     .carousel-item {
