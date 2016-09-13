@@ -46,6 +46,10 @@ footer {
     ul {
       border-right: 1px solid white;
 
+      @media (max-width: 992px) {
+        border: none;
+      }
+
       li {
         font-family: 'CenturyGothic-Bold';
         font-size: 12px;
@@ -72,6 +76,14 @@ footer {
     .network {
       display: flex;
 
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+
+       @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
       span {
         font-family: 'CenturyGothic-Bold';
         font-size: 14px;
@@ -82,6 +94,16 @@ footer {
       .social {
         padding: 13px 1rem;
         width: 33.33333%;
+
+        @media (max-width: 992px) {
+          padding: 13px 2rem 13px 0;
+          width: 50%;
+        }
+
+        @media (max-width: 767px) {
+          padding-top: 0;
+          width: 100%;
+        }
 
         ul.social-grid {
           display: flex;
@@ -99,6 +121,15 @@ footer {
         flex-wrap: wrap;
         padding-top: 13px;
         width: 66.66666%;
+
+        @media (max-width: 992px) {
+          width: 50%;
+        }
+
+        @media (max-width: 767px) {
+          padding-top: 0;
+          width: 100%;
+        }
       }
     }
 
@@ -107,9 +138,21 @@ footer {
       padding: 0 0.75rem;
       border: none;
 
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
+
+      @media (max-width: 767px) {
+        margin-top: 40px;
+      }
+
       li {
         font-family: 'CenturyGothic';
         font-size: 12px;
+
+        @media (max-width: 992px) {
+          font-size: 10px;
+        }
       }
 
       li:not(:last-child) {

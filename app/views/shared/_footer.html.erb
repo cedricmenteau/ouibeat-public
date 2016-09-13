@@ -4,7 +4,7 @@
       <%= image_tag 'logos/main-logo.svg', class: 'footer-logo' %>
     </div>
     <div class="row">
-      <div class="col m3 pages">
+      <div class="col s12 m6 l3 pages">
         <ul>
           <li><%= link_to 'Home', root_path, id: 'go-to-button' %></li>
           <li><%= link_to 'Social Wall', socialwall_path %></li>
@@ -13,7 +13,7 @@
           <li><%= link_to 'Contact', contact_path %></li>
         </ul>
       </div>
-      <div class="col m3 corporate">
+      <div class="col s12 m6 l3 corporate">
         <ul>
           <% if current_page?(root_path) %>
             <li><%= link_to 'À propos', '#who-are-we' %></li>
@@ -25,7 +25,7 @@
           <li><%= link_to 'Certification', certification_path %></li>
         </ul>
       </div>
-      <div class="col m6 network">
+      <div class="col s12 m12 l6 network">
         <div class='social'>
           <span>Suivez-nous</span>
           <ul class='social-grid'>
