@@ -1,7 +1,7 @@
 class DetailsController < ApplicationController
 
-  before_action :find_detail, only: [:edit, :update, :destroy]
-  before_action :find_project, only: [:index, :new, :create, :edit]
+  before_action :find_detail, only: [:edit, :update, :destroy, :move_lower, :move_higher]
+  before_action :find_project, only: [:index, :new, :create, :edit, :move_lower, :move_higher]
 
   def index
     @details = Detail.where(project_id: @project)
@@ -34,6 +34,17 @@ class DetailsController < ApplicationController
   def destroy
     @detail.destroy
     redirect_to admin_path
+  end
+
+  def move_lower
+    @detail.move_lower
+    binding.pry
+    redirect_to project_details_path(params[:project_id])
+  end
+
+  def move_higher
+    @detail.move_higher
+    redirect_to project_details_path(params[:project_id])
   end
 
   private

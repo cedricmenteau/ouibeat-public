@@ -8,8 +8,11 @@
           <%= cl_image_tag f.object.picture.path, width: 100, height: 100, crop: :fill %>
         <% end %>
         <%= f.input :picture, as: :attachinary %>
-
         <%= f.submit "Sauvegarder", class: "waves-effect waves-light btn" %>
+      <% end %>
+      <!-- BACK TO index logos -->
+      <%= link_to admin_path do %>
+        <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
       <% end %>
     </div>
   </div>

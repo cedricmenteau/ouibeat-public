@@ -17,9 +17,11 @@
         <%= link_to logo_path(logo[:id]), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
+        <!-- MOVE DOWN LOGO -->
         <%= link_to logos_move_lower_path(id: logo[:id]) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
         <% end %>
+        <!-- MOVE DOWN LOGO -->
         <%= link_to logos_move_higher_path(id: logo[:id]) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
         <% end %>
@@ -27,7 +29,11 @@
     <% end %>
   </ul>
   <!-- NEW LOGO -->
-    <%= link_to new_logo_path do %>
-      <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
-    <% end %>
+  <%= link_to new_logo_path do %>
+    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
+  <% end %>
+  <!-- BACK TO index logos -->
+  <%= link_to admin_path do %>
+    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
+  <% end %>
 </div>
