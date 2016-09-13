@@ -1,16 +1,15 @@
 class PagesController < ApplicationController
 
+  before_action :find_logos, only: [:home, :socialwall, :borne_connectee]
+  before_action :find_projects, only: [:home, :socialwall, :borne_connectee, :conception_digitale]
+
   def home
     if current_user
       redirect_to admin_path
     end
-    @logos = Logo.limit(6)
-    @projects = Project.active.shuffle
   end
 
   def socialwall
-    @logos = Logo.limit(6)
-    @projects = Project.active.shuffle
   end
 
   def socialwall_plateforme
@@ -20,12 +19,9 @@ class PagesController < ApplicationController
   end
 
   def borne_connectee
-    @logos = Logo.limit(6)
-    @projects = Project.active.shuffle
   end
 
   def conception_digitale
-    @projects = Project.active.shuffle
   end
 
   def contact
@@ -35,6 +31,17 @@ class PagesController < ApplicationController
   end
 
   def jobs
+  end
+
+
+  private
+
+  def find_logos
+    @logos = Logo.limit(6)
+  end
+
+  def find_projects
+    @projects = Project.active.shuffle
   end
 
 end

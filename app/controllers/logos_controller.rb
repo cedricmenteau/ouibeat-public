@@ -49,7 +49,7 @@ class LogosController < ApplicationController
 
   def move_higher
     @logo.move_higher
-    poredirect_to admin_path
+    redirect_to admin_path
   end
 
   private
