@@ -27,4 +27,6 @@ Rails.application.routes.draw do
     resources :details
   end
 
+  resources :jobs
+
 end

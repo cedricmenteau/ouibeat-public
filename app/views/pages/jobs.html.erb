@@ -8,8 +8,9 @@
       <div class="col s13 m6">
         <h2>Poste à<br>pourvoir</h2>
         <ul>
-          <li><%= link_to 'Assistant chef de projet', '#' %></li>
-          <li><%= link_to 'Chef de projet junior', '#' %></li>
+          <% @jobs.each do |job| %>
+            <li><a href="https://docs.google.com/gview?url=<%= cloudinary_url(job.picture.path) %>&embedded=true", target="_blank"><%= job.name %></a></li>
+          <% end %>
         </ul>
       </div>
     </div>

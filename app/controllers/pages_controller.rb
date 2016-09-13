@@ -31,6 +31,7 @@ class PagesController < ApplicationController
   end
 
   def jobs
+    @jobs = Job.all
   end
 
 

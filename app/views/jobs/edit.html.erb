@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col s10 offset-s1">
+      <%= simple_form_for(@job) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :picture, as: :attachinary %>
+        <%= f.submit "Sauvegarder", class: "waves-effect waves-light btn" %>
+      <% end %>
+      <!-- BACK TO index jobs -->
+      <%= link_to admin_path(anchor: "jobs") do %>
+        <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
+      <% end %>
+    </div>
+  </div>
+</div>

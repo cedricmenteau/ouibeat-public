@@ -6,6 +6,7 @@ class AdminController < ApplicationController
     @logos = Logo.all
     @projects = Project.all
     @details = Detail.all
+    @jobs = Job.all
   end
 
 end
