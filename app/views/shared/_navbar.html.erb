@@ -39,21 +39,21 @@
       <span></span>
     </div>
   </div>
-
-  <div id="small-device-menu" class="small-device-menu hide-on-large-only">
-    <ul class="center-align">
-      <li><%= link_to 'Social wall', socialwall_path %></li>
-      <li><%= link_to 'Borne connectée', borne_connectee_path %></li>
-      <li><%= link_to 'Conception digitale', conception_digitale_path %></li>
-      <li><%= link_to 'Contact', contact_path %></li>
-      <li><a href="http://app.ouibeat.com/login">Connexion</a></li>
-    </ul>
-    <div class="social-links">
-      <a href="https://www.facebook.com/OuiBeat/"><%= image_tag 'logos/facebook-dark.svg', width: '9px' %></a>
-      <a href="https://twitter.com/ouibeat"><%= image_tag 'logos/twitter-dark.svg', width: '17px' %></a>
-    </div>
-  </div>
 </nav>
+
+<div id="small-device-menu" class="small-device-menu hide-on-large-only">
+  <ul class="center-align">
+    <li><%= link_to 'Social wall', socialwall_path %></li>
+    <li><%= link_to 'Borne connectée', borne_connectee_path %></li>
+    <li><%= link_to 'Conception digitale', conception_digitale_path %></li>
+    <li><%= link_to 'Contact', contact_path %></li>
+    <li><a href="http://app.ouibeat.com/login">Connexion</a></li>
+  </ul>
+  <div class="social-links">
+    <a href="https://www.facebook.com/OuiBeat/"><%= image_tag 'logos/facebook-dark.svg', width: '9px' %></a>
+    <a href="https://twitter.com/ouibeat"><%= image_tag 'logos/twitter-dark.svg', width: '17px' %></a>
+  </div>
+</div>
 
 <% if current_page?(socialwall_path) || current_page?(socialwall_plateforme_path) || current_page?(socialwall_solution_path) %>
   <div id="sub-nav" class="sub-nav">
