@@ -38,7 +38,6 @@ class DetailsController < ApplicationController
 
   def move_lower
     @detail.move_lower
-    binding.pry
     redirect_to project_details_path(params[:project_id])
   end
 
