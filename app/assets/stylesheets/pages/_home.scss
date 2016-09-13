@@ -5,100 +5,8 @@
 
 .home-action {
   header {
-    display: flex;
-    position: relative;
-    height: calc(100vh - 30px);
     background: asset-url('home/header.jpg') no-repeat top center fixed;
     background-size: cover;
-
-    &:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(0,0,0,0.3);
-      z-index: 1;
-    }
-
-    .home-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding-top: 10%;
-      z-index: 10;
-      width: 100%;
-
-      h1 {
-        max-width: 660px;
-        margin: 2em 0 1em !important;
-        font-family: 'CenturyGothic-BoldItalic';
-        font-size: 20px;
-        color: #fff;
-
-        @media (max-width: 992px) {
-          width: 90%;
-          font-size: 18px !important;
-          margin-bottom: 45px !important;
-        }
-      }
-
-      a {
-        margin-bottom: 4em;
-      }
-
-      .icon-mouse {
-        margin-top: 3.5em;
-      }
-
-      .social-container {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        justify-content: center;
-        width: 100%;
-        height: 50px;
-        bottom: 0;
-        background-color: black;
-        z-index: 10;
-
-        @media (max-width: 992px) {
-          flex-direction: column;
-          justify-content: space-around;
-          padding: 5px 0;
-          height: 70px;
-        }
-
-        i {
-          margin-right: 20px;
-          color: white;
-        }
-
-        ul {
-          display: flex;
-          margin: 0;
-
-          li {
-            display: flex;
-            align-items: center;
-            margin: 0 5px;
-          }
-        }
-      }
-    }
-  }
-
-  .section-text {
-    padding: 60px 0;
-
-    h2 {
-      max-width: 185px !important;
-      left: 50%;
-      transform: translateX(-50%);
-    }
   }
 
   .section-offers {
@@ -106,6 +14,7 @@
 
     h2 {
       text-align: center;
+      margin: 0 auto !important;
 
       &:before, &:after {
         left: 50%;
@@ -114,8 +23,8 @@
     }
 
     .offers {
-      display: flex;
-      align-items: stretch;
+      //display: flex;
+      //align-items: stretch;
 
       .offer {
         display: flex;
@@ -123,7 +32,10 @@
         position: relative;
         padding: 0px 45px;
         margin-top: 75px;
-        min-height: 560px;
+
+        @media (min-width: 993px) {
+          min-height: 630px;
+        }
 
         h3 {
           margin: 50px 0 0 !important;
@@ -142,8 +54,11 @@
 
         .btn-ouibeat {
           align-self: center;
-          position: absolute;
-          bottom: 0;
+
+          @media (min-width: 993px) {
+            position: absolute;
+            bottom: 0;
+          }
         }
       }
     }

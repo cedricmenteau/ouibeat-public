@@ -18,10 +18,17 @@ h1 {
 h2 {
   position: relative;
   margin: 30px 0 0 !important;
+  max-width: 185px;
   font-family: 'CenturyGothic-Bold';
   font-size: 23px !important;
   text-transform: uppercase;
   color: #4A4A4A;
+
+  @media (max-width: 992px) {
+    margin-bottom: 40px !important;
+    max-width: 300px !important;
+    text-align: center;
+  }
 
   &:before {
     content: "";
@@ -41,6 +48,13 @@ h2 {
     left: 0;
     bottom: -20px;
     background-color: #00CFCB;
+  }
+
+  &:before, &:after {
+    @media (max-width: 992px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
@@ -107,29 +121,15 @@ p {
   cursor: not-allowed !important;
 }
 
+.section-text {
+  padding: 60px 0;
 
-header {
-  img {
-    @media (max-width: 992px) {
-      width: 80%;
-    }
-  }
-
-  h1 {
-    @media (max-width: 992px) {
-      width: 90%;
-      font-size: 18px !important;
-      margin-bottom: 45px !important;
-    }
-  }
-
-  #go-to-button {
-    @media (max-width: 992px) {
-      display: none;
-    }
+  h2 {
+    max-width: 185px !important;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
-
 
 .section-clients {
   padding: 60px 0;

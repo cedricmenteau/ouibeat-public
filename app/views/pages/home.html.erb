@@ -2,37 +2,22 @@
 
 <%= render 'shared/navbar' %>
 
-<header>
-  <div class="home-header center-align">
-    <%= image_tag 'logos/main-logo.svg' %>
+<header class="main-layout">
+  <div class="header-content center-align">
+    <!-- Logo -->
+    <%= image_tag 'logos/main-logo.svg', class: 'header-logo' %>
+    <!-- Tagline -->
     <h1>Concepteur d'éxpériences sociales et connectées dédiées aux plus belles activations de marques</h1>
-
+    <!-- Link Video -->
     <%= link_to '#animatedModal', id: 'modal-video', class: 'btn-ouibeat waves-effect waves-light' do %>
       Voir la vidéo
     <% end %>
-
+    <!-- Link Scroll down -->
     <%= link_to "#", id: 'go-to-button' do %>
       <%= render 'shared/mouse' %>
     <% end %>
-
-    <div class="social-container">
-      <i>100% compatible avec :</i>
-      <ul>
-        <li><%= image_tag 'shared/icons/facebook.svg' %></li>
-        <li><%= image_tag 'shared/icons/twitter.svg' %></li>
-        <li><%= image_tag 'shared/icons/instagram.svg' %></li>
-        <li><%= image_tag 'shared/icons/youtube.svg' %></li>
-        <li><%= image_tag 'shared/icons/vimeo.svg' %></li>
-        <li><%= image_tag 'shared/icons/periscope.svg' %></li>
-        <li><%= image_tag 'shared/icons/linkedin.svg' %></li>
-        <li><%= image_tag 'shared/icons/googleplus.svg' %></li>
-        <li><%= image_tag 'shared/icons/pinterest.svg' %></li>
-        <li><%= image_tag 'shared/icons/vine.svg' %></li>
-        <li><%= image_tag 'shared/icons/rss.svg' %></li>
-        <li><%= image_tag 'shared/icons/tumblr.svg' %></li>
-      </ul>
-    </div>
   </div>
+  <%= render 'shared/social_container' %>
 </header>
 
 <%= render 'shared/modal_video' %>
@@ -41,10 +26,10 @@
 <section id="who-are-we"class="section-text grey lighten-4">
   <div class="container">
     <div class="row">
-      <div class="col s12 m6">
+      <div class="col s12 m12 l6">
         <h2>Propulseur d'expériences e-sociales</h2>
       </div>
-      <div class="col s12 m6">
+      <div class="col s12 m12 l6">
         <p>Première plateforme de création de social walls événementiels et web dédiée aux marques et aux agences depuis 2013 en France, OuiBeat s’est très rapidement imposé comme un acteur essentiel dans la digitalisation des évènements avec pour principale expertise, l’utilisation des réseaux sociaux.</p>
         <p>Notre start up spécialisée dans la création d’expériences e-sociales intégrées aux activations de marques propose aujourd’hui 3 offres : le social wall, la borne modulable connectée, la conception et le développement digitale.</p>
       </div>
@@ -60,19 +45,19 @@
       </div>
     </div>
     <div class="row offers">
-      <div class="col s12 m4 center-align offer">
+      <div class="col s12 m12 l4 center-align offer">
         <%= image_tag 'shared/icons/icon-socialwall.svg', alt: 'Icon Social >all OuiBeat' %>
         <h3>Social<br>Wall</h3>
         <p>Notre plateforme est utilisée par les plus grandes marques et agences qui ont décidé de placer au coeur de leur stratégie le social brand content et la récupération d’UGC.</p>
         <%= link_to 'En savoir plus', socialwall_path, class: 'btn-ouibeat dark waves-effect waves-light' %>
       </div>
-      <div class="col s12 m4 center-align offer">
+      <div class="col s12 m12 l4 center-align offer">
         <%= image_tag 'shared/icons/icon-borne.svg', alt: 'Icon Borne OuiBeat' %>
         <h3>Borne modulable<br>connectée</h3>
         <p>Parce que le social brand content est la 1ère source d’influence dans la commercialisation d’un produit, nous avons décidé de développer la 1ère borne photo modulable connectée et reliable à notre plateforme de social walls.</p>
         <%= link_to 'En savoir plus', borne_connectee_path, class: 'btn-ouibeat dark waves-effect waves-light' %>
       </div>
-      <div class="col s12 m4 center-align offer">
+      <div class="col s12 m12 l4 center-align offer">
         <%= image_tag 'shared/icons/icon-conception.svg', alt: 'Icon social wall OuiBeat' %>
         <h3>Conception et<br>développement digitale</h3>
         <p>Un pôle de conception / rédaction et dedéveloppement digital est à votre service afin de vous accompagner dans la personnalisation de vos expériences e-sociales « car nous ne pouvons pas répondre à tous les projets et toutes les problématiques d’une seule et même voix ». </p>

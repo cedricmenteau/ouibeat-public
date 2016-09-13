@@ -3,36 +3,21 @@
 <%= render 'shared/navbar' %>
 
 <header class="main-layout">
-  <div class="home-header center-align">
-    <%= image_tag 'logos/main-logo.svg' %>
+  <div class="header-content center-align">
+    <!-- Logo -->
+    <%= image_tag 'logos/main-logo.svg', class: 'header-logo' %>
+    <!-- Tagline -->
     <h1>La borne modulable connectée<br>des plus belles activations</h1>
-
+    <!-- Link Video -->
     <%= link_to '#animatedModal', id: 'modal-video', class: 'btn-ouibeat waves-effect waves-light' do %>
       Voir la vidéo
     <% end %>
-
+    <!-- Link Scroll down -->
     <%= link_to "#", id: 'go-to-button' do %>
       <%= render 'shared/mouse' %>
     <% end %>
-
-    <div class="social-container">
-      <i>100% compatible avec :</i>
-      <ul>
-        <li><%= image_tag 'shared/icons/facebook.svg' %></li>
-        <li><%= image_tag 'shared/icons/twitter.svg' %></li>
-        <li><%= image_tag 'shared/icons/instagram.svg' %></li>
-        <li><%= image_tag 'shared/icons/youtube.svg' %></li>
-        <li><%= image_tag 'shared/icons/vimeo.svg' %></li>
-        <li><%= image_tag 'shared/icons/periscope.svg' %></li>
-        <li><%= image_tag 'shared/icons/linkedin.svg' %></li>
-        <li><%= image_tag 'shared/icons/googleplus.svg' %></li>
-        <li><%= image_tag 'shared/icons/pinterest.svg' %></li>
-        <li><%= image_tag 'shared/icons/vine.svg' %></li>
-        <li><%= image_tag 'shared/icons/rss.svg' %></li>
-        <li><%= image_tag 'shared/icons/tumblr.svg' %></li>
-      </ul>
-    </div>
   </div>
+  <%= render 'shared/social_container' %>
 </header>
 
 <%= render 'shared/modal_video' %>
