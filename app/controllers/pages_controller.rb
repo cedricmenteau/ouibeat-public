@@ -38,11 +38,11 @@ class PagesController < ApplicationController
   private
 
   def find_logos
-    @logos = Logo.limit(6)
+    @logos = Logo.includes(:picture_files).limit(6)
   end
 
   def find_projects
-    @projects = Project.active.shuffle
+    @projects = Project.active.includes(:picture_files).shuffle
   end
 
 end

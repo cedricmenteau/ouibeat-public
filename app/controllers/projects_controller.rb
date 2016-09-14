@@ -8,9 +8,9 @@ class ProjectsController < ApplicationController
       @projects = Project.active
     else
       @projects = []
-      @projects.push(Project.active.where('category = ?', "Social Wall")) if params[:query].include? "social"
-      @projects.push(Project.active.where('category = ?', "Borne")) if params[:query].include? "borne"
-      @projects.push(Project.active.where('category = ?', "Conception")) if params[:query].include? "conception"
+      @projects.push(Project.active.includes(:picture_files)  .where('category = ?', "Social Wall")) if params[:query].include? "social"
+      @projects.push(Project.active.includes(:picture_files)  .where('category = ?', "Borne")) if params[:query].include? "borne"
+      @projects.push(Project.active.includes(:picture_files)  .where('category = ?', "Conception")) if params[:query].include? "conception"
       @projects.flatten!
     end
   end
@@ -29,8 +29,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @details = Detail.where(project_id: @project.id)
-    @projects = Project.where.not(id: @project.id)
+    @details = Detail.includes(:picture_files).where(project_id: @project.id)
+    @projects = Project.includes(:picture_files).where.not(id: @project.id)
   end
 
   def edit

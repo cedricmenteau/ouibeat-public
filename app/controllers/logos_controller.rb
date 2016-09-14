@@ -5,7 +5,7 @@ class LogosController < ApplicationController
   before_action :set_logo, only: [:edit, :update, :destroy, :move_lower, :move_higher]
 
   def index
-    @logos = Logo.where('position > ?', params[:position]).limit(6)
+    @logos = Logo.where('position > ?', params[:position]).includes(:picture_files).limit(6)
     if @logos[5].present? && params[:position].to_i < Logo.last.position
       params[:position] = @logos[5].position
     else
