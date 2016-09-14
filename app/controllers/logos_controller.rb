@@ -33,7 +33,7 @@ class LogosController < ApplicationController
     if @logo.update(logo_params)
       redirect_to admin_path
     else
-     render :edit
+      render :edit
     end
   end
 

@@ -11,6 +11,10 @@
         <%= f.input :active, collection: [['Oui', true ], ['Non', false ]] %>
         <%= f.submit "Sauvegarder", class: "waves-effect waves-light btn" %>
       <% end %>
+      <!-- BACK TO index projects -->
+      <%= link_to admin_path(anchor: "projects") do %>
+        <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
+      <% end %>
     </div>
   </div>
 </div>

@@ -18,12 +18,15 @@ Rails.application.routes.draw do
   get 'jobs', to: 'pages#jobs'
   get 'logos-move-lower', to: 'logos#move_lower'
   get 'logos-move-higher', to: 'logos#move_higher'
-  get 'logos-move-position', to: 'logos#move_position'
+  get 'details-move-lower', to: 'details#move_lower'
+  get 'details-move-higher', to: 'details#move_higher'
 
   resources :logos
 
   resources :projects do
     resources :details
   end
+
+  resources :jobs
 
 end

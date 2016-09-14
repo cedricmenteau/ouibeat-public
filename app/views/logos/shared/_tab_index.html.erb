@@ -7,7 +7,6 @@
         <% if logo.picture? %>
           <%= cl_image_tag logo.picture.path, width: 100, height: 100, crop: :fill %>
         <% end %>
-        <%#= image_tag logo.picture.url(:thumb) %>
         <span class="position"><%= logo.position %></span>
          <!-- EDIT LOGO -->
         <%= link_to edit_logo_path(logo[:id]) do %>
@@ -17,9 +16,11 @@
         <%= link_to logo_path(logo[:id]), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
+        <!-- MOVE DOWN LOGO -->
         <%= link_to logos_move_lower_path(id: logo[:id]) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
         <% end %>
+        <!-- MOVE DOWN LOGO -->
         <%= link_to logos_move_higher_path(id: logo[:id]) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
         <% end %>
@@ -27,7 +28,7 @@
     <% end %>
   </ul>
   <!-- NEW LOGO -->
-    <%= link_to new_logo_path do %>
-      <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
-    <% end %>
+  <%= link_to new_logo_path do %>
+    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
+  <% end %>
 </div>

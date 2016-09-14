@@ -10,7 +10,7 @@
         <% detail.pictures.each do |picture| %>
           <%= cl_image_tag picture.path, width: 100, height: 100, crop: :fill %>
         <% end %>
-        <span class="position"><%#= project.position %></span>
+        <span class="position"><%= detail.position %></span>
          <!-- EDIT detail -->
         <%= link_to edit_project_detail_path(detail.project_id, detail.id) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
@@ -19,11 +19,23 @@
         <%= link_to project_detail_path(detail.project_id, detail.id), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
+        <!-- MOVE DOWN detail -->
+        <%= link_to details_move_lower_path(project_id: detail.project_id, id: detail[:id]) do %>
+          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
+        <% end %>
+        <!-- MOVE DOWN detail -->
+        <%= link_to details_move_higher_path(project_id: detail.project_id, id: detail[:id]) do %>
+          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
+        <% end %>
       </li>
     <% end %>
   </ul>
   <!-- NEW detail -->
   <%= link_to new_project_detail_path(@project) do %>
     <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
+  <% end %>
+  <!-- BACK TO edit project -->
+  <%= link_to edit_project_path(@project) do %>
+    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
   <% end %>
 </div>
