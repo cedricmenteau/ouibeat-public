@@ -12,7 +12,7 @@ $(document).ready(function(){
     }
   });
 
- var  on = $('#sub-nav');
+  var  on = $('#sub-nav');
       ons = "sub-nav-scrolled";
 
   $(window).scroll(function() {

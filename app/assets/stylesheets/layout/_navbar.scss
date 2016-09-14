@@ -156,7 +156,7 @@
 }
 
 .small-device-menu {
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: black;
   border-bottom: 1px solid black;
@@ -241,10 +241,8 @@
 
 .small-device-show-menu {
   display: block;
-  transform: translateY(60px);
+  transform: translateY(30px);
 }
-
-
 
 
 .sub-nav {
