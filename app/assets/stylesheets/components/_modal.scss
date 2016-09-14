@@ -14,3 +14,9 @@
     height: 40px;
   }
 }
+
+.modal-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

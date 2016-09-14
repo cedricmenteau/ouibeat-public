@@ -44,6 +44,6 @@ $(document).ready(function(){
 
   $('.close-animatedModal').click(function() {
     $(".video-container").fadeOut().find("iframe").attr("src", "");
-    $(".video-container").find("iframe").attr('src', url);
+    $(".video-container").fadeIn().find("iframe").attr('src', url);
   });
 });
