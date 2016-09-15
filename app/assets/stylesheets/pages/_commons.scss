@@ -527,7 +527,8 @@ p {
     }
 
     p {
-      margin: 0 auto;
+      margin-right: auto;
+      margin-left: auto;
       max-width: 520px;
       text-align: left;
     }
@@ -576,105 +577,6 @@ p {
 
       @media (max-width: 420px) {
         padding: 0 20px;
-      }
-    }
-
-    .mockup-macbook {
-      position: absolute;
-      width: 39%;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-      top: 273px;
-
-      @media (max-width: 992px) {
-        top: 279px;
-        width: 37%;
-      }
-
-      @media (max-width: 748px) {
-        display: none;
-      }
-    }
-  }
-
-  .exemples-centered {
-    position: relative;
-    margin: 90px 0 0;
-
-    // &:after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 39%;
-    //   height: 82%;
-    //   top: -5%;
-    //   left: 50%;
-    //   transform: translateX(-50%);
-    //   background: asset-url('socialwall/carousel/macbook.png') no-repeat top left;
-    //   background-size: cover;
-    // }
-
-    .slick-prev,
-    .slick-next {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      padding-left: 12px;
-      width: 60px;
-      height: 60px;
-      top: 25%;
-      z-index: 50;
-      background: rgba(255,255,255, 0.6);
-      border-radius: 50%;
-      cursor: pointer;
-      @include transition(all 0.3s ease-in-out);
-
-      &:hover {
-        background: white;
-      }
-    }
-
-    .slick-prev {
-      left: 40px;
-    }
-
-    .slick-next {
-      right: 40px;
-      padding-left: 16px;
-    }
-
-    .slick-slide {
-      opacity: 0.3;
-      outline: none;
-
-      img {
-        width: 100%;
-      }
-
-      .item-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 75px;
-        font-family: 'CenturyGothic-Bold';
-        visibility: hidden;
-
-        span {
-          text-transform: uppercase;
-        }
-
-        i {
-          font-style: normal;
-        }
-      }
-    }
-
-    .slick-current {
-      opacity: 1;
-
-      .item-details {
-        visibility: visible;
       }
     }
   }

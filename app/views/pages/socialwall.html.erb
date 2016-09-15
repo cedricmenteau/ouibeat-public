@@ -87,55 +87,57 @@
       </div>
     </div>
   </div>
-  <%= image_tag 'socialwall/carousel/macbook.png', class: 'mockup-macbook' %>
-  <div class="exemples-centered">
-    <div class="">
-      <%= image_tag 'socialwall/carousel/screen-obcustom.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+  <div class="socialwall-exemples">
+    <%= image_tag 'socialwall/carousel/macbook.png', class: 'mockup-macbook' %>
+    <div class="exemples-centered">
+      <div>
+        <%= image_tag 'socialwall/carousel/screen-obcustom.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-    <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob03.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+      <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob03.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-    <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob02.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+      <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob02.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob01.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob01.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob04.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob04.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-obweb.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-obweb.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-obperiscope.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-obperiscope.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
     </div>
   </div>
@@ -203,11 +205,7 @@
 </section>
 
 <section class="section-next grey lighten-4">
-  <div class="container">
-    <div class="row">
-      <h2>Nos autres expertises</h2>
-    </div>
-  </div>
+  <h2>Nos autres expertises</h2>
   <div class="next-container">
     <div class="next-left">
       <div class="next-content">
@@ -262,18 +260,9 @@
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 1
