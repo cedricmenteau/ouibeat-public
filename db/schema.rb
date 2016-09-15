@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160913045959) do
+ActiveRecord::Schema.define(version: 20160915212246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20160913045959) do
   add_index "attachinary_files", ["attachinariable_type", "attachinariable_id", "scope"], name: "by_scoped_parent", using: :btree
 
   create_table "details", force: :cascade do |t|
-    t.string   "title"
     t.text     "text"
     t.integer  "project_id"
     t.string   "link"

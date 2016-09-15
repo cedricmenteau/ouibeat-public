@@ -3,7 +3,6 @@
 # Table name: details
 #
 #  id         :integer          not null, primary key
-#  title      :string
 #  text       :text
 #  project_id :integer
 #  link       :string
