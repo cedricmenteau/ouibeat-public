@@ -301,8 +301,12 @@ p {
 .section-portfolio {
   padding: 60px 0 0;
 
+  .main-row {
+    margin-bottom: 0;
+  }
+
   h2 {
-    margin: 0 auto !important;
+    margin: 0 auto 60px !important;
     text-align: center;
 
     &:before, &:after {
@@ -314,6 +318,10 @@ p {
 
 .section-news {
   padding: 60px 0;
+
+  @media (max-width: 520px) {
+    display: none;
+  }
 
   h2 {
     margin: 0 auto !important;
