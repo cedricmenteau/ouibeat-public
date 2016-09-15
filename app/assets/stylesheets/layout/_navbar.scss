@@ -1,3 +1,7 @@
+/******************************************************************************/
+/* PAGE DISCLAIMER */
+/******************************************************************************/
+
 .navbar-disclaimer {
   display: flex;
   justify-content: center;
@@ -11,6 +15,10 @@
   color: black;
   z-index: 1200;
 }
+
+/******************************************************************************/
+/* DESKTOP MENU */
+/******************************************************************************/
 
 /* Main class */
 .navbar {
@@ -174,6 +182,10 @@
   }
 }
 
+/******************************************************************************/
+/* MOBILE MENU */
+/******************************************************************************/
+
 .small-device-menu {
   position: fixed;
   padding-top: 30px;
@@ -265,6 +277,22 @@
 }
 
 
+.navbar-scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-project-scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/******************************************************************************/
+/* SUBNAV ON SOCIAL WALL PAGES */
+/******************************************************************************/
+
 .sub-nav {
   ul {
     display: flex;
@@ -311,22 +339,12 @@
   }
 }
 
-.navbar-scrolled {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .sub-nav-scrolled {
   position: fixed;
-  top: 60px;
+  top: -30px;
   width: 100%;
-}
-
-.navbar-project-scrolled {
-  position: fixed;
-  top: 0;
-  width: 100%;
+  height: 40px;
+  z-index: 1050;
 }
 
 

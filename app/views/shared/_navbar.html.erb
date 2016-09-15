@@ -23,7 +23,7 @@
       <%= image_tag 'logos/main-logo.svg' %>
     <% end %>
     <ul class="right hide-on-med-and-down">
-      <li class="<%= 'active' if current_page?(socialwall_path) %>">
+      <li class="<%= 'active' if current_page?(socialwall_path) || current_page?(socialwall_plateforme_path) || current_page?(socialwall_solution_path) %>">
         <%= link_to 'Social wall', socialwall_path %>
       </li>
       <li class="<%= 'active' if current_page?(borne_connectee_path) %>">
