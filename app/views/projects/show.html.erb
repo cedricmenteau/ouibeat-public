@@ -3,7 +3,9 @@
 <%= render 'shared/navbar_projet' %>
 
 <header>
-  <%= cl_image_tag @project.picture.path, class: 'project-header' %>
+  <% if @project.picture.present? %>
+    <%= cl_image_tag @project.picture.path, class: 'project-header' %>
+  <% end %>
   <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
 </header>
 
@@ -92,7 +94,6 @@
 
   <script>
     $(document).ready(function(){
-
       $('.next-carousel').slick({
         dots: false,
         arrows: true,
@@ -104,11 +105,9 @@
         nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
       });
-
       // $('.btn-video').click(function() {
       //   $(this).closest('.ytp-large-play-button').click();
       // });
-
       $('.other-projects-carousel').slick({
         dots: false,
         arrows: true,
@@ -120,9 +119,7 @@
         nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
       });
-
     });
-
   </script>
 
 <% end %>

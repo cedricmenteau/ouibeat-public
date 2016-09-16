@@ -1,4 +1,4 @@
-class JobsController < ApplicationController
+class Admin::JobsController < ApplicationController
 
   before_action :authenticate_user!, except: [:index]
 
@@ -15,7 +15,7 @@ class JobsController < ApplicationController
   def create
     @job = Job.new(job_params)
     if @job.save
-      redirect_to admin_path(anchor: "jobs")
+      redirect_to admin_jobs_path
     else
       render :new
     end
@@ -26,7 +26,7 @@ class JobsController < ApplicationController
 
   def update
     if @job.update(job_params)
-      redirect_to admin_path(anchor: "jobs")
+      redirect_to admin_jobs_path
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class JobsController < ApplicationController
 
   def destroy
     @job.destroy
-    redirect_to admin_path(anchor: "jobs")
+    redirect_to admin_jobs_path
   end
 
   private

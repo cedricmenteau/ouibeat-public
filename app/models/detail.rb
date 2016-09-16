@@ -13,7 +13,7 @@
 
 class Detail < ActiveRecord::Base
   belongs_to :project
-  acts_as_list
+  acts_as_list scope: :project_id
 
   has_attachments :pictures, maximum: 3
 

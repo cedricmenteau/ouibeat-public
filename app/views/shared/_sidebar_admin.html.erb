@@ -1,0 +1,15 @@
+<ul id="slide-out" class="side-nav fixed">
+  <li class="waves-effect"><a href="/admin/logos">Logos</a></li>
+  <li class="waves-effect"><a href="/admin/projects">Projets</a></li>
+  <li class="waves-effect"><a href="/admin/jobs">Jobs</a></li>
+  <li>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <span class="waves-effect waves-light btn">Se déconnecter</span>
+    <% end %>
+  </li>
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+
+

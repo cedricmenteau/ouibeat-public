@@ -5,7 +5,7 @@
   <%= link_to 'Conception digitale', projects_index_filter_path(query: 'conception' ), remote: true, class: "filter", id: "conception" %>
 </nav>
 
-<%= render partial: "projects/shared/section_projects", locals: {projects: @projects} %>
+<%= render partial: "shared/section_projects", locals: {projects: @projects} %>
 
 <% content_for :after_js do %>
   <script>
