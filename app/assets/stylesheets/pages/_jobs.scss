@@ -1,40 +1,5 @@
 .jobs-action {
 
-  h2 {
-    left: inherit;
-    transform: inherit;
-  }
-
-  h3 {
-    &:before {
-      display: none;
-    }
-
-    &:after {
-      bottom: -8px;
-    }
-  }
-
-  ul {
-    margin-top: 60px;
-    padding-left: 20px;
-
-    li {
-      list-style: disc;
-      margin: 10px 0;
-
-      a {
-        color: black;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  p {
-    margin-top: 40px;
-    text-align: center;
-  }
-
   .section-jobs {
     display: flex;
     padding: 0;
@@ -71,6 +36,41 @@
         @media (max-width: 992px) {
           left: 50%;
           transform: translateX(-50%);
+        }
+
+        h2 {
+          left: inherit;
+          transform: inherit;
+        }
+
+        h3 {
+          &:before {
+            display: none;
+          }
+
+          &:after {
+            bottom: -8px;
+          }
+        }
+
+        ul {
+          margin-top: 60px;
+          padding-left: 20px;
+
+          li {
+            list-style: disc;
+            margin: 10px 0;
+
+            a {
+              color: black;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        p {
+          margin-top: 40px;
+          text-align: center;
         }
       }
     }
