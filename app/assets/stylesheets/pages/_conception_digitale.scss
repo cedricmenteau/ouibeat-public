@@ -5,8 +5,8 @@
   }
 
   .section-text {
-    padding: 60px 0;
-    min-height: 520px;
+    //padding: 60px 0;
+    //min-height: 520px;
 
     h2 {
       margin-bottom: 60px !important;
@@ -16,17 +16,71 @@
     }
   }
 
-  .section-startup {
+  .content-bloc {
+    p {
+      @media (max-width: 992px) {
+        max-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (max-width: 520px) {
+        max-width: 100%;
+      }
+    }
+    .picture-bloc-right,
+    .picture-bloc-left {
+      position: relative;
+
+      img {
+        position: relative;
+        width: 80%;
+        z-index: 10;
+
+        @media (max-width: 992px) {
+          width: 80% !important;
+          margin-top: 40px;
+        }
+      }
+    }
+
+    .picture-bloc-right {
+      text-align: right;
+
+      @media (max-width: 992px) {
+         text-align: center;
+      }
+    }
+
+    .picture-bloc-left {
+      text-align: left;
+
+      @media (max-width: 992px) {
+         text-align: center;
+      }
+    }
+  }
+
+  /****************************************************************************/
+  /* BLOC 1 */
+  /****************************************************************************/
+
+  .bloc-1 {
     background: -webkit-linear-gradient(-115deg, white 46%,  $light-grey 46%);
     background: linear-gradient(-115deg, white 46%,  $light-grey 46%);
 
-    img {
-      margin-top: 75px;
-      width: 386px;
-    }
-
     ul {
       -webkit-padding-start: 20px;
+
+      @media (max-width: 992px) {
+        max-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (max-width: 520px) {
+        max-width: 100%;
+      }
 
       li {
         margin-bottom: 20px;
@@ -43,6 +97,10 @@
     }
   }
 
+  /****************************************************************************/
+  /* DIVIDER */
+  /****************************************************************************/
+
   .section-divider {
     padding: 60px 0;
 
@@ -58,29 +116,116 @@
     }
   }
 
-  .section-web {
-    background: -webkit-linear-gradient(-115deg, $grey 57%,  $light-grey 57%);
-    background: linear-gradient(-115deg, $grey 57%,  $light-grey 57%);
+  /****************************************************************************/
+  /* BLOC 2 */
+  /****************************************************************************/
 
-    img {
-      margin-top: 60px;
-      max-width: 400px;
-    }
+  .bloc-2 {
+    background: -webkit-linear-gradient(-115deg, $grey 56%,  $light-grey 56%);
+    background: linear-gradient(-115deg, $grey 56%,  $light-grey 56%);
 
-    .section-logo {
-      width: 100%;
-      max-width: 300px;
+    .row {
+      ul {
+        -webkit-padding-start: 20px;
+
+        @media (max-width: 992px) {
+          max-width: 70%;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        @media (max-width: 520px) {
+          max-width: 100%;
+        }
+
+        li {
+          font-family: 'CenturyGothic-Bold';
+          list-style: disc;
+        }
+      }
+
+      .section-logo {
+        width: 100%;
+        max-width: 300px;
+
+        @media (max-width: 992px) {
+          display: flex;
+          margin: 0 auto 30px;
+        }
+      }
+
+      .picture-bloc-left {
+          img {
+            width: 80%;
+          }
+        }
+
+      @media (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+
+        .picture-bloc-left {
+          order: 2;
+          img {
+            width: 60% !important;
+          }
+        }
+      }
+
+      @media (max-width: 520px) {
+        .picture-bloc-left {
+          img {
+            width: 100% !important;
+          }
+        }
+      }
     }
+  }
+
+  /****************************************************************************/
+  /* BLOC 3 */
+  /****************************************************************************/
+
+  .bloc-3 {
+    background: -webkit-linear-gradient(-115deg, $light-grey 56%,  $grey 56%);
+    background: linear-gradient(-115deg, $light-grey 56%,  $grey 56%);
 
     ul {
       -webkit-padding-start: 20px;
+
+      @media (max-width: 992px) {
+        max-width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (max-width: 520px) {
+        max-width: 100%;
+      }
 
       li {
         font-family: 'CenturyGothic-Bold';
         list-style: disc;
       }
     }
+
+    .section-logo {
+      width: 100%;
+      max-width: 300px;
+
+      @media (max-width: 992px) {
+        display: flex;
+        margin: 0 auto 30px;
+      }
+    }
+
+    .picture-bloc-right {
+      img {
+        width: 100%;
+      }
+    }
   }
+
 
   .section-social {
     background: -webkit-linear-gradient(-115deg, $light-grey 47%, $grey 47%);
