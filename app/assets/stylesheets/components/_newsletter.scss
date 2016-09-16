@@ -26,6 +26,11 @@
       @media (max-width: 992px) {
         max-width: 280px;
       }
+
+      @media (max-width: 375px) {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
     }
 
     input[type="submit"] {
@@ -40,11 +45,16 @@
       background-color: #00CFCB;
       color: white;
       outline: none;
+      border-radius: 0 !important;
 
       @media (max-width: 992px) {
         position: relative;
         min-width: 290px;
         top: -15px;
+      }
+
+      @media (max-width: 375px) {
+        min-width: 100%;
       }
     }
   }

@@ -25,12 +25,12 @@
 <section id="socialwall-first-block" class="section-introduction section-text">
   <div class="container">
     <div class="row">
-      <div class="col s12 m6">
+      <div class="col s12 m12 l6">
         <h2>Affichage en temps réel<br>et analyse de contenu social</h2>
         <p>OuiBeat est une solution de création de social wall 100% personnalisable, adaptée à l’évènement, au web et au mobile. Grâce à la plateforme OuiBeat, vous agrégez instantanément les meilleurs contenus sociaux, vous animez et faites intéragir votre communauté, tout en développant votre visibilité digitale.</p>
         <p>Génération de leads qualifiés, de trafic sur site web ou encore vecteur de viralité, OuiBeat est le nouvel outil marketing indispensable utilisé par les plus grandes agences et annonceurs dans leur stratégie digitale, mettant en avant le social brand content.</p>
       </div>
-      <div class="col s12 m6">
+      <div class="col s12 m12 l6">
         <%= image_tag 'socialwall/socialwall-introduction.png' %>
       </div>
     </div>
@@ -80,61 +80,58 @@
 </section>
 
 <section class="section-exemples">
-  <div class="container">
-    <div class="row">
-      <div class="s12">
-        <h2>Choissisez votre thème<br>ou faites le 100% sur mesure</h2>
+  <h2>Choissisez votre thème<br>ou faites le 100% sur mesure</h2>
+  <div class="socialwall-exemples">
+    <%= image_tag 'socialwall/carousel/macbook.png', class: 'mockup-macbook' %>
+    <div class="exemples-centered">
+      <div>
+        <%= image_tag 'socialwall/carousel/screen-obcustom.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="exemples-centered">
-    <div class="">
-      <%= image_tag 'socialwall/carousel/screen-obcustom.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+      <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob03.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-    <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob03.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+      <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob02.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-    <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob02.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob01.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob01.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-ob04.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-ob04.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-obweb.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-obweb.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
-      </div>
-    </div>
-     <div class="">
-      <%= image_tag 'socialwall/carousel/screen-obperiscope.jpg' %>
-      <div class="item-details">
-        <span>Social Wall Event - 0B-01</span>
-        <i>Bandeau Haut</i>
+       <div class="">
+        <%= image_tag 'socialwall/carousel/screen-obperiscope.jpg' %>
+        <div class="item-details">
+          <span>Social Wall Event - 0B-01</span>
+          <i>Bandeau Haut</i>
+        </div>
       </div>
     </div>
   </div>
@@ -151,29 +148,25 @@
   <div class="container">
     <h2>Une plateforme qui<br>s'adapte à tous les besoins</h2>
     <div class="row">
-      <div class="col m2 center-align">
+      <div class="col s6 m4 l2 offset-l1 center-align">
         <%= image_tag 'socialwall/icons/icon-socialwall.svg' %>
         <h3>Mur d'écran</h3>
       </div>
-      <div class="col m2 center-align">
+      <div class="col s6 m4 l2 center-align">
         <%= image_tag 'socialwall/icons/icon-tv.svg' %>
         <h3>Télévision</h3>
       </div>
-      <div class="col m2 center-align">
+      <div class="col s6 m4 l2 center-align">
         <%= image_tag 'socialwall/icons/icon-tablet.svg' %>
         <h3>Tablet</h3>
       </div>
-      <div class="col m2 center-align">
+      <div class="col s6 m4 offset-m2 l2 center-align">
         <%= image_tag 'socialwall/icons/icon-laptop.svg' %>
         <h3>Ordinateur</h3>
       </div>
-      <div class="col m2 center-align">
+      <div class="col s6 offset-s3 m4 l2 center-align">
         <%= image_tag 'socialwall/icons/icon-mobile.svg' %>
         <h3>Mobile</h3>
-      </div>
-      <div class="col m2 center-align">
-        <%= image_tag 'socialwall/icons/icon-watch.svg' %>
-        <h3>Montre</h3>
       </div>
     </div>
     <div class="row center-align" style="padding-top: 45px">
@@ -185,7 +178,7 @@
 <!-- PORTFOLIO -->
 <section class="section-portfolio grey lighten-4">
   <div class="container">
-    <div class="row">
+    <div class="row main-row">
       <div class="s12">
         <h2>Portfolio</h2>
       </div>
@@ -206,11 +199,7 @@
 </section>
 
 <section class="section-next grey lighten-4">
-  <div class="container">
-    <div class="row">
-      <h2>Nos autres expertises</h2>
-    </div>
-  </div>
+  <h2>Nos autres expertises</h2>
   <div class="next-container">
     <div class="next-left">
       <div class="next-content">
@@ -265,18 +254,9 @@
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
+              arrows: true,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 1
