@@ -1,7 +1,7 @@
-class DetailsController < ApplicationController
+class Admin::DetailsController < ApplicationController
 
   before_action :find_detail, only: [:edit, :update, :destroy, :move_lower, :move_higher]
-  before_action :find_project, only: [:index, :new, :create, :edit, :move_lower, :move_higher]
+  before_action :find_project, only: [:index, :new, :create]
 
   def index
     @details = Detail.where(project_id: @project)
@@ -14,7 +14,7 @@ class DetailsController < ApplicationController
   def create
     @detail = @project.details.build(detail_params)
     if @detail.save
-      redirect_to admin_path
+      redirect_to admin_project_details_path(params[:project_id])
     else
       redirect_to :back
     end
@@ -25,25 +25,25 @@ class DetailsController < ApplicationController
 
   def update
     if @detail.update(detail_params)
-      redirect_to admin_path
+      redirect_to admin_project_details_path(@detail.project)
     else
-     render :edit
+      render :edit
     end
   end
 
   def destroy
     @detail.destroy
-    redirect_to admin_path
+    redirect_to admin_project_details_path(params[:project_id])
   end
 
   def move_lower
     @detail.move_lower
-    redirect_to project_details_path(params[:project_id])
+    redirect_to admin_project_details_path(@detail.project)
   end
 
   def move_higher
     @detail.move_higher
-    redirect_to project_details_path(params[:project_id])
+    redirect_to admin_project_details_path(@detail.project)
   end
 
   private

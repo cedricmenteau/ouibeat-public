@@ -1,0 +1,20 @@
+<% body_class "admin" %>
+
+<%= render 'shared/sidebar_admin' %>
+
+<div class="container">
+  <h3>Création job</h3>
+  <div class="row">
+    <div class="col s10 offset-s1">
+      <%= simple_form_for [:admin, @job] do |f| %>
+        <%= f.input :name %>
+        <%= f.input :picture, as: :attachinary %>
+        <%= f.submit "Créer", class: "waves-effect waves-light btn" %>
+      <% end %>
+      <!-- BACK TO index Job -->
+      <%= link_to  admin_jobs_path do %>
+        <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
+      <% end %>
+    </div>
+  </div>
+</div>

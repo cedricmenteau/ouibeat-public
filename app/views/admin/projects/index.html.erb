@@ -1,4 +1,18 @@
+<% body_class "admin" %>
+
+<%= render 'shared/sidebar_admin' %>
+
 <div class="container">
+  <h3>Liste des projets</h3>
+
+  <ul class="indicators">
+    <li><span>Nombre de projets créés : <%= @projects.count %></li>
+    <li><span>Nombre de projets actifs : <%= @projects.active.count %></li>
+    <li><span>Nombre de projets actifs "Social Wall" : <%= @projects.active.social_wall.count %></li>
+    <li><span>Nombre de projets actifs "Borne connectées" : <%= @projects.active.borne.count %></li>
+    <li><span>Nombre de projets actifs "Conception digitale" : <%= @projects.active.conception.count %></li>
+  </ul>
+
   <ul class="collection">
     <% @projects.each do |project| %>
       <li class="collection-item">
@@ -15,21 +29,22 @@
         <% end %>
         <p class="active">Projet actif : <%= project.active %></p>
          <!-- EDIT project -->
-        <%= link_to edit_project_path(project[:id]) do %>
+        <%= link_to edit_admin_project_path(project[:id]) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
         <% end %>
         <!-- DELETE project -->
-        <%= link_to project_path(project[:id]), method: :delete do %>
+        <%= link_to admin_project_path(project[:id]), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
-        <!-- INDEX details project -->
-        <%= link_to 'Liste détails', project_details_path(project[:id]), class: 'btn-ouibeat dark waves-effect waves-light' %>
+        <!-- INDEX liste des details project -->
+        <%= link_to 'Paragraphes', admin_project_details_path(project_id: project.id), class: 'btn-ouibeat dark waves-effect waves-light' %>
       </li>
     <% end %>
   </ul>
+
   <!-- NEW project -->
-  <%= link_to new_project_path do %>
+  <%= link_to new_admin_project_path do %>
     <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
   <% end %>
-</div>
 
+</div>

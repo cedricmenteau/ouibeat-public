@@ -1,5 +1,5 @@
 $('.portfolio-carousel').remove();
-$('.section-portfolio').append('<%= j render partial: "projects/shared/section_projects", locals: {projects: @projects} %>')
+$('.section-portfolio').append('<%= j render partial: "shared/section_projects", locals: {projects: @projects} %>')
 $('.portfolio-carousel').slick({
   dots: false,
   arrows: true,

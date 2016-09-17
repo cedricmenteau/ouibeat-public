@@ -1,5 +1,5 @@
 <% if @logos.present? %>
-  $('.logo-container').append('<%= j render partial: "logos/shared/section_logos", locals: {logos: @logos} %>');
+  $('.logo-container').append('<%= j render partial: "shared/section_logos", locals: {logos: @logos} %>');
   <% if params[:position] == nil %>
     $('.btn-more').addClass('disabled');
     $('.btn-more').attr('href', "#")

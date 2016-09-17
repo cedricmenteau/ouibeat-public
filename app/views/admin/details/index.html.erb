@@ -1,10 +1,14 @@
-<h3>Liste des paragraphes détails</h3>
+<% body_class "admin" %>
+
+<%= render 'shared/sidebar_admin' %>
+
+
 <div class="container">
+  <h3>Liste des paragraphes</h3>
   <ul class="collection">
     <% @details.each do |detail| %>
       <li class="collection-item">
         <span class="project"><%= detail.project_id %></span>
-        <span class="title"><%= detail.title %></span>
         <span class="text"><%= detail.text %></span>
         <span class="link"><%= detail.link %></span>
         <% detail.pictures.each do |picture| %>
@@ -12,30 +16,30 @@
         <% end %>
         <span class="position"><%= detail.position %></span>
          <!-- EDIT detail -->
-        <%= link_to edit_project_detail_path(detail.project_id, detail.id) do %>
+        <%= link_to edit_admin_detail_path(id: detail.id) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
         <% end %>
         <!-- DELETE detail -->
-        <%= link_to project_detail_path(detail.project_id, detail.id), method: :delete do %>
+        <%= link_to admin_detail_path(project_id: detail.project.id, id: detail.id), method: :delete do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
         <% end %>
         <!-- MOVE DOWN detail -->
-        <%= link_to details_move_lower_path(project_id: detail.project_id, id: detail[:id]) do %>
+        <%= link_to admin_details_move_lower_path(id: detail.id) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
         <% end %>
         <!-- MOVE DOWN detail -->
-        <%= link_to details_move_higher_path(project_id: detail.project_id, id: detail[:id]) do %>
+        <%= link_to admin_details_move_higher_path(id: detail.id) do %>
           <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
         <% end %>
       </li>
     <% end %>
   </ul>
   <!-- NEW detail -->
-  <%= link_to new_project_detail_path(@project) do %>
+  <%= link_to new_admin_project_detail_path(@project) do %>
     <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
   <% end %>
   <!-- BACK TO edit project -->
-  <%= link_to edit_project_path(@project) do %>
+  <%= link_to edit_admin_project_path(@project) do %>
     <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
   <% end %>
 </div>
