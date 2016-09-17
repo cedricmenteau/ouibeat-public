@@ -6,7 +6,9 @@
   <% if @project.picture.present? %>
     <%= cl_image_tag @project.picture.path, class: 'project-header' %>
   <% end %>
-  <%= image_tag 'home/icone-mouse.svg', class: 'icon-mouse' %>
+  <%= link_to "#", id: 'go-to-button' do %>
+    <%= render 'shared/mouse' %>
+  <% end %>
 </header>
 
 <section class="section-text">
@@ -28,14 +30,18 @@
       <div class="container">
         <div class="row">
           <div class="col s10 offset-s1">
-            <div class="embed-container video-mobile">
-              <%= content_tag(:iframe, nil, src: "#{detail.link}", allowfullscreen: "allowfullscreen", frameborder: "0", controls: "0") %>
+            <%= cl_image_tag detail.pictures.first.path %>
+            <div class="video-details">
               <h3 class="title-small"><%= @project.name %><br><%= @project.title %></h3>
-              <%= link_to 'Voir la vidéo', '#', class: 'btn-video btn-ouibeat waves-effect waves-light' %>
+              <!-- Link Video -->
+              <%= link_to '#animatedModal', id: 'modal-video', class: 'btn-ouibeat waves-effect waves-light' do %>
+                Voir la vidéo
+              <% end %>
             </div>
           </div>
         </div>
       </div>
+      <%= render partial: 'shared/modal_video', locals: {source: detail.link} %>
     </section>
   <% else %>
     <section class="section-paragraph">
@@ -105,9 +111,7 @@
         nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
       });
-      // $('.btn-video').click(function() {
-      //   $(this).closest('.ytp-large-play-button').click();
-      // });
+
       $('.other-projects-carousel').slick({
         dots: false,
         arrows: true,

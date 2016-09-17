@@ -117,6 +117,12 @@
   <script>
     $(document).ready(function(){
 
+      $("#go-to-button").click(function() {
+        $('html,body').animate({
+          scrollTop: $("#who-are-we").offset().top
+        },'slow');
+      });
+
       $('.portfolio-carousel').slick({
         dots: false,
         arrows: true,

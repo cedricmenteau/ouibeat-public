@@ -18,10 +18,9 @@
       clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 25% 100%, 0% 85%);
     }
 
-    .icon-mouse {
+    #go-to-button {
       position: absolute;
-      margin-top: 1.5em;
-      bottom: 20%;
+      bottom: 10%;
       z-index: 5;
     }
   }
@@ -94,6 +93,7 @@
     padding: 30px 0;
 
     .row {
+      position: relative;
       text-align: center;
 
       h3 {
@@ -104,6 +104,22 @@
           left: 50%;
           transform: translateX(-50%);
         }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-details {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-item: center;
+        flex-direction: column;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       .btn-ouibeat {
