@@ -3,6 +3,10 @@
   header {
     background: asset-url('socialwall/plateforme-header.jpg') no-repeat top center fixed;
 
+    @media (max-width: 992px) {
+      background: asset-url('socialwall/plateforme-header.jpg') no-repeat top center;
+    }
+
     #go-to-button {
       position: relative;
       z-index: 2;
