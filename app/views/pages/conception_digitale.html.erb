@@ -20,7 +20,7 @@
   <%= render 'shared/social_container' %>
 </header>
 
-<%= render 'shared/modal_video' %>
+<%= render partial: 'shared/modal_video', locals: {source: "https://www.youtube.com/embed/qhK2kkAcYfE?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0"} %>
 
 <section id="conception-first-block" class="section-text content-bloc bloc-1">
   <div class="container">
@@ -122,14 +122,3 @@
 
 <%= render 'shared/footer' %>
 
-<%= content_for(:after_js) do %>
-  <script>
-    $(document).ready(function(){
-      $("#go-to-button").click(function() {
-        $('html,body').animate({
-          scrollTop: $("#conception-first-block").offset().top
-        },'slow');
-      });
-    });
-  </script>
-<% end %>

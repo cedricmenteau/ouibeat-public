@@ -20,7 +20,7 @@
   <%= render 'shared/social_container' %>
 </header>
 
-<%= render 'shared/modal_video' %>
+<%= render partial: 'shared/modal_video', locals: {source: "https://www.youtube.com/embed/qhK2kkAcYfE?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0"} %>
 
 <section id="socialwall-first-block" class="section-introduction section-text">
   <div class="container">
@@ -221,11 +221,6 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $("#go-to-button").click(function() {
-        $('html,body').animate({
-          scrollTop: $("#socialwall-first-block").offset().top
-        },'slow');
-      });
 
       $('.carousel-socialwall-main').slick({
         dots: false,

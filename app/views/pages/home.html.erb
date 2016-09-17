@@ -20,7 +20,7 @@
   <%= render 'shared/social_container' %>
 </header>
 
-<%= render 'shared/modal_video' %>
+<%= render partial: 'shared/modal_video', locals: {source: "https://www.youtube.com/embed/qhK2kkAcYfE?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0"} %>
 
 <!-- PROJECTS -->
 <section id="who-are-we"class="section-text grey lighten-4">
@@ -116,12 +116,6 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-
-      $("#go-to-button").click(function() {
-        $('html,body').animate({
-          scrollTop: $("#who-are-we").offset().top
-        },'slow');
-      });
 
       $('.portfolio-carousel').slick({
         dots: false,
