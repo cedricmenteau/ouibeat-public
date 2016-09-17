@@ -1,14 +1,18 @@
-<ul id="slide-out" class="side-nav fixed">
-  <li class="waves-effect"><a href="/admin/logos">Logos</a></li>
-  <li class="waves-effect"><a href="/admin/projects">Projets</a></li>
-  <li class="waves-effect"><a href="/admin/jobs">Jobs</a></li>
-  <li>
+<div class="side-nav fixed">
+  <%= image_tag 'logos/main-logo.svg' %>
+  <ul>
+    <li class="waves-effect"><a href="/admin/logos"><i class="material-icons">photo</i> Logos</a></li>
+    <li class="waves-effect"><a href="/admin/projects"><i class="material-icons">folder_special</i> Projets</a></li>
+    <li class="waves-effect"><a href="/admin/jobs"><i class="material-icons">business_center</i> Jobs</a></li>
+  </ul>
+
+  <div class="btn-logout">
     <%= link_to destroy_user_session_path, method: :delete do %>
-      <span class="waves-effect waves-light btn">Se déconnecter</span>
+      <i class="material-icons">clear</i>
+      Se déconnecter
     <% end %>
-  </li>
-</ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</div>
 
 
 

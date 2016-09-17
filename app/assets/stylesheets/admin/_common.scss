@@ -1,9 +1,159 @@
 .admin {
-  .container {
-    margin-left: 30%;
+  .page-content {
+    padding: 0 40px;
+    margin-left: 20%;
+    width: 80%;
 
-    h3 {
-      margin-bottom: 50px !important;
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        margin: 50px 0 !important;
+      }
+
+      .btn-add-content {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        color: white;
+        background-color: #00CFCB;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: #6fdddb;
+        }
+
+        .material-icons {
+          margin-right: 10px;
+        }
+      }
+
+      .btn-go-back {
+        display: flex;
+        align-items: center;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    ul.collection {
+      border: none;
+
+      li.collection-item {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin-bottom: 15px;
+        height: 150px;
+        border-bottom: none;
+        background-color: #f7f7f7;
+        border-radius: 2px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+
+        .title {
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          margin: 0;
+          height: 45px;
+          background-color: #00CFCB;
+          color: white;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        .collection-item-content {
+          display: flex;
+          height: 100%;
+
+          .update-position {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-around;
+            padding: 10px 20px;
+
+            .btn-floating {
+              background-color: black;
+            }
+          }
+
+          .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+
+            img {
+              max-width: 150px;
+            }
+          }
+
+          .update-item {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-right: 20px;
+            right: 0;
+
+            .btn-update {
+              display: flex;
+              align-items: center;
+              padding: 5px 7px;
+              margin: 11px 0;
+              border: 1px solid #333;
+              color: #333;
+
+              &:hover {
+                color: white;
+                background-color: #333;
+              }
+
+              .material-icons {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content-container {
+      width: 50%;
+
+      .picture-preview {
+        max-width: 150px;
+      }
+
+      .logo_picture {
+        display: flex;
+        flex-direction: column;
+
+        .optional{
+          margin-bottom: 15px;
+        }
+      }
+
+      .btn-add-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        margin-top: 25px;
+        width: 200px;
+        color: white;
+        background-color: #00CFCB;
+        border-radius: 2px;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: #6fdddb;
+        }
+      }
     }
   }
 }

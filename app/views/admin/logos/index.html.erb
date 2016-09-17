@@ -2,39 +2,47 @@
 
 <%= render 'shared/sidebar_admin' %>
 
-<div class="container">
-  <h3>Liste des logos</h3>
+<div class="page-content">
+  <div class="page-header">
+    <h3>Liste des logos</h3>
+    <!-- NEW LOGO -->
+    <%= link_to new_admin_logo_path do %>
+      <div class="btn-add-content waves-effect waves-light"><i class="material-icons">control_point</i>Ajouter un logo</div>
+    <% end %>
+  </div>
   <ul class="collection">
     <% @logos.each do |logo| %>
       <li class="collection-item">
-        <p class="title">Soutien : <%= logo.name %></p>
-        <p>Logo :</p>
-        <% if logo.picture? %>
-          <%= cl_image_tag logo.picture.path, width: 100, height: 100, crop: :fill %>
-        <% end %>
-        <span class="position"><%= logo.position %></span>
-         <!-- EDIT LOGO -->
-        <%= link_to edit_admin_logo_path(logo[:id]) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
-        <% end %>
-        <!-- DELETE LOGO -->
-        <%= link_to admin_logo_path(logo[:id]), method: :delete do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
-        <% end %>
-        <!-- MOVE DOWN LOGO -->
-        <%= link_to admin_logos_move_lower_path(id: logo[:id]) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
-        <% end %>
-        <!-- MOVE DOWN LOGO -->
-        <%= link_to admin_logos_move_higher_path(id: logo[:id]) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
-        <% end %>
+        <p class="title"><%= logo.position %> | <%= logo.name %></p>
+        <div class="collection-item-content">
+          <div class="update-position">
+            <!-- MOVE UP LOGO -->
+            <%= link_to admin_logos_move_higher_path(id: logo[:id]) do %>
+              <div class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">keyboard_arrow_up</i></div>
+            <% end %>
+            <!-- MOVE DOWN LOGO -->
+            <%= link_to admin_logos_move_lower_path(id: logo[:id]) do %>
+              <div class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">keyboard_arrow_down</i></div>
+            <% end %>
+          </div>
+          <div class="logo-container">
+            <% if logo.picture? %>
+              <%= cl_image_tag logo.picture.path %>
+            <% end %>
+          </div>
+          <div class="update-item">
+          <!-- EDIT LOGO -->
+            <%= link_to edit_admin_logo_path(logo[:id]) do %>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">edit</i>Modifier ce logo</div>
+            <% end %>
+            <!-- DELETE LOGO -->
+            <%= link_to admin_logo_path(logo[:id]), method: :delete do %>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">delete</i>Supprimer ce logo</div>
+            <% end %>
+          </div>
+        </div>
       </li>
     <% end %>
   </ul>
-  <!-- NEW LOGO -->
-  <%= link_to new_admin_logo_path do %>
-    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
-  <% end %>
 </div>
 
