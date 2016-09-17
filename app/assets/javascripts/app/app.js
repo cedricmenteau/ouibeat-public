@@ -40,6 +40,12 @@ $(document).ready(function(){
     color:'#000000'
   });
 
+  $("#modal-video-2").animatedModal({
+    animatedIn:'zoomIn',
+    animatedOut:'zoomOut',
+    color:'#000000'
+  });
+
   var url = $(".video-container").find("iframe").attr('src');
 
   $('.close-animatedModal').click(function() {

@@ -2,6 +2,10 @@
   header {
     background: asset-url('socialwall/socialwall-header.png') no-repeat top center fixed;
     background-size: cover;
+
+    @media (max-width: 992px) {
+      background: asset-url('home/header.jpg') no-repeat top center;
+    }
   }
 
   .section-introduction {
