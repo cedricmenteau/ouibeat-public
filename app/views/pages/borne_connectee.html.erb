@@ -23,7 +23,7 @@
   <%= render 'shared/social_container' %>
 </header>
 
-<%= render 'shared/modal_video' %>
+<%= render partial: 'shared/modal_video', locals: {source: "https://www.youtube.com/embed/qhK2kkAcYfE?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0"} %>
 
 <section id="borne-first-block" class="section-text grey lighten-4 bloc-1">
   <div class="side-description">
@@ -205,11 +205,6 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-      $("#go-to-button").click(function() {
-        $('html,body').animate({
-          scrollTop: $("#borne-first-block").offset().top
-        },'slow');
-      });
 
       $('.borne-carousel').slick({
         centerMode: true,

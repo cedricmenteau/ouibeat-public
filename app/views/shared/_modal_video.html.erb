@@ -6,7 +6,19 @@
 
   <div class="modal-content">
     <div class="video-container">
-      <iframe id="playerid" width="560" height="315" src="https://www.youtube.com/embed/qhK2kkAcYfE?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      <iframe id="playerid" width="560" height="315" src="<%= source %>" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </div>
+
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function(){
+      $("#go-to-button").click(function() {
+        $('html,body').animate({
+          scrollTop: $("#socialwall-first-block").offset().top
+        },'slow');
+      });
+    });
+  </script>
+<% end %>

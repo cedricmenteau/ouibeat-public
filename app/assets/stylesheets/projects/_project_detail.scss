@@ -26,10 +26,9 @@
       }
     }
 
-    .icon-mouse {
+    #go-to-button {
       position: absolute;
-      margin-top: 1.5em;
-      bottom: 20%;
+      bottom: 10%;
       z-index: 5;
     }
   }
@@ -91,28 +90,44 @@
     }
   }
 
-  .section-paragraph {
+  .section-subsections {
+
 
     ul.pictures-detail {
-      display: flex;
-      max-width: 100%;
-      justify-content: center;
-      margin: 40px 0 0;
 
-      li {
-        padding: 0 5px;
+      .one-picture, .two-pictures {
+        display: flex;
+        max-width: 100%;
       }
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
-
-      @media (max-width: 520px) {
-        flex-direction: column;
+      .one-picture {
+        justify-content: center;
+        margin: 40px 0 0;
 
         li {
-          padding: 5px;
+          padding: 0 5px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        @media (max-width: 520px) {
+          flex-direction: column;
+
+          li {
+            padding: 5px;
+          }
+        }
+      }
+
+      .two-pictures {
+        justify-content: space-between;
+
+        img {
+          width: 49%;
+          height: 25rem;
         }
       }
     }
@@ -122,6 +137,7 @@
     padding: 30px 0;
 
     .row {
+      position: relative;
       text-align: center;
 
       h3 {
@@ -134,6 +150,22 @@
         }
       }
 
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .video-details {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       .btn-ouibeat {
         margin-top: 60px;
       }
@@ -141,11 +173,12 @@
   }
 
   .section-other-projects {
-    padding: 30px 0 0;
+    padding: 60px 0 0;
     margin-top: 60px;
 
     h2 {
       margin: 0 auto 60px !important;
+      max-width: 430px !important;
       text-align: center;
       max-width: 220px;
 

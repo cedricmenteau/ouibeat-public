@@ -26,27 +26,35 @@
     <section class="section-video grey lighten-4">
       <div class="container">
         <div class="row">
-          <div class="col s12 m10 offset-m1 l8 offset-l2">
-            <div class="embed-container video-mobile">
-              <%= content_tag(:iframe, nil, src: "#{detail.link}", allowfullscreen: "allowfullscreen", frameborder: "0", controls: "0") %>
+            <%= cl_image_tag detail.pictures.first.path %>
+            <div class="video-details">
               <h3 class="title-small"><%= @project.title %></h3>
-              <%= link_to 'Voir la vidéo', '#', class: 'btn-video btn-ouibeat waves-effect waves-light' %>
+              <!-- Link Video -->
+              <%= link_to '#animatedModal', id: 'modal-video', class: 'btn-ouibeat waves-effect waves-light' do %>
+                Voir la vidéo
+              <% end %>
             </div>
           </div>
         </div>
       </div>
+      <%= render partial: 'shared/modal_video', locals: {source: detail.link} %>
     </section>
   <% else %>
-    <section class="section-paragraph">
+    <section class="section-subsections">
       <div class="container">
         <div class="row">
           <div class="col s12 m10 offset-m1 l8 offset-l2">
             <p><%= detail.text %></p>
-            <ul class="pictures-detail">
-              <% detail.pictures.each do |picture| %>
-                <li><%= cl_image_tag picture.path %></li>
-              <% end %>
-            </ul>
+            <% if detail.pictures[1].present? %>
+              <div class="two-pictures">
+                <%= cl_image_tag detail.pictures[0].path %>
+                <%= cl_image_tag detail.pictures[1].path %>
+              </div>
+            <% else %>
+              <div class="one-picture">
+                <%= cl_image_tag detail.pictures[0].path %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -86,7 +94,6 @@
 
 
 <% content_for :after_js do %>
-
   <script>
     $(document).ready(function(){
       $('.next-carousel').slick({
@@ -100,9 +107,7 @@
         nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
         prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
       });
-      // $('.btn-video').click(function() {
-      //   $(this).closest('.ytp-large-play-button').click();
-      // });
+
       $('.other-projects-carousel').slick({
         dots: false,
         arrows: true,
@@ -116,5 +121,4 @@
       });
     });
   </script>
-
 <% end %>
