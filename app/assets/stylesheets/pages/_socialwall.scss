@@ -1,10 +1,10 @@
 .socialwall-action {
   header {
-    background: asset-url('socialwall/socialwall-header.png') no-repeat top center fixed;
+    background: asset-url('socialwall/socialwall-header.jpg') no-repeat top center fixed;
     background-size: cover;
 
     @media (max-width: 992px) {
-      background: asset-url('socialwall/socialwall-header.png') no-repeat top center;
+      background: asset-url('socialwall/socialwall-header.jpg') no-repeat top center;
     }
   }
 
@@ -201,7 +201,7 @@
     .next-container {
       .next-left {
         &:after {
-          background: asset-url('socialwall/borne-connectee.png') no-repeat top left;
+          background: asset-url('shared/selection/offer-borne.jpg') no-repeat top left;
           background-size: cover;
         }
       }
