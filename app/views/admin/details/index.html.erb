@@ -38,7 +38,7 @@
           <div class="update-item">
             <!-- EDIT detail -->
             <%= link_to edit_admin_detail_path(id: detail.id) do %>
-              <div class="btn-update waves-effect waves-light"><i class="material-icons">delete</i>Modifier ce contenu</div>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">edit</i>Modifier ce contenu</div>
             <% end %>
             <!-- DELETE detail -->
             <%= link_to admin_detail_path(project_id: detail.project.id, id: detail.id), method: :delete do %>
