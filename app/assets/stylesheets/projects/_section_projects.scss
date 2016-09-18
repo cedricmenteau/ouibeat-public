@@ -1,36 +1,37 @@
 .section-portfolio {
 
   .sub-nav-filter {
-  padding-top: 40px;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1440px;
-  height: 40px;
-  top: 90px;
-  //background-color: #f4f4f6;
-  box-shadow: none;
-  width: 100%;
-  z-index: 100;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 40px;
+    top: 90px;
+    box-shadow: none;
+    width: 100%;
+    z-index: 100;
 
-  @media (max-width: 420px) {
-    display: none;
-  }
+    display: none; /* Temp */
 
-  a {
-    margin: 0 30px;
-    font-family: 'CenturyGothic-Bold', 'Open sans';
-    text-transform: uppercase;
-    font-size: 0.85em;
-    letter-spacing: 0.1em;
-    color: black;
-  }
+    @media (max-width: 420px) {
+      display: none;
+    }
 
-  .selected {
-    text-decoration: underline;
+    a {
+      margin: 0 30px;
+      font-family: 'CenturyGothic-Bold', 'Open sans';
+      text-transform: uppercase;
+      font-size: 0.85em;
+      letter-spacing: 0.1em;
+      color: black;
+    }
+
+    .selected {
+      text-decoration: underline;
+    }
   }
-}
 
   .portfolio-carousel {
 
@@ -73,6 +74,15 @@
 
   .container-projects {
     display: flex;
+
+    @media (max-width: 992px){
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    @media (max-width: 520px){
+      margin-bottom: 30px;
+    }
 
     .col-1, .col-2, .col-3 {
       display: flex;
@@ -129,6 +139,11 @@
             left: 5%;
             bottom: 25%;
             color: #fff;
+
+            @media (max-width: 520px){
+              top: 17px;
+              bottom: inherit;
+            }
           }
 
           .title-small {
@@ -136,13 +151,17 @@
             left: 5%;
             top: 5%;
             color: #fff;
+
+            @media (max-width: 520px){
+              display: none;
+            }
           }
 
           .logo {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            left: calc(50% - 50px);
+            transform: translate(-50%, -50%);
+            left: 50%;
           }
 
 
@@ -154,7 +173,60 @@
             position: absolute;
             left: 5%;
             bottom: 2%;
+
+            @media (max-width: 520px){
+              bottom: -17px;
+            }
           }
+        }
+      }
+
+      .small-item {
+        .logo {
+          max-width: 150px;
+          max-height: 55px;
+
+          @media (max-width: 992px){
+            max-width: 200px;
+            max-height: 80px;
+          }
+
+          @media (max-width: 520px){
+            max-width: 80px;
+            max-height: 40px;
+            top: 35% !important;
+          }
+        }
+
+        .btn-ouibeat {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          min-width: 130px;
+          text-align: center;
+        }
+      }
+
+      .large-item {
+        .logo {
+          max-width: 220px;
+          max-height: 150px;
+
+          @media (max-width: 992px){
+            max-width: 220px;
+            max-height: 110px;
+          }
+
+          @media (max-width: 520px){
+            max-height: 100px;
+          }
+        }
+      }
+
+      .small-large-item {
+        .logo {
+          max-width: 150px;
+          max-height: 55px;
         }
       }
     }
@@ -171,10 +243,23 @@
         width: 100%;
         height: 66.66666%;
       }
+
+      @media (max-width: 992px) {
+        width: 100%;
+      }
     }
 
     .col-2 {
       width: 20%;
+
+      @media (max-width: 992px) {
+        width: 100%;
+
+        li:nth-child(1),
+        li:nth-child(2) {
+          width: 50%;
+        }
+      }
 
       li {
         width: 100%;
@@ -189,14 +274,27 @@
     .col-3 {
       width: 40%;
 
+      @media (max-width: 992px) {
+        display: flex;
+        width: 100%;
+      }
+
       li:first-child {
         width: 100%;
         height: 66.66666%;
+
+        @media (max-width: 992px) {
+          order: 3;
+        }
       }
 
       li:nth-child(n+2) {
         width: 50%;
         height: 33.33333%;
+
+        @media (max-width: 992px) {
+          order: 1;
+        }
       }
     }
   }

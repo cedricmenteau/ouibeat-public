@@ -14,7 +14,7 @@
     <%= simple_form_for [:admin, @job] do |f| %>
       <%= f.input :name, :label => 'Titre du poste' %>
       <%= f.input :picture, as: :attachinary, :label => "Sélectionner le fichier .pdf" %>
-      <%= f.submit "Sauvegarder", class: "btn-add-content waves-effect waves-light" %>
+      <%= f.submit "Mettre à jour", class: "btn-add-content waves-effect waves-light" %>
     <% end %>
   </div>
 </div>

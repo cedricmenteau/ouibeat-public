@@ -3,31 +3,41 @@
     <div class="carousel-item">
       <div class="container-projects">
         <ul class="col-1">
-          <li class="flex-item"><%= cl_image_tag(projects[0].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[0].present? && projects[0].picture.present? %>
+          <li class="flex-item small-item"><%= cl_image_tag(projects[0].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[0].present? && projects[0].picture.present? %>
             <div class="project-text">
               <% if projects[0].present? %>
                 <h3 class="title-small"><%= projects[0].title %></h3>
+                <% if projects[0].logo? %>
+                  <%= cl_image_tag projects[0].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[0][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[1].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[1].present? && projects[1].picture.present? %>
+          <li class="flex-item small-item"><%= cl_image_tag(projects[1].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[1].present? && projects[1].picture.present? %>
             <div class="project-text">
               <% if projects[1].present? %>
                 <h3 class="title-small"><%= projects[1].title %></h3>
+                <% if projects[1].logo? %>
+                  <%= cl_image_tag projects[1].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[1][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[2].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[2].present? && projects[2].picture.present? %>
+          <li class="flex-item large-item"><%= cl_image_tag(projects[2].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[2].present? && projects[2].picture.present? %>
             <div class="project-text">
               <% if projects[2].present? %>
                 <% if projects[2].logo? %>
-                  <%= cl_image_tag projects[2].logo.path, width: 100, class: "logo" %>
+                  <%= cl_image_tag projects[2].logo.path, class: "logo" %>
                 <% else %>
                   <h1 class="name"><%= projects[2].name %></h1>
                 <% end %>
@@ -40,30 +50,45 @@
           </li>
         </ul>
         <ul class="col-2">
-          <li class="flex-item"><%= cl_image_tag(projects[3].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[3].present? && projects[3].picture.present? %>
+          <li class="flex-item small-item"><%= cl_image_tag(projects[3].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[3].present? && projects[3].picture.present? %>
             <div class="project-text">
               <% if projects[3].present? %>
                 <h3 class="title-small"><%= projects[3].title %></h3>
+                <% if projects[3].logo? %>
+                  <%= cl_image_tag projects[3].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[3][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[4].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[4].present? && projects[4].picture.present? %>
+          <li class="flex-item small-item"><%= cl_image_tag(projects[4].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[4].present? && projects[4].picture.present? %>
             <div class="project-text">
               <% if projects[4].present? %>
                 <h3 class="title-small"><%= projects[4].title %></h3>
+                <% if projects[4].logo? %>
+                  <%= cl_image_tag projects[4].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[4][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[5].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[5].present? && projects[5].picture.present? %>
+          <li class="flex-item small-large-item"><%= cl_image_tag(projects[5].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[5].present? && projects[5].picture.present? %>
             <div class="project-text">
               <% if projects[5].present? %>
                 <h3 class="title-small"><%= projects[5].title %></h3>
+                <% if projects[5].logo? %>
+                  <%= cl_image_tag projects[5].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[5][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
@@ -72,12 +97,12 @@
           </li>
         </ul>
         <ul class="col-3">
-          <li class="flex-item">
+          <li class="flex-item large-item">
             <%= cl_image_tag(projects[6].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[6].present? && projects[6].picture.present? %>
             <div class="project-text">
               <% if projects[6].present? %>
                 <% if projects[6].logo? %>
-                  <%= cl_image_tag projects[6].logo.path, width: 100, class: "logo" %>
+                  <%= cl_image_tag projects[6].logo.path, class: "logo" %>
                 <% else %>
                   <h1 class="name"><%= projects[6].name %></h1>
                 <% end %>
@@ -88,20 +113,30 @@
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[7].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[7].present? && projects[7].picture.present? %>
+          <li class="flex-item small-item"><%= cl_image_tag(projects[7].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[7].present? && projects[7].picture.present? %>
             <div class="project-text">
               <% if projects[7].present? %>s
                 <h3 class="title-small"><%= projects[7].title %></h3>
+                <% if projects[7].logo? %>
+                  <%= cl_image_tag projects[7].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[7][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
               <% end %>
             </div>
           </li>
-          <li class="flex-item"><%= cl_image_tag(projects[8].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[8].present? && projects[8].picture.present? %>
+          <li class="flex-item small-item"><%= cl_image_tag(projects[8].picture.path, width: 600, height: 600, crop: :fill, class: "picture") if projects[8].present? && projects[8].picture.present? %>
             <div class="project-text">
               <% if projects[8].present? %>
                 <h3 class="title-small"><%= projects[8].title %></h3>
+                <% if projects[8].logo? %>
+                  <%= cl_image_tag projects[8].logo.path, class: "logo" %>
+                <% else %>
+                  <!-- Empty if nothing -->
+                <% end %>
                 <%= link_to project_path(projects[8][:id]), class: 'btn-ouibeat waves-effect waves-light' do %>
                   Voir le projet
                 <% end %>
