@@ -16,7 +16,7 @@
       Voir la vidéo
     <% end %>
     <!-- Link Scroll down -->
-    <%= link_to "#", id: 'go-to-button' do %>
+    <%= link_to "#who-are-we", id: 'go-to-button' do %>
       <%= render 'shared/mouse' %>
     <% end %>
   </div>
@@ -26,7 +26,7 @@
 <%= render partial: 'shared/modal_video', locals: {source: "https://www.youtube.com/embed/qhK2kkAcYfE?enablejsapi=1&amp;rel=0&amp;controls=0&amp;showinfo=0"} %>
 
 <!-- PROJECTS -->
-<section id="who-are-we"class="section-text grey lighten-4">
+<section id="who-are-we" class="section-text grey lighten-4">
   <div class="container">
     <div class="row">
       <div class="col s12 m12 l6">
@@ -121,12 +121,6 @@
 <% content_for :after_js do %>
   <script>
     $(document).ready(function(){
-
-      $("#go-to-button").click(function() {
-        $('html,body').animate({
-          scrollTop: $("#who-are-we").offset().top
-        },'slow');
-      });
 
       $('.portfolio-carousel').slick({
         dots: false,

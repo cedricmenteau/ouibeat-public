@@ -123,9 +123,10 @@
 <%= render 'shared/footer' %>
 
 
-<% content_for :after_js do %>
+<%= content_for :after_js do %>
   <script>
     $(document).ready(function(){
+
       $('.exemples-centered').slick({
         centerMode: true,
         dots: false,
