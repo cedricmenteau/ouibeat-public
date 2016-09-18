@@ -3,19 +3,20 @@
 <%= render 'shared/sidebar_admin' %>
 
 <div class="page-content">
-  <h3>Création paragraphe</h3>
-  <div class="row">
-    <div class="col s10 offset-s1">
-      <%= simple_form_for [:admin, @project, @detail] do |f| %>
-        <%= f.input :text %>
-        <%= f.input :link %>
-        <%= f.input :pictures, as: :attachinary %>
-        <%= f.submit "Créer", class: "waves-effect waves-light btn" %>
-      <% end %>
-        <!-- BACK TO edit Project -->
-        <%= link_to  admin_project_details_path(project_id: @project.id) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
-        <% end %>
-    </div>
+  <div class="page-header">
+    <h3>Créer un contenu</h3>
+    <!-- BACK TO index logos -->
+    <%= link_to admin_project_details_path(project_id: @project.id) do %>
+      <div class="btn-go-back waves-effect waves-light"><i class="material-icons">navigate_before</i>Retour à la page précédente</div>
+    <% end %>
+  </div>
+
+  <div class="content-container">
+    <%= simple_form_for [:admin, @project, @detail] do |f| %>
+      <%= f.input :text, :label => "Contenu du paragraphe", input_html: { rows: 10 }  %>
+      <%= f.input :link, :label => "URL de la vidéo" %>
+      <%= f.input :pictures, as: :attachinary, :label => "Ajouter une image (max : 2)" %>
+      <%= f.submit "Créer", class: "btn-add-content waves-effect waves-light" %>
+    <% end %>
   </div>
 </div>

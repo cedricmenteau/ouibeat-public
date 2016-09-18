@@ -3,42 +3,57 @@
 <%= render 'shared/sidebar_admin' %>
 
 <div class="page-content">
-  <h3>Liste des paragraphes</h3>
+  <div class="page-header">
+    <h3>Liste des contenus de l'étude</h3>
+    <!-- BACK TO edit project -->
+    <%= link_to admin_projects_path(@project) do %>
+      <div class="btn-go-back waves-effect waves-light"><i class="material-icons">navigate_before</i>Retour à la page précédente</div>
+    <% end %>
+  </div>
+
   <ul class="collection">
     <% @details.each do |detail| %>
       <li class="collection-item">
-        <span class="project"><%= detail.project_id %></span>
-        <span class="text"><%= detail.text %></span>
-        <span class="link"><%= detail.link %></span>
-        <% detail.pictures.each do |picture| %>
-          <%= cl_image_tag picture.path, width: 100, height: 100, crop: :fill %>
-        <% end %>
-        <span class="position"><%= detail.position %></span>
-         <!-- EDIT detail -->
-        <%= link_to edit_admin_detail_path(id: detail.id) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
-        <% end %>
-        <!-- DELETE detail -->
-        <%= link_to admin_detail_path(project_id: detail.project.id, id: detail.id), method: :delete do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
-        <% end %>
-        <!-- MOVE DOWN detail -->
-        <%= link_to admin_details_move_lower_path(id: detail.id) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_down</i></p>
-        <% end %>
-        <!-- MOVE DOWN detail -->
-        <%= link_to admin_details_move_higher_path(id: detail.id) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></p>
-        <% end %>
+        <p class="title">Contenu <%= detail.position %></p>
+        <div class="collection-item-content">
+          <div class="update-position">
+            <!-- MOVE UP DETAIL -->
+            <%= link_to admin_details_move_higher_path(id: detail.id) do %>
+              <div class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">keyboard_arrow_up</i></div>
+            <% end %>
+            <!-- MOVE DOWN DETAIL -->
+            <%= link_to admin_details_move_lower_path(id: detail.id) do %>
+              <div class="btn-floating btn-small waves-effect waves-light"><i class="material-icons">keyboard_arrow_down</i></div>
+            <% end %>
+          </div>
+          <div class="detail-container">
+            <% detail.pictures.each do |picture| %>
+              <%= cl_image_tag picture.path %>
+            <% end %>
+            <div class="detail-text-container">
+              <p><%= truncate(detail.text, length: 180, omission: '...') %></p>
+              <p><%= detail.link %></p>
+            </div>
+          </div>
+          <div class="update-item">
+            <!-- EDIT detail -->
+            <%= link_to edit_admin_detail_path(id: detail.id) do %>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">delete</i>Modifier ce contenu</div>
+            <% end %>
+            <!-- DELETE detail -->
+            <%= link_to admin_detail_path(project_id: detail.project.id, id: detail.id), method: :delete do %>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">delete</i>Supprimer ce contenu</div>
+            <% end %>
+          </div>
+        </div>
       </li>
     <% end %>
   </ul>
-  <!-- NEW detail -->
-  <%= link_to new_admin_project_detail_path(@project) do %>
-    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
-  <% end %>
-  <!-- BACK TO edit project -->
-  <%= link_to edit_admin_project_path(@project) do %>
-    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
-  <% end %>
+
+  <div class="content-container">
+    <!-- NEW detail -->
+    <%= link_to new_admin_project_detail_path(@project) do %>
+      <div class="btn-add-content waves-effect waves-light"><i class="material-icons">control_point</i>Ajouter un contenu</div>
+    <% end %>
+  </div>
 </div>
