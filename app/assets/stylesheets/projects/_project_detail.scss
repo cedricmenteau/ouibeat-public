@@ -92,43 +92,38 @@
 
   .section-subsections {
 
+    .one-picture, .two-pictures {
+      display: flex;
+      max-width: 100%;
+    }
 
-    ul.pictures-detail {
+    .one-picture {
+      justify-content: center;
+      margin: 40px 0 0;
 
-      .one-picture, .two-pictures {
-        display: flex;
-        max-width: 100%;
+      li {
+        padding: 0 5px;
       }
 
-      .one-picture {
-        justify-content: center;
-        margin: 40px 0 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 520px) {
+        flex-direction: column;
 
         li {
-          padding: 0 5px;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-
-        @media (max-width: 520px) {
-          flex-direction: column;
-
-          li {
-            padding: 5px;
-          }
+          padding: 5px;
         }
       }
+    }
 
-      .two-pictures {
-        justify-content: space-between;
+    .two-pictures {
+      justify-content: space-between;
 
-        img {
-          width: 49%;
-          height: 25rem;
-        }
+      img {
+        width: 49%;
       }
     }
   }
