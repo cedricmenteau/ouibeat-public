@@ -44,16 +44,21 @@
       <%= render partial: 'shared/modal_video', locals: {source: detail.link} %>
     </section>
   <% else %>
-    <section class="section-paragraph">
+    <section class="section-subsections">
       <div class="container">
         <div class="row">
           <div class="col s10 offset-s1">
             <p><%= detail.text %></p>
-            <ul class="pictures-detail">
-              <% detail.pictures.each do |picture| %>
-                <li><%= cl_image_tag picture.path %></li>
-              <% end %>
-            </ul>
+            <% if detail.pictures[1].present? %>
+              <div class="two-pictures">
+                <%= cl_image_tag detail.pictures[0].path %>
+                <%= cl_image_tag detail.pictures[1].path %>
+              </div>
+            <% else %>
+              <div class="one-picture">
+                <%= cl_image_tag detail.pictures[0].path %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>

@@ -75,16 +75,28 @@
     }
   }
 
-  .section-paragraph {
+  .section-subsections {
 
-    .pictures-detail {
+    .one-picture, .two-pictures {
       display: flex;
       max-width: 100%;
+    }
+
+    .one-picture {
       justify-content: center;
 
       img {
         width: 100%;
         height: 100%;
+      }
+    }
+
+    .two-pictures {
+      justify-content: space-between;
+
+      img {
+        width: 49%;
+        height: 25rem;
       }
     }
   }
@@ -114,9 +126,9 @@
       .video-details {
         position: absolute;
         display: flex;
-        justify-content: center;
-        align-item: center;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         top: 30%;
         left: 50%;
         transform: translateX(-50%);
@@ -129,10 +141,11 @@
   }
 
   .section-other-projects {
-    padding: 30px 0 0;
+    padding: 60px 0 0;
 
     h2 {
-      margin-bottom: 60px !important;
+      margin: 0 auto 60px !important;
+      max-width: 430px !important;
       text-align: center;
 
       &:before, &:after {
