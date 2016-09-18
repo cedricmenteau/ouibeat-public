@@ -14,7 +14,7 @@
 
 class Project < ActiveRecord::Base
 
-  has_many :details
+  has_many :details, dependent: :destroy
 
   has_attachment :picture
   has_attachment :logo

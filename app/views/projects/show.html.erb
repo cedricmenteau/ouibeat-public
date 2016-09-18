@@ -47,8 +47,8 @@
             <p><%= detail.text %></p>
             <% if detail.pictures[1].present? %>
               <div class="two-pictures">
-                <%= cl_image_tag detail.pictures[0].path %>
-                <%= cl_image_tag detail.pictures[1].path %>
+                <%= cl_image_tag detail.pictures[0].path, height: 186, crop: :fill %>
+                <%= cl_image_tag detail.pictures[1].path, height: 186, crop: :fill %>
               </div>
             <% else %>
               <div class="one-picture">
