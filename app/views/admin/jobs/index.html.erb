@@ -3,27 +3,36 @@
 <%= render 'shared/sidebar_admin' %>
 
 <div class="page-content">
-  <h3>Liste des jobs</h3>
+  <div class="page-header">
+    <h3>Liste des jobs</h3>
+    <!-- NEW LOGO -->
+    <%= link_to new_admin_job_path do %>
+      <div class="btn-add-content waves-effect waves-light"><i class="material-icons">control_point</i>Ajouter une offre</div>
+    <% end %>
+  </div>
   <ul class="collection">
     <% @jobs.each do |job| %>
       <li class="collection-item">
-        <p class="title">Job : <%= job.name %></p>
-        <% if job.picture? %>
-          <%= cl_image_tag job.picture.path, width: 100, height: 100, crop: :fill %>
-        <% end %>
-        <%= link_to edit_admin_job_path(job[:id]) do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">edit</i></p>
-        <% end %>
-        <!-- DELETE job -->
-        <%= link_to admin_job_path(job[:id]), method: :delete do %>
-          <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></p>
-        <% end %>
+        <p class="title"><%= job.name %></p>
+        <div class="collection-item-content">
+          <div class="update-position">
+            <div class="job-file">
+              <i class="material-icons">description</i>
+              <a href="https://docs.google.com/gview?url=<%= cloudinary_url(job.picture.path) %>&embedded=true", target="_blank">Voir l'annonce (.pdf)</a>
+            </div>
+          </div>
+          <div class="update-item">
+            <%= link_to edit_admin_job_path(job[:id]) do %>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">edit</i>Modifier cette offre</div>
+            <% end %>
+            <!-- DELETE job -->
+            <%= link_to admin_job_path(job[:id]), method: :delete do %>
+              <div class="btn-update waves-effect waves-light"><i class="material-icons">delete</i>Supprimer cette offre</div>
+            <% end %>
+          </div>
+        </div>
       </li>
     <% end %>
   </ul>
-  <!-- NEW job -->
-  <%= link_to new_admin_job_path do %>
-    <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></p>
-  <% end %>
 </div>
 

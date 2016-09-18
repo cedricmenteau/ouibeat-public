@@ -3,18 +3,18 @@
 <%= render 'shared/sidebar_admin' %>
 
 <div class="page-content">
-  <h3>Création job</h3>
-  <div class="row">
-    <div class="col s10 offset-s1">
-      <%= simple_form_for [:admin, @job] do |f| %>
-        <%= f.input :name %>
-        <%= f.input :picture, as: :attachinary %>
-        <%= f.submit "Créer", class: "waves-effect waves-light btn" %>
-      <% end %>
-      <!-- BACK TO index Job -->
-      <%= link_to  admin_jobs_path do %>
-        <p class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">skip_previous</i></p>
-      <% end %>
-    </div>
+  <div class="page-header">
+    <h3>Créer une offre</h3>
+    <!-- BACK TO index logos -->
+    <%= link_to admin_jobs_path do %>
+      <div class="btn-go-back waves-effect waves-light"><i class="material-icons">navigate_before</i>Retour à la page précédente</div>
+    <% end %>
+  </div>
+  <div class="content-container">
+    <%= simple_form_for [:admin, @job] do |f| %>
+      <%= f.input :name, :label => 'Titre du poste' %>
+      <%= f.input :picture, as: :attachinary, :label => "Sélectionner le fichier .pdf" %>
+      <%= f.submit "Créer", class: "btn-add-content waves-effect waves-light" %>
+    <% end %>
   </div>
 </div>
