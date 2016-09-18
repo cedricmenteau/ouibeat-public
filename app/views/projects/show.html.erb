@@ -50,7 +50,7 @@
                 <%= cl_image_tag detail.pictures[0].path %>
                 <%= cl_image_tag detail.pictures[1].path %>
               </div>
-            <% else %>
+            <% elsif detail.pictures[0].present? %>
               <div class="one-picture">
                 <%= cl_image_tag detail.pictures[0].path %>
               </div>
