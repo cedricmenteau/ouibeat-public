@@ -26,6 +26,7 @@
     <section class="section-video grey lighten-4">
       <div class="container">
         <div class="row">
+          <div class="thumbnail-container">
             <%= cl_image_tag detail.pictures.first.path %>
             <div class="video-details">
               <h3 class="title-small"><%= @project.title %></h3>
@@ -44,11 +45,13 @@
       <div class="container">
         <div class="row">
           <div class="col s12 m10 offset-m1 l8 offset-l2">
-            <p><%= detail.text %></p>
+            <% if detail.text.present? %>
+              <p><%= detail.text %></p>
+            <% end %>
             <% if detail.pictures[1].present? %>
               <div class="two-pictures">
-                <%= cl_image_tag detail.pictures[0].path, height: 186, crop: :fill %>
-                <%= cl_image_tag detail.pictures[1].path, height: 186, crop: :fill %>
+                <%= cl_image_tag detail.pictures[0].path %>
+                <%= cl_image_tag detail.pictures[1].path %>
               </div>
             <% elsif detail.pictures[0].present? %>
               <div class="one-picture">
@@ -70,7 +73,7 @@
         <div class="next-project-left">
           <% if projects[0].present? %>
             <%= cl_image_tag(projects[0].picture.path) %>
-            <div class="next-project-content">
+            <div class="project-content-left">
               <h3><%= projects[0].name %> - <%= projects[0].title %></h3>
               <%= link_to 'Découvrez le projet', project_path(projects[0].id), class: 'btn-ouibeat waves-effect waves-light' %>
             </div>
@@ -79,7 +82,7 @@
         <div class="next-project-right">
           <% if projects[1].present? %>
             <%= cl_image_tag(projects[1].picture.path) %>
-            <div class="next-project-content">
+            <div class="project-content-right">
               <h3><%= projects[1].name %> - <%= projects[1].title %></h3>
               <%= link_to 'Découvrez le projet', project_path(projects[1].id), class: 'btn-ouibeat waves-effect waves-light' %>
             </div>
@@ -111,7 +114,7 @@
       $('.other-projects-carousel').slick({
         dots: false,
         arrows: true,
-        infinite: false,
+        infinite: true,
         autoplay: false,
         speed: 1500,
         slidesToShow: 1,

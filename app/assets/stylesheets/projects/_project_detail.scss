@@ -35,7 +35,7 @@
 
   p {
     padding: 0 5px;
-    margin-top: 40px;
+    margin: 0;
     font-size: 16px;
     line-height: 1.6rem;
   }
@@ -91,6 +91,7 @@
   }
 
   .section-subsections {
+    margin: 35px 0;
 
     .one-picture, .two-pictures {
       display: flex;
@@ -99,7 +100,7 @@
 
     .one-picture {
       justify-content: center;
-      margin: 40px 0 0;
+      margin: 0;
 
       li {
         padding: 0 5px;
@@ -124,12 +125,28 @@
 
       img {
         width: 49%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 520px){
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: 260px;
+        }
+
+        img:first-child {
+          margin-bottom: 10px;
+        }
       }
     }
   }
 
   .section-video {
     padding: 30px 0;
+    margin: 20px 0;
 
     .row {
       position: relative;
@@ -145,9 +162,24 @@
         }
       }
 
-      img {
-        width: 100%;
-        height: 100%;
+      .thumbnail-container {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: calc(100% - 5px);
+          background-color: rgba(0,0,0,0.6);
+          z-index: 1;
+        }
+
+        img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
       }
 
       .video-details {
@@ -156,20 +188,31 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        top: 30%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        h3 {
+          @media (max-width: 520px){
+            display: none;
+          }
+        }
       }
 
       .btn-ouibeat {
         margin-top: 60px;
+
+        @media (max-width: 520px){
+          margin: 0;
+        }
       }
     }
   }
 
   .section-other-projects {
     padding: 60px 0 0;
-    margin-top: 60px;
+    margin-top: 20px;
 
     h2 {
       margin: 0 auto 60px !important;
@@ -192,8 +235,28 @@
         height: 400px;
         overflow: hidden;
 
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.6);
+          z-index: 1;
+        }
+
+        @media (max-width: 992px){
+          height: 500px;
+        }
+
         .next-project-left {
           width: 100%;
+
+          @media (max-width: 992px){
+            width: 100%;
+            height: 250px;
+          }
 
           img {
             position: absolute;
@@ -202,6 +265,14 @@
             object-fit: cover;
             -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+
+            @media (max-width: 992px){
+              width: 100%;
+              height: 250px;
+              max-height: 250px;
+              min-height: 250px;
+              clip-path: none;
+            }
 
             &:hover {
               &:after {
@@ -215,6 +286,11 @@
         .next-project-right {
           width: 100%;
 
+          @media (max-width: 992px){
+            width: 100%;
+            height: 250px;
+          }
+
           img {
             position: absolute;
             right: 0;
@@ -224,6 +300,15 @@
             -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
 
+            @media (max-width: 992px){
+              width: 100%;
+              height: 250px;
+              max-height: 250px;
+              min-height: 250px;
+              bottom: 0;
+              clip-path: none;
+            }
+
             &:hover {
               &:after {
                 transform: scale(1.1);
@@ -232,16 +317,19 @@
           }
         }
 
-        .next-project-content {
-          position: relative;
+        .project-content-left,
+        .project-content-right {
+          position: absolute;
           display: flex;
           flex-direction :column;
-          height: 100%;
           justify-content: center;
-          left: 120px;
+          z-index: 5;
 
           h3 {
             color: white;
+            margin-bottom: 45px !important;
+            max-width: 200px;
+            line-height: 1.4rem;
 
             &:before, &:after {
               background-color: white;
@@ -249,8 +337,34 @@
           }
 
           a {
-            position: absolute;
-            margin-top: 18%;
+
+          }
+        }
+
+        .project-content-left {
+          top: 30%;
+          left: 12%;
+
+          @media (max-width: 992px){
+            top: 10%;
+          }
+        }
+
+        .project-content-right {
+          top: 30%;
+          right: 12%;
+
+          @media (max-width: 992px){
+            top: 60%;
+          }
+
+          h3 {
+            text-align: right;
+
+            &:before, &:after {
+             left: inherit;
+             right: 0;
+            }
           }
         }
       }
@@ -268,6 +382,10 @@
       z-index: 10;
       cursor: pointer;
       @include transition(all 0.3s ease-in-out);
+
+      @media (max-width: 992px){
+        top: 44%;
+      }
 
       &:hover {
         background-color: white;
