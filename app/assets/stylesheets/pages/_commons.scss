@@ -207,15 +207,6 @@ p {
     z-index: 1;
   }
 
-  &:hover {
-    .discover-container-video,
-    .discover-container-solution {
-      &:after {
-        transform: scale(1.1);
-      }
-    }
-  }
-
   .discover-container-video,
   .discover-container-solution {
     display: flex;
@@ -233,9 +224,13 @@ p {
       height: 100%;
       top: 0;
       left: 0;
-      background: asset-url('home/discover-offer.jpg') no-repeat top center;
+      background: asset-url('home/discover-offer.jpg') no-repeat top fixed;
       background-size: cover;
       @include transition(all 0.3s ease-in-out);
+
+      @media (max-width: 992px){
+        background: asset-url('home/discover-offer.jpg') no-repeat top center;
+      }
     }
 
 
