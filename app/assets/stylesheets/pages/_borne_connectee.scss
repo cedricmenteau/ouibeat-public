@@ -257,33 +257,6 @@
     }
   }
 
-
-
-
-
-
-  .section-borne-intro.mask-white-right {
-    &:after {
-      background: asset-url('borne/borne-ouibeat.jpg') no-repeat top left;
-      background-size: cover;
-    }
-  }
-
-  .section-borne-murale.mask-white-left {
-    &:after {
-      background: asset-url('borne/borne-murale.png') no-repeat top left;
-      background-size: cover;
-      background-color: white;
-    }
-  }
-
-  .section-borne-connectee.mask-white-left {
-    &:after {
-      background: asset-url('borne/borne-ouibeat.jpg') no-repeat top left;
-      background-size: cover;
-    }
-  }
-
   .section-configuration {
     padding: 60px 0 90px;
 
