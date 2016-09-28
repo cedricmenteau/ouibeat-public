@@ -11,14 +11,4 @@
   </div>
 </div>
 
-<% content_for :after_js do %>
-  <script>
-    $(document).ready(function(){
-      $("#go-to-button").click(function() {
-        $('html,body').animate({
-          scrollTop: $("#socialwall-first-block").offset().top
-        },'slow');
-      });
-    });
-  </script>
-<% end %>
+

@@ -1,4 +1,6 @@
-CLOUDINARY_URL: 'cloudinary://331355449445794:hCDwgt-vT4_kUivzLsR4x25xkfg@ouibeat'
+# CLOUDINARY_URL: 'cloudinary://331355449445794:hCDwgt-vT4_kUivzLsR4x25xkfg@ouibeat'
+CLOUDINARY_URL: 'cloudinary://515918446312123:6m2wmQoYcbXFcHlCD7tLcNFWQaI@dnbn7hcsj'
+
 
 production:
   HOST: 'ouibeat-public.herokuapp.com'
