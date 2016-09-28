@@ -155,11 +155,32 @@
         }
       }
 
+      .picture-borne {
+        left: -80px;
+        top: 30px;
+
+         @media (max-width: 992px) {
+          left: inherit;
+          top: inherit;
+         }
+      }
+
       @media (max-width: 520px) {
         .picture-bloc-left {
           img {
             width: 100% !important;
           }
+        }
+      }
+
+      .borne-text {
+        position: relative;
+        padding-top: 70px;
+        left: -15px;
+
+        @media (max-width: 992px) {
+          padding-top: 0;
+          left: 0;
         }
       }
     }
