@@ -1,7 +1,17 @@
-<div class="logos">
+<div class="logos" style="display:none">
   <% logos.each do |logo| %>
     <% if logo %>
       <%= link_to cl_image_tag(logo.picture.path, width: 150), logo.link, target: "_blank", class: logo.id %>
     <% end %>
   <% end %>
 </div>
+
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function(){
+
+      $('.logos').slideDown();
+
+    });
+  </script>
+<% end %>

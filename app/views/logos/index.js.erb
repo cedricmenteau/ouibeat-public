@@ -1,7 +1,8 @@
 <% if @logos.present? %>
-  $('.logo-container').append('<%= j render partial: "shared/section_logos", locals: {logos: @logos} %>');
+  $('.logo-container').append('<%= j render partial: "shared/section_logos", locals: {logos: @logos} %>')
+  $('.logos').slideDown();
   <% if params[:position] == nil %>
-    $('.btn-more').addClass('disabled');
+    $('.btn-more').addClass('hidden');
     $('.btn-more').attr('href', "#")
   <% else %>
    var href = $('.btn-more').attr('href').split('=')[0] + "=" + <%= params[:position] %>

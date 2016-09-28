@@ -185,6 +185,9 @@ p {
 
   .btn-more {
     margin-top: 40px;
+    &.hidden {
+      display: none;
+    }
   }
 }
 
