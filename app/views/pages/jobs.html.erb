@@ -9,7 +9,11 @@
       <% if @jobs.count > 0 %>
         <ul>
           <% @jobs.each do |job| %>
-            <li><a href="https://docs.google.com/gview?url=<%= cloudinary_url(job.picture.path) %>&embedded=true", target="_blank"><%= job.name %></a></li>
+            <% if job.picture? %>
+            <li>
+                <a href="https://docs.google.com/gview?url=<%= cloudinary_url(job.picture.path) %>&embedded=true", target="_blank"><%= job.name %></a>
+            </li>
+            <% end %>
           <% end %>
         </ul>
       <% else %>
