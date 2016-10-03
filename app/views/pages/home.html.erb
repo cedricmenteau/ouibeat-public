@@ -120,21 +120,6 @@
 
 <% content_for :after_js do %>
   <script>
-    $(document).ready(function(){
-
-      $('.portfolio-carousel').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        autoplay: true,
-        speed: 1500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: '<div class="slick-next"><%= image_tag "shared/arrows/arrow-right.svg" %></div>',
-        prevArrow: '<div class="slick-prev"><%= image_tag "shared/arrows/arrow-left.svg" %></div>',
-      });
-    });
-
     (function(){
       window.ouibeatEmbedSite='http://app.ouibeat.com';
       window.ouibeatEmbedPath='/events/web/eaa977282a03169a89909543183afab997a45784';

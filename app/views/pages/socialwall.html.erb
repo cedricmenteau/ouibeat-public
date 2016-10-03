@@ -264,6 +264,12 @@
           }
         ]
       });
+
+      $("#go-to-button").click(function() {
+        $('html,body').animate({
+          scrollTop: $("#socialwall-first-block").offset().top
+        },'slow');
+      });
     });
 
     $('.slick-prev').html('something');

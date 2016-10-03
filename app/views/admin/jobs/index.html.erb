@@ -18,7 +18,9 @@
           <div class="update-position">
             <div class="job-file">
               <i class="material-icons">description</i>
-              <a href="https://docs.google.com/gview?url=<%= cloudinary_url(job.picture.path) %>&embedded=true", target="_blank">Voir l'annonce (.pdf)</a>
+                <% if job.picture? %>
+                  <a href="https://docs.google.com/gview?url=<%= cloudinary_url(job.picture.path) %>&embedded=true", target="_blank">Voir l'annonce (.pdf)</a>
+                <% end %>
             </div>
           </div>
           <div class="update-item">
