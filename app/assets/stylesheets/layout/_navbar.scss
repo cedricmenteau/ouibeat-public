@@ -115,6 +115,22 @@
           font-size: 0.85em;
           letter-spacing: 0.1em;
         }
+
+        .icon-facebook {
+          &:hover {
+            svg {
+              fill: red;
+            }
+          }
+        }
+
+        .icon-twitter {
+          &:hover {
+            svg {
+              fill: red;
+            }
+          }
+        }
       }
 
       li.active,
