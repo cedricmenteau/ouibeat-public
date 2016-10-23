@@ -34,6 +34,9 @@ class PagesController < ApplicationController
     @jobs = Job.all
   end
 
+  def policy
+  end
+
 
   private
 

@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'projects-index-filter', to: 'projects#index_filter'
   get 'certification', to: 'pages#certification'
   get 'jobs', to: 'pages#jobs'
+  get 'policy', to: 'pages#policy'
 
   namespace :admin do
     resources :logos, :jobs
