@@ -1,5 +1,5 @@
 <% if @logos.present? %>
-  $('.logo-container').slice(-1).append('<%= j render partial: "shared/section_logos", locals: {logos: @logos} %>')
+  $('.logo-container').slice(-1).append('<%= j render partial: "shared/section_logos", locals: {logos: @logos[0..11]} %>')
   $('.logos').slideDown();
   <% if params[:position] == nil %>
     $('.btn-more').addClass('hidden');
