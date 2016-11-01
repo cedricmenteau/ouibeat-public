@@ -16,7 +16,11 @@
       <div class="col s12 m6 l3 corporate">
         <ul>
           <% if current_page?(root_path) %>
-            <li><%= link_to 'À propos', '#who-are-we' %></li>
+            <li>
+              <%= link_to "#who-are-we", id: 'go-to-button', class: "anchor-scroll" do %>
+                À propos
+              <% end %>
+            </li>
           <% else %>
             <li><%= link_to 'À propos', '/#who-are-we' %></li>
           <% end %>
