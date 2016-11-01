@@ -31,7 +31,7 @@ class PagesController < ApplicationController
   end
 
   def jobs
-    @jobs = Job.all
+    @jobs = Job.includes(:picture_files).all
   end
 
   def policy
@@ -41,7 +41,7 @@ class PagesController < ApplicationController
   private
 
   def find_logos
-    @logos = Logo.includes(:picture_files).limit(6)
+    @logos = Logo.includes(:picture_files).limit(13)
   end
 
   def find_projects
