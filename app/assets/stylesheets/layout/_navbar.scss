@@ -107,6 +107,18 @@
           a {
             color: #00cfcb;
           }
+
+          .icon-facebook {
+            #Shape{
+              fill: #00cfcb;
+            }
+          }
+
+          .icon-twitter {
+            #Shape{
+              fill: #00cfcb;
+            }
+          }
         }
 
         a {
@@ -117,19 +129,13 @@
         }
 
         .icon-facebook {
-          &:hover {
-            svg {
-              fill: red;
-            }
-          }
+          width: 9px;
+          height: 16px;
         }
 
         .icon-twitter {
-          &:hover {
-            svg {
-              fill: red;
-            }
-          }
+          width: 17px;
+          height: 16px;
         }
       }
 
