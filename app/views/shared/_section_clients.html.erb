@@ -1,8 +1,6 @@
 <% if logos.present? %>
   <div class="col s12 logo-container">
-    <% logos[0..11].in_groups_of(6) do |logos| %>
-      <%= render partial: "shared/section_logos", locals: {logos: logos} %>
-    <% end %>
+    <%= render partial: "shared/section_logos", locals: {logos: logos[0..11]} %>
   </div>
   <%= link_to 'Voir plus', logos_path(position: @logos.last.position), remote: true, class: "#{logos[12].present? ? 'btn-more btn-ouibeat dark waves-effect waves-light' : 'btn-more btn-ouibeat dark waves-effect waves-light hidden' }" %>
 <% end %>

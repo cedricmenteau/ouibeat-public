@@ -1,10 +1,12 @@
-<div class="logos" style="display:none">
-  <% logos.each do |logo| %>
-    <% if logo %>
-      <%= link_to cl_image_tag(logo.picture.path, width: 150), logo.link, target: "_blank", class: logo.id %>
+<% logos.in_groups_of(6) do |logos_group| %>
+  <div class="logos" style="display:none">
+    <% logos_group.each do |logo| %>
+      <% if logo %>
+        <%= link_to cl_image_tag(logo.picture.path, width: 150), logo.link, target: "_blank", class: logo.id %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <% content_for :after_js do %>
   <script>
