@@ -29,7 +29,9 @@
   }
 
   .section-text {
-    padding: 100px 0 !important;
+    @media (min-width: 992px) {
+      padding: 100px 0 !important;
+    }
   }
 
   .section-introduction.mask-grey-right {
