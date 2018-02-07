@@ -14,9 +14,8 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
-    @projects = Project.includes(:picture_files).where.not(id: params[:id])
+    @projects = Project.active.includes(:picture_files).where.not(id: params[:id])
     @details = Detail.includes(:picture_files).where(project_id: params[:id])
   end
 
 end
-
